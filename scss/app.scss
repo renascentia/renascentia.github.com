@@ -45,6 +45,7 @@ body {
 	p {
 		font-size: 14px;
 		color: #6b757c;
+		margin-bottom: 0;
 	}
 
 	.avatar {
@@ -115,5 +116,67 @@ body {
 	img.img-web {
 		margin-top: 60px;
 		max-width: 1020px;
+	}
+}
+
+#finenyc {
+
+	.video-texture {
+		background: url(../img/grid.png);
+		width: 100%;
+		height: 400px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+
+	.header-unit {
+	  height: 400px;
+	  position: relative;
+
+	  .content {
+	  	margin-top: 70px;
+	  	z-index: 11;
+
+	  	h1 {
+	  		color: #fff;
+	  		@include text-shadow(rgba(0,0,0, 0.5) 1px 1px 4px);
+	  		font-size: 30px;
+			font-weight: 400;
+			margin-top: 20px;
+			margin-bottom: 35px;
+	  	}
+
+	  	a.btn-brightEC {
+			border: 2px solid #656b6b;
+			text-transform: uppercase;
+			background-color: transparent;
+			font-weight: 700;
+			transition: border-color 0.5s ease;
+
+			&:hover {
+				border-color: white;
+			}
+		}
+	  }
+	}
+	#video-container {
+		position: absolute;
+	}
+	#video-container {
+		top:0%;
+		left:0%;
+		height:100%;
+		width:100%;
+		overflow: hidden;
+	}
+	video {
+		position:absolute;
+		top: -30px;
+		z-index:0;
+	}
+	video.fillWidth {
+		width: 100%;
 	}
 }

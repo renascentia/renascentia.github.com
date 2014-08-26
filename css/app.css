@@ -192,18 +192,19 @@ body {
 #about-me p {
   font-size: 14px;
   color: #6b757c;
+  margin-bottom: 0;
 }
-/* line 50, ../scss/app.scss */
+/* line 51, ../scss/app.scss */
 #about-me .avatar {
   margin-right: 35px;
 }
 
-/* line 55, ../scss/app.scss */
+/* line 56, ../scss/app.scss */
 #bright-ec {
   background: url("../img/bg-brightEC.jpg") #232c2c center no-repeat;
   padding: 70px 0;
 }
-/* line 59, ../scss/app.scss */
+/* line 60, ../scss/app.scss */
 #bright-ec h1 {
   color: #FFF;
   font-size: 30px;
@@ -211,7 +212,7 @@ body {
   margin-top: 20px;
   margin-bottom: 35px;
 }
-/* line 68, ../scss/app.scss */
+/* line 69, ../scss/app.scss */
 #bright-ec a.btn-brightEC {
   border: 2px solid #656b6b;
   text-transform: uppercase;
@@ -219,35 +220,35 @@ body {
   font-weight: 700;
   transition: border-color 0.5s ease;
 }
-/* line 75, ../scss/app.scss */
+/* line 76, ../scss/app.scss */
 #bright-ec a.btn-brightEC:hover {
   border-color: white;
 }
 
-/* line 81, ../scss/app.scss */
+/* line 82, ../scss/app.scss */
 #acquisition {
   background-color: #f4ef9d;
   padding: 15px 0;
 }
-/* line 85, ../scss/app.scss */
+/* line 86, ../scss/app.scss */
 #acquisition .icon-congrats {
   float: left;
   margin-right: 15px;
 }
-/* line 89, ../scss/app.scss */
+/* line 90, ../scss/app.scss */
 #acquisition p {
   font-size: 14px;
   color: #3d3020;
   margin-bottom: 0;
 }
 
-/* line 96, ../scss/app.scss */
+/* line 97, ../scss/app.scss */
 #bright-js {
   background: #FFF;
   padding-top: 70px;
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 101, ../scss/app.scss */
+/* line 102, ../scss/app.scss */
 #bright-js h1 {
   color: #4a5f69;
   font-size: 30px;
@@ -255,13 +256,77 @@ body {
   margin-top: 20px;
   margin-bottom: 35px;
 }
-/* line 110, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 #bright-js a.btn-brightJS {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 115, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 #bright-js img.img-web {
   margin-top: 60px;
   max-width: 1020px;
+}
+
+/* line 124, ../scss/app.scss */
+#finenyc .video-texture {
+  background: url(../img/grid.png);
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+/* line 134, ../scss/app.scss */
+#finenyc .header-unit {
+  height: 400px;
+  position: relative;
+}
+/* line 138, ../scss/app.scss */
+#finenyc .header-unit .content {
+  margin-top: 70px;
+  z-index: 11;
+}
+/* line 142, ../scss/app.scss */
+#finenyc .header-unit .content h1 {
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 4px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+/* line 151, ../scss/app.scss */
+#finenyc .header-unit .content a.btn-brightEC {
+  border: 2px solid #656b6b;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-weight: 700;
+  transition: border-color 0.5s ease;
+}
+/* line 158, ../scss/app.scss */
+#finenyc .header-unit .content a.btn-brightEC:hover {
+  border-color: white;
+}
+/* line 164, ../scss/app.scss */
+#finenyc #video-container {
+  position: absolute;
+}
+/* line 167, ../scss/app.scss */
+#finenyc #video-container {
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 174, ../scss/app.scss */
+#finenyc video {
+  position: absolute;
+  top: -30px;
+  z-index: 0;
+}
+/* line 179, ../scss/app.scss */
+#finenyc video.fillWidth {
+  width: 100%;
 }
