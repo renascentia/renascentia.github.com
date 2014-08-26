@@ -1,0 +1,119 @@
+@import "compass/css3";
+@import "foundation/mixins";
+@import "foundation/components/global";
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+#top-nav {
+	background: #2c9df0;
+	//height: 115px;
+
+	.contain-to-grid {
+		background: #2c9df0;
+	}
+
+	ul {
+		list-style: none;
+		display: inline;
+
+		li {
+			float: left;
+			padding-left: 120px;
+
+			a {
+				color: #FFF;
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: 700;
+				padding: 0;
+			}
+		}
+	}
+}
+
+#about-me {
+	padding: 60px 0;
+
+	h1 {
+		color: #31393e;
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 14px;
+		color: #6b757c;
+	}
+
+	.avatar {
+		margin-right: 35px;
+	}
+}
+
+#bright-ec {
+	background: url('../img/bg-brightEC.jpg') #232c2c center no-repeat;
+	padding: 70px 0;
+
+	h1 {
+		color: #FFF;
+		font-size: 30px;
+		font-weight: 400;
+		margin-top: 20px;
+		margin-bottom: 35px;
+
+	}
+
+	a.btn-brightEC {
+		border: 2px solid #656b6b;
+		text-transform: uppercase;
+		background-color: transparent;
+		font-weight: 700;
+		transition: border-color 0.5s ease;
+
+		&:hover {
+			border-color: white;
+		}
+	}
+}
+
+#acquisition {
+	background-color: #f4ef9d;
+	padding: 15px 0;
+
+	.icon-congrats {
+		float: left;
+		margin-right: 15px;
+	}
+	p {
+		font-size: 14px;
+		color: #3d3020;
+		margin-bottom: 0;
+	}
+}
+
+#bright-js {
+	background: #FFF;;
+	padding-top: 70px;
+	border-bottom: 1px solid #e4e4e4;
+
+	h1 {
+		color: #4a5f69;
+		font-size: 30px;
+		font-weight: 400;
+		margin-top: 20px;
+		margin-bottom: 35px;
+
+	}
+
+	a.btn-brightJS {
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	img.img-web {
+		margin-top: 60px;
+		max-width: 1020px;
+	}
+}
