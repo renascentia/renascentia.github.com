@@ -330,3 +330,71 @@ body {
 #finenyc video.fillWidth {
   width: 100%;
 }
+
+@media only screen and (max-width: 40em) {
+  /* line 187, ../scss/app.scss */
+  #top-nav nav.top-bar {
+    height: 80px;
+  }
+  /* line 193, ../scss/app.scss */
+  #top-nav ul li {
+    float: left;
+    padding-left: 100px;
+  }
+  /* line 197, ../scss/app.scss */
+  #top-nav ul li a {
+    line-height: 80px;
+  }
+  /* line 200, ../scss/app.scss */
+  #top-nav ul li a.work {
+    display: none;
+  }
+  /* line 203, ../scss/app.scss */
+  #top-nav ul li a.blog {
+    display: none;
+  }
+  /* line 206, ../scss/app.scss */
+  #top-nav ul li a.about {
+    display: none;
+  }
+
+  /* line 216, ../scss/app.scss */
+  #finenyc .header-unit {
+    height: 340px;
+  }
+  /* line 219, ../scss/app.scss */
+  #finenyc .header-unit .content {
+    margin-top: 50px;
+  }
+  /* line 224, ../scss/app.scss */
+  #finenyc .video-texture {
+    height: 340px;
+  }
+  /* line 229, ../scss/app.scss */
+  #finenyc #video-container {
+    background-color: #334046;
+  }
+  /* line 231, ../scss/app.scss */
+  #finenyc #video-container video {
+    display: none;
+  }
+
+  /* line 239, ../scss/app.scss */
+  #bright-js img.img-web {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 252, ../scss/app.scss */
+  #top-nav ul li {
+    float: left;
+    padding-left: 60px;
+  }
+
+  /* line 262, ../scss/app.scss */
+  #bright-js img.img-web {
+    margin-top: 60px;
+    max-width: 100%;
+  }
+}

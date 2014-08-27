@@ -180,3 +180,88 @@ body {
 		width: 100%;
 	}
 }
+
+@media #{$small-only} {
+	#top-nav {
+
+		nav.top-bar {
+			height: 80px;
+		}
+
+		ul {
+
+			li {
+				float: left;
+				padding-left: 100px;
+
+				a {
+					line-height: 80px;
+
+					&.work {
+						display: none;
+					}
+					&.blog {
+						display: none;
+					}
+					&.about {
+						display: none;
+					}
+				}
+
+			}
+		}
+	}
+
+	#finenyc {
+		.header-unit {
+			height: 340px;
+
+			.content {
+				margin-top: 50px;
+			}
+		}
+
+		.video-texture {
+			height: 340px;
+		}
+
+
+		#video-container {
+			background-color: #334046;
+			video {
+				display: none;
+			}
+		}
+	}
+
+	#bright-js {
+
+		img.img-web {
+			margin-top: 30px;
+			max-width: 100%;
+		}
+	}
+}
+
+@media #{$medium-only} {
+
+	#top-nav {
+
+		ul {
+
+			li {
+				float: left;
+				padding-left: 60px;
+
+			}
+		}
+	}
+
+	#bright-js {
+
+		img.img-web {
+			margin-top: 60px;
+			max-width: 100%;
+		}
+	}
+}
