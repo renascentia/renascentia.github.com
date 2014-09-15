@@ -122,9 +122,9 @@ body {
 #finenyc {
 
 	.video-texture {
-		background: url(../img/grid.png);
+		background: url(../img/grid.png),rgba(0,0,0,0.7);
 		width: 100%;
-		height: 400px;
+		height: 350px;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -132,7 +132,7 @@ body {
 	}
 
 	.header-unit {
-	  height: 400px;
+	  height: 350px;
 	  position: relative;
 
 	  .content {
