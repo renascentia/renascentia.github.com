@@ -1,0 +1,108 @@
+@import "compass/css3";
+@import "foundation/mixins";
+@import "foundation/components/global";
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+#top-nav {
+
+	.contain-to-grid {
+		background: -webkit-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Chrome 10+, Saf5.1+ */
+		background:    -moz-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* FF3.6+ */
+		background:     -ms-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* IE10 */
+		background:      -o-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Opera 11.10+ */
+		background:         linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* W3C */
+
+		  .top-bar{
+		  	background: transparent;
+
+		  	#top-logo {
+			  background: url("../../img/top-logo.png") no-repeat;
+			  display: block;
+			  width: 29px;
+			  height: 44px;
+			  margin-top: 30px;
+			  @include image-2x("../../img/top-logo@2x.png", 29px, 44px);
+			}
+		  }
+	}
+
+	ul {
+		list-style: none;
+		display: inline;
+
+		li {
+			float: left;
+			padding-left: 120px;
+			background: transparent !important;
+
+			a {
+				color: #FFF;
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: 700;
+				padding: 0;
+				background: transparent;
+			}
+		}
+	}
+}
+
+#promo-top {
+	background: -webkit-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Chrome 10+, Saf5.1+ */
+	background:    -moz-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* FF3.6+ */
+	background:     -ms-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* IE10 */
+	background:      -o-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Opera 11.10+ */
+	background:         linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* W3C */
+}
+
+@media #{$small-only} {
+	#top-nav {
+
+		nav.top-bar {
+			height: 80px;
+		}
+
+		ul {
+
+			li {
+				float: left;
+				padding-left: 100px;
+
+				a {
+					line-height: 80px;
+
+					&.work {
+						display: none;
+					}
+					&.blog {
+						display: none;
+					}
+					&.about {
+						display: none;
+					}
+				}
+
+			}
+		}
+	}
+
+}
+
+@media #{$medium-only} {
+
+	#top-nav {
+
+		ul {
+
+			li {
+				float: left;
+				padding-left: 60px;
+
+			}
+		}
+	}
+
+}
