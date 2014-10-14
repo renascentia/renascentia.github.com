@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FestaCerta</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'> -->
+
+</head>
+
+
+<body>
+
+  <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <div class="off-canvas-wrap">
+
+    <div class="inner-wrap">
+
+
+      <!-- SEARCH SECTION -->
+      <section id="top-content">
+        <div class="row">
+          <div class="large-12 columns text-center top-content">
+            <img src="img/logo.png" alt="">
+            <h1>Descubra a quantidade certa de alimentos para sua festa.</h1>
+            <div class="large-12 columns bloco-busca" id="bloco-busca">
+              <form>
+                <div class="row">
+                  <div class="large-1 columns">
+                    <img src="img/icon-adulto.png" alt="">
+                  </div>
+                  <div class="large-4 columns">
+                      
+                      <input id="campo-adulto" type="text" placeholder="Nº de adultos" />
+                    
+                  </div>
+                  <div class="large-1 columns">
+                    <img src="img/icon-crianca.png" alt="">
+                  </div>
+                  <div class="large-4 columns">
+                    
+                      <input id="campo-crianca" type="text" placeholder="Nº de crianças" />
+                    
+                  </div>
+
+                  <div class="large-2 columns">
+                    <a href="#" id="calcular-quantidade" class="button large expand">CALCULAR</a>
+                  </div>
+                </div>
+              </form>
+              <hr>
+              <p>* Cálculo válido para festas com duração até 4hr. <br>
+                  * Cálculo válido para crianças até 12 anos.</p>
+            </div>
+
+            <div class="large-12 columns bloco-resultado hide" id="bloco-resultado">
+
+            <h2>O que você deve comprar</h2>
+            <hr>
+
+              <div class="row">
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-salgado.png" alt="">
+                  <h2 id="qtd-salgado">500</h2>
+                  <p>salgados</p>
+                  </div>
+                </div>
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-cake.png" alt="">
+                  <h2 id="qtd-bolo">150</h2>
+                  <p>de bolo</p>
+                  </div>
+                </div>
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-refri.png" alt="">
+                  <h2 id="qtd-suco">500</h2>
+                  <p>refri/suco</p>
+                  </div>
+                </div>
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-agua.png" alt="">
+                  <h2 id="qtd-agua">200</h2>
+                  <p>agua</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-doce.png" alt="">
+                  <h2 id="qtd-docinho">5</h2>
+                  <p>docinhos</p>
+                  </div>
+                </div>
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-batataFrita.png" alt="">
+                  <h2 id="qtd-batata">100</h2>
+                  <p>batata frita</p>
+                  </div>
+                </div>
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-sanduiche.png" alt="">
+                  <h2 id="qtd-sanduiche">3</h2>
+                  <p>mini sanduiche</p>
+                  </div>
+                </div>
+
+                <div class="large-3 columns text-center">
+                <div class="panel">
+                  <img src="img/icon-popcorn.png" alt="">
+                  <h2 id="qtd-pipoca">3</h2>
+                  <p>saquinho de pipoca</p>
+                  </div>
+                </div>
+
+              </div>
+              <hr>
+            <a href="#" class="button" id="botao-resetar">Calcular Novamente</a>
+              
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- WHAT WE OFFER SECTION -->
+      <section id="features">
+
+        <div class="row">
+          <div class="large-12 columns text-center">
+            <h1>Como nosso sistema ajuda você?</h1>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="medium-4 large-4 columns supporticons">
+            <img src="img/img-barato.png" >
+            <h2>Redução de Custos</h2>
+            <p>Compre somente a quantidade necessário de alimentos e bebidas para sua festa, evitando desperdício.</p>
+          </div>
+
+          <div class="medium-4 columns supporticons">
+            <img src="img/img-agilidade.png" >
+            <h2>Agilidade</h2>
+            <p>Simplesmente informe a quantidade de pessoas que irão comparecer a sua festa e o sistema faz o resto.</p>
+          </div>
+
+          <div class="medium-4 columns supporticons">
+            <img src="img/img-controle.png" >
+            <h2>Controle de Pessoas</h2>
+            <p>Tenha um maior controle das pessoas na sua festa, sabendo o que cada uma irá consumir.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="contact">
+
+        <div class="row">
+          <div class="large-12 columns text-center">
+            <h1>Interessado em nossa consultoria para sua festa? </h1>
+            <p>Entre em contato.</p>
+            <a href="#" class="button">CONTATO</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="row">
+          <nav>
+            <ul>
+              <li>Preços</li>
+              <li><a href="http://finenyc.com/">Home</a></li>
+              <li><a href="http://www.finenyc.com/#main-content">Features</a></li>
+              <li><a href="https://itunes.apple.com/us/app/finenyc/id514262496">Mobile</a></li>
+            </ul>
+            <ul>
+              <li>Resources</li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Investors</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+            <ul>
+              <li>Support</li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy & Terms</a></li>
+            </ul>
+            <ul>
+              <li>Connect</li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Google+</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+  <script src="js/foundation.js"></script>
+  <script src="js/calcular-quantidade.js"></script>
+</body>
+</html>
