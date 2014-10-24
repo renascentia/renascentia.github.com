@@ -6,6 +6,14 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+h1 {
+	font-size: 30px;
+}
+
+p {
+	color: #838383;
+}
+
 #top-nav {
 
 	.contain-to-grid {
@@ -14,6 +22,7 @@ body {
 		background:     -ms-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* IE10 */
 		background:      -o-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Opera 11.10+ */
 		background:         linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* W3C */
+		border-bottom: 1px solid rgba(255,255,255, .2);
 
 		  .top-bar{
 		  	background: transparent;
@@ -50,12 +59,56 @@ body {
 	}
 }
 
+section.work {
+	padding: 80px;
+
+	h1 {
+		margin-top: 10px;
+	}
+
+	.item {
+		margin-top: 100px;
+
+		h2 {
+			font-size: 18px;
+			font-weight: 600;
+			margin: 0;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	}
+}
+
 #promo-top {
 	background: -webkit-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Chrome 10+, Saf5.1+ */
 	background:    -moz-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* FF3.6+ */
 	background:     -ms-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* IE10 */
 	background:      -o-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Opera 11.10+ */
 	background:         linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* W3C */
+
+	padding-top: 80px;
+
+	h1 {
+		color: #FFF;
+		margin: 60px 0;
+	}
+}
+
+#logo {
+	background: #fff;
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 0;
+
+	.artwork {
+		margin-top: 50px;
+	}
+}
+
+#ux {
+	background: url('../../project/finenyc/img/bg-pattern-ux.gif') repeat;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 @media #{$small-only} {
