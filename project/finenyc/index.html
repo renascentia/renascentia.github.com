@@ -48,8 +48,8 @@
   <section id="promo-top">
     <div class="row">
       <div class="large-12 columns text-center">
-        <img src="img/logo-fine.png">
-        <h1>Manage and Pay your Parking Tickets on the go.</h1>
+        <img src="img/logo-fine.png" class="wow fadeInUp">
+        <h1 class="wow fadeInUp">Manage and Pay your Parking Tickets on the go.</h1>
         <img src="img/img-screens.png">
       </div>
     </div>
@@ -63,7 +63,7 @@
         <div class="large-8 large-centered columns">
           <p>The goal of the logo was to convey that the product was all about Parking Tickets. After a few iterations and tests we decided to use the Parking Sign design because the user could assimilate our product with Parking right away.</p>
         </div>
-        <img src="img/artwork-logo.png" class="artwork">
+        <img src="img/artwork-logo.png" class="wow fadeInUp artwork">
       </div>
     </div>
   </section>
@@ -76,20 +76,20 @@
         <p>A tool provides a good user experience if it is Understandable, Actionable, Engaging, and Efficient.</p>
         
         <div class="item clearfix">
-          <div class="large-4 columns text-left" style="margin-top: 80px;">
+          <div class="large-4 columns text-left wow fadeInLeft" style="margin-top: 80px;">
             <h2>Pay Everywhere</h2>
             <p>One of the main goals at FineNYC was for the user to be able to pay on any device, so a responsive design was essential.</p>
           </div>
-          <div class="large-8 columns">
+          <div class="large-8 columns wow fadeInRight">
             <img src="img/img-devices.png" alt="Pay Everywhere!">
           </div>
         </div>
 
         <div class="item clearfix">
-          <div class="large-6 columns">
+          <div class="large-6 columns wow fadeInLeft">
             <img src="img/img-paybyphone.png" alt="Pay By Phone!">
           </div>
-          <div class="large-6 columns text-left" style="margin-top: 50px;">
+          <div class="large-6 columns text-left wow fadeInRight" style="margin-top: 50px;">
             <h2>Pay by Phone</h2>
             <p>UX tests showed us that our older users couldn’t see the screen properly, so our solution was to launch an option to pay by simply calling to our automated voice system.</p>
           </div>
@@ -122,8 +122,11 @@
 
   <script src="../../js/vendor/jquery-1.10.2.min.js"></script>
   <script src="../../js/foundation.js"></script>
+  <script src="../../js/wow.min.js"></script>
   <script>
     $(document).foundation();
+
+    new WOW().init();
   </script>
 </body>
 </html>
