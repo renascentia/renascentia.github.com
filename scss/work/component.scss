@@ -11,6 +11,7 @@ html, body, .container, .header {
 }
 
 #promo-top {
+	padding: 0;
 	position: absolute;
 	overflow: hidden;
 	top: 0;
@@ -25,6 +26,10 @@ html, body, .container, .header {
 	position: absolute;
 	top: 0;
 	left: 0;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	display: block;
 	min-width: 100%;
 	min-height: 100%;
@@ -120,7 +125,7 @@ button.trigger span::before {
 /* Conent */
 .content {
 	margin: 0 auto;
-	padding: 0 0 3em;
+	padding: 0 0;
 }
 
 .content > div:not(.title) {

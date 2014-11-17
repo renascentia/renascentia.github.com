@@ -6,6 +6,23 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+footer {
+	background: #313338;
+	padding: 40px 0;
+
+	p {
+		color: #a2a7b0;
+		font-size: 14px;
+		line-height: 1;
+	}
+
+	
+}
+
+#container {
+
+}
+
 h1 {
 	font-size: 30px;
 }
@@ -26,6 +43,7 @@ p {
 
 		  .top-bar{
 		  	background: transparent;
+		  	text-align: center;
 
 		  	#top-logo {
 			  background: url("../../img/top-logo.png") no-repeat;
@@ -35,6 +53,10 @@ p {
 			  margin-top: 30px;
 			  @include image-2x("../../img/top-logo@2x.png", 29px, 44px);
 			}
+
+			section.top-bar-section {
+				display: inline-block;
+			}
 		  }
 	}
 
@@ -43,9 +65,9 @@ p {
 		display: inline;
 
 		li {
-			float: left;
-			padding-left: 120px;
+			padding: 0 60px;
 			background: transparent !important;
+			vertical-align: top;
 
 			a {
 				color: #FFF;
@@ -109,6 +131,14 @@ section.work {
 #ux {
 	background: url('../../project/finenyc/img/bg-pattern-ux.gif') repeat;
 	border-bottom: 1px solid #e5e5e5;
+}
+
+#website {
+	background: #252c35;
+
+	h1, h2 {
+		color: #FFF;
+	}
 }
 
 @media #{$small-only} {
