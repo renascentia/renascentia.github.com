@@ -1,0 +1,61 @@
+@import "compass/css3";
+@import "framework/mixins";
+@import "framework/components/global";
+
+body {
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+#search {
+	.logo {
+		padding: 60px 0 30px 0;
+	}
+	h1 {
+		font-weight: 300;
+	}
+}
+
+footer {
+	border-top: 1px solid #e8e8e8;
+	padding: 10px 0;
+	color: $secondary-color;
+
+	nav {
+		ul {
+			list-style: none;
+
+
+
+			li {
+				float: left;
+				position: relative;
+				//margin: 0 10px 0 0;
+
+				a {
+					font-size: 14px;
+					color: $secondary-color;
+				}
+			}
+
+			li + li:before{
+			    content: "•";
+			    font-size: 12px;
+			    padding: 0 10px;
+			}
+		}
+	}
+
+	p {
+		font-size: 14px;
+		margin: 0;
+	}
+}
+
+
+
+@media #{$small-only} { 
+
+	
+
+}
