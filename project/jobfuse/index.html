@@ -30,11 +30,11 @@
 
   <div class="inner-wrap">
 
+    <!-- TOP MENU -->
     <div class="contain-to-grid">
       <nav class="top-bar" data-topbar>
 
         <section class="top-bar-section">
-          <!-- Right Nav Section -->
           <ul class="right">
             <li><a href="#">Sign In</a></li>
             <li><a href="#">Create Account</a></li>
@@ -42,36 +42,50 @@
         </section>
       </nav>
     </div>
+    <!-- END TOP MENU -->
 
-    <!-- SEARCH SECTION -->
-    <section id="search">
-      <div class="row">
-        <div class="large-12 columns text-center">
-          <img src="img/logo.png" alt="" class="logo">
-          <h1>Millions of Jobs, One Site.</h1>
-          <div class="block-search text-left">
-            <form>
-              <div class="row">
-                <div class="large-5 columns">
-                  <label>What
-                    <input type="text" placeholder="Insert your plate here" />
-                  </label>
+    <div id="content">
+      <!-- SEARCH SECTION -->
+      <section id="search">
+        <div class="row">
+          <div class="large-12 columns text-center">
+            <img src="img/logo.png" alt="" class="logo">
+            <h1>Millions of Jobs, One Site.</h1>
+            <div class="block-search text-left">
+              <form>
+                <div class="row">
+                  <div class="large-5 columns">
+                    <label>What
+                      <input type="text" placeholder="job title, position or keyword" />
+                    </label>
+                  </div>
+                  <div class="large-5 columns">
+                    <label>Where
+                      <input type="text" placeholder="city, state or zip code" />
+                    </label>
+                  </div>
+                  <div class="large-2 columns">
+                    <label> <br></label>
+                    <a href="step2.html" class="button expand">Find Jobs</a>
+                  </div>
                 </div>
-                <div class="large-5 columns">
-                  <label>Where
-                    <input type="text" placeholder="Insert your plate here" />
-                  </label>
-                </div>
-                <div class="large-2 columns">
-                  <label> <br></label>
-                  <a href="step2.html" class="button expand">SEARCH JOBS  </a>
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
+      </section>
+
+      <div class="large-4 columns large-centered text-center job-stats">
+        <p><strong>3,000 new jobs</strong> in the past 7 days</p>
+        <nav>
+          <ul>
+            <li><a href="#">browse all jobs</a></li>
+            <li><a href="#">browse by category</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+
+    </div>
 
     <footer class="clearfix">
       <div class="row">
@@ -88,7 +102,6 @@
   </div>
 
   <script src="js/foundation.js"></script>
-  <script src="js/foundation.topbar.js"></script>
   <script src="js/foundation.interchange.js"></script>
   <script>
     $(document).foundation();
