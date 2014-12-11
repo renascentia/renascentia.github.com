@@ -12,11 +12,11 @@
 $include-html-top-bar-classes: $include-html-classes !default;
 
 // Background color for the top bar
-$topbar-bg-color: #3c4147 !default;
+$topbar-bg-color: #f9f9f9 !default;
 $topbar-bg: $topbar-bg-color !default;
 
 // Height and margin
-$topbar-height: 40px !default;
+$topbar-height: 86px !default;
 $topbar-margin-bottom: 0 !default;
 
 // Controlling the styles for the title in the top bar
@@ -40,10 +40,10 @@ $topbar-link-color-active-hover: #FFF !default;
 $topbar-link-weight: $font-weight-normal !default;
 $topbar-link-font-size: rem-calc(13) !default;
 $topbar-link-hover-lightness: -10% !default; // Darken by 10%
-$topbar-link-bg: #3c4147 !default;
-$topbar-link-bg-hover: #3c4147 !default;
+$topbar-link-bg: #f9f9f9 !default;
+$topbar-link-bg-hover: #f9f9f9 !default;
 $topbar-link-bg-color-hover: #555555 !default;
-$topbar-link-bg-active: #3c4147 !default;
+$topbar-link-bg-active: #f9f9f9 !default;
 $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !default;
 $topbar-link-font-family: $body-font-family !default;
 $topbar-link-text-transform: none !default;

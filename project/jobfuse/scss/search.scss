@@ -1,0 +1,86 @@
+@import "compass/css3";
+@import "framework/mixins";
+@import "framework/components/global";
+
+
+header {
+	background: #f9f9f9;
+	border-bottom: 1px solid #e8e8e8;
+	height: 86px;
+
+	.header-logo {
+		line-height: 86px;
+	}
+
+	.input {
+
+		p {
+			font-size: 12px;
+			color: $secondary-color;
+			margin: 10px 0 3px 0;
+
+		}
+
+		span.prefix {
+			font-weight: 600;
+			color: $orange-color;
+			background: #fcfcfc;
+		}
+
+		input[type="text"] {
+			@include box-shadow(none);
+		}
+	}
+
+	.button {
+		background: $orange-color;
+		font-size: 14px !important;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		margin: 30px 0 0 0;
+
+		&:hover {
+			background: #e05801;
+		}
+	}
+}
+
+
+
+
+@media #{$small-only} { 
+
+	#content {
+		padding-bottom: 200px;
+	}
+
+	footer {
+	padding: 10px 15px;
+	height: 80px;
+	text-align: center;
+
+		p {
+		  float: none !important;
+		  //text-align: center;
+		  display: block;
+		  line-height: 30px;
+		}
+	}
+
+	nav {
+		float: none !important;
+		text-align: center;
+
+		ul {
+		  margin: 0;
+
+
+		  li {
+		    display: inline;
+		    line-height: 30px !important;
+		  }
+		}
+	}
+
+}

@@ -147,38 +147,32 @@ select {
   width: 100%;
 }
 
-/* line 5, ../scss/app.scss */
-body {
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-}
-
-/* line 11, ../scss/app.scss */
+/* line 7, ../scss/home.scss */
 #search .logo {
   padding: 60px 0 30px 0;
 }
-/* line 14, ../scss/app.scss */
+/* line 10, ../scss/home.scss */
 #search h1 {
   font-weight: 300;
 }
-/* line 18, ../scss/app.scss */
+/* line 14, ../scss/home.scss */
 #search .block-search {
   margin-top: 40px;
 }
-/* line 21, ../scss/app.scss */
+/* line 17, ../scss/home.scss */
 #search .block-search label {
   font-size: 18px;
   font-weight: 600;
   color: #363e45;
 }
-/* line 27, ../scss/app.scss */
+/* line 23, ../scss/home.scss */
 #search .block-search input {
   font-weight: 400;
   height: 55px;
   padding-left: 15px;
   font-size: 18px;
 }
-/* line 34, ../scss/app.scss */
+/* line 30, ../scss/home.scss */
 #search .block-search a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -190,43 +184,43 @@ body {
   text-transform: uppercase;
 }
 
-/* line 44, ../scss/app.scss */
+/* line 40, ../scss/home.scss */
 .job-stats {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* line 48, ../scss/app.scss */
+/* line 44, ../scss/home.scss */
 .job-stats p {
   font-size: 18px;
   margin-bottom: 6px;
   color: #363e45;
 }
-/* line 54, ../scss/app.scss */
+/* line 50, ../scss/home.scss */
 .job-stats nav {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-/* line 60, ../scss/app.scss */
+/* line 56, ../scss/home.scss */
 .job-stats nav ul {
   margin: 0;
 }
-/* line 63, ../scss/app.scss */
+/* line 59, ../scss/home.scss */
 .job-stats nav ul li {
   display: inline;
 }
-/* line 66, ../scss/app.scss */
+/* line 62, ../scss/home.scss */
 .job-stats nav ul li a {
   font-size: 14px;
   color: #007ee5;
   display: inline-block;
 }
-/* line 71, ../scss/app.scss */
+/* line 67, ../scss/home.scss */
 .job-stats nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 77, ../scss/app.scss */
+/* line 73, ../scss/home.scss */
 .job-stats nav ul li + li:before {
   content: "•";
   font-size: 12px;
@@ -234,113 +228,55 @@ body {
   color: #c2c5c7;
 }
 
-/* line 87, ../scss/app.scss */
-.inner-wrap {
-  min-height: 100%;
-  position: relative;
-}
-
-/* line 92, ../scss/app.scss */
-#content {
-  padding-bottom: 50px;
-}
-
-/* line 96, ../scss/app.scss */
-footer {
-  border-top: 1px solid #e8e8e8;
-  color: #797f84;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #f9f9f9;
-}
-/* line 107, ../scss/app.scss */
-footer nav {
-  float: right;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-/* line 113, ../scss/app.scss */
-footer nav ul {
-  margin: 0;
-}
-/* line 116, ../scss/app.scss */
-footer nav ul li {
-  position: relative;
-  line-height: 50px;
-  display: inline;
-}
-/* line 122, ../scss/app.scss */
-footer nav ul li a {
-  font-size: 14px;
-  color: #797f84;
-}
-/* line 128, ../scss/app.scss */
-footer nav ul li + li:before {
-  content: "•";
-  font-size: 12px;
-  padding: 0 10px;
-}
-/* line 136, ../scss/app.scss */
-footer p {
-  font-size: 14px;
-  margin: 0;
-  line-height: 50px;
-  float: left;
-}
-
 @media only screen and (max-width: 40em) {
-  /* line 148, ../scss/app.scss */
+  /* line 88, ../scss/home.scss */
   #content {
     padding-bottom: 200px;
   }
 
-  /* line 153, ../scss/app.scss */
-  #search .logo {
-    max-width: 50%;
-    padding: 30px 0 15px 0;
-  }
-  /* line 158, ../scss/app.scss */
-  #search h1 {
-    font-size: 24px;
-  }
-  /* line 162, ../scss/app.scss */
-  #search .block-search {
-    margin-top: 20px;
-  }
-  /* line 166, ../scss/app.scss */
-  #search .block-search .large-2 label {
-    display: none;
-  }
-
-  /* line 173, ../scss/app.scss */
+  /* line 92, ../scss/home.scss */
   footer {
     padding: 10px 15px;
     height: 80px;
     text-align: center;
   }
-  /* line 178, ../scss/app.scss */
+  /* line 97, ../scss/home.scss */
   footer p {
     float: none !important;
     display: block;
     line-height: 30px;
   }
 
-  /* line 186, ../scss/app.scss */
+  /* line 105, ../scss/home.scss */
   nav {
     float: none !important;
     text-align: center;
   }
-  /* line 190, ../scss/app.scss */
+  /* line 109, ../scss/home.scss */
   nav ul {
     margin: 0;
   }
-  /* line 194, ../scss/app.scss */
+  /* line 113, ../scss/home.scss */
   nav ul li {
     display: inline;
     line-height: 30px !important;
+  }
+
+  /* line 121, ../scss/home.scss */
+  #search .logo {
+    max-width: 50%;
+    padding: 30px 0 15px 0;
+  }
+  /* line 126, ../scss/home.scss */
+  #search h1 {
+    font-size: 24px;
+  }
+  /* line 130, ../scss/home.scss */
+  #search .block-search {
+    margin-top: 20px;
+  }
+  /* line 134, ../scss/home.scss */
+  #search .block-search .large-2 label {
+    display: none;
   }
 }

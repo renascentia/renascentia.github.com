@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 318, ../scss/framework/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.3.0/";
@@ -2214,11 +2215,11 @@ button, .button {
   background-color: #007ee5;
   border-color: #0065b7;
   color: white;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
   transition: background-color 300ms ease-out;
 }
 /* line 139, ../scss/framework/components/_buttons.scss */
@@ -4135,7 +4136,7 @@ meta.foundation-mq-topbar {
 /* line 110, ../scss/framework/components/_top-bar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #3c4147;
+  background: #f9f9f9;
 }
 /* line 114, ../scss/framework/components/_top-bar.scss */
 .contain-to-grid .top-bar {
@@ -4166,16 +4167,16 @@ meta.foundation-mq-topbar {
 /* line 137, ../scss/framework/components/_top-bar.scss */
 .fixed.expanded:not(.top-bar) .top-bar-section {
   z-index: 98;
-  margin-top: 40px;
+  margin-top: 86px;
 }
 
 /* line 144, ../scss/framework/components/_top-bar.scss */
 .top-bar {
   overflow: hidden;
-  height: 40px;
-  line-height: 40px;
+  height: 86px;
+  line-height: 86px;
   position: relative;
-  background: #3c4147;
+  background: #f9f9f9;
   margin-bottom: 0;
 }
 /* line 153, ../scss/framework/components/_top-bar.scss */
@@ -4213,13 +4214,13 @@ meta.foundation-mq-topbar {
 }
 /* line 181, ../scss/framework/components/_top-bar.scss */
 .top-bar .name {
-  height: 40px;
+  height: 86px;
   margin: 0;
   font-size: 16px;
 }
 /* line 186, ../scss/framework/components/_top-bar.scss */
 .top-bar .name h1 {
-  line-height: 40px;
+  line-height: 86px;
   font-size: 1.0625rem;
   margin: 0;
 }
@@ -4246,8 +4247,8 @@ meta.foundation-mq-topbar {
   position: relative;
   display: block;
   padding: 0 10px;
-  height: 40px;
-  line-height: 40px;
+  height: 86px;
+  line-height: 86px;
 }
 /* line 219, ../scss/framework/components/_top-bar.scss */
 .top-bar .toggle-topbar.menu-icon {
@@ -4285,7 +4286,7 @@ meta.foundation-mq-topbar {
 }
 /* line 256, ../scss/framework/components/_top-bar.scss */
 .top-bar.expanded .title-area {
-  background: #3c4147;
+  background: #f9f9f9;
 }
 /* line 259, ../scss/framework/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
@@ -4315,7 +4316,7 @@ meta.foundation-mq-topbar {
 /* line 291, ../scss/framework/components/_top-bar.scss */
 .top-bar-section .divider,
 .top-bar-section [role="separator"] {
-  border-top: solid 1px #1e2123;
+  border-top: solid 1px #7d7d7d;
   clear: both;
   height: 1px;
   width: 100%;
@@ -4457,12 +4458,12 @@ meta.foundation-mq-topbar {
 /* line 335, ../scss/framework/components/_top-bar.scss */
 .top-bar-section ul li:hover:not(.has-form) > a {
   background-color: #555555;
-  background: #3c4147;
+  background: #f9f9f9;
   color: white;
 }
 /* line 345, ../scss/framework/components/_top-bar.scss */
 .top-bar-section ul li.active > a {
-  background: #3c4147;
+  background: #f9f9f9;
   color: white;
   border-bottom: 2px solid #34bd92;
 }
@@ -4548,7 +4549,7 @@ meta.foundation-mq-topbar {
 /* line 413, ../scss/framework/components/_top-bar.scss */
 .top-bar-section .dropdown li.title h5 a {
   color: #e7f1fd;
-  line-height: 20px;
+  line-height: 43px;
   display: block;
 }
 /* line 419, ../scss/framework/components/_top-bar.scss */
@@ -4577,7 +4578,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 40.063em) {
   /* line 439, ../scss/framework/components/_top-bar.scss */
   .top-bar {
-    background: #3c4147;
+    background: #f9f9f9;
     overflow: visible;
   }
   /* line 168, ../scss/framework/components/_global.scss */
@@ -4611,7 +4612,7 @@ meta.foundation-mq-topbar {
   }
   /* line 457, ../scss/framework/components/_top-bar.scss */
   .top-bar.expanded {
-    background: #3c4147;
+    background: #f9f9f9;
   }
 
   /* line 460, ../scss/framework/components/_top-bar.scss */
@@ -4643,26 +4644,26 @@ meta.foundation-mq-topbar {
   /* line 483, ../scss/framework/components/_top-bar.scss */
   .top-bar-section li.hover > a:not(.button) {
     background-color: #555555;
-    background: #3c4147;
+    background: #f9f9f9;
     color: white;
   }
   /* line 492, ../scss/framework/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 10px;
-    line-height: 40px;
-    background: #3c4147;
+    line-height: 86px;
+    background: #f9f9f9;
   }
   /* line 496, ../scss/framework/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button):hover {
     background-color: #555555;
-    background: #3c4147;
+    background: #f9f9f9;
   }
   /* line 505, ../scss/framework/components/_top-bar.scss */
   .top-bar-section li.active:not(.has-form) a:not(.button) {
     padding: 0 10px;
-    line-height: 40px;
+    line-height: 86px;
     color: white;
-    background: #3c4147;
+    background: #f9f9f9;
   }
   /* line 510, ../scss/framework/components/_top-bar.scss */
   .top-bar-section li.active:not(.has-form) a:not(.button):hover {
@@ -4682,7 +4683,7 @@ meta.foundation-mq-topbar {
     border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
     border-top-style: solid;
     margin-top: -2.5px;
-    top: 20px;
+    top: 43px;
   }
   /* line 530, ../scss/framework/components/_top-bar.scss */
   .top-bar-section .has-dropdown.moved {
@@ -4726,7 +4727,7 @@ meta.foundation-mq-topbar {
   /* line 564, ../scss/framework/components/_top-bar.scss */
   .top-bar-section .dropdown li a {
     color: white;
-    line-height: 40px;
+    line-height: 86px;
     white-space: nowrap;
     padding: 12px 10px;
     background: #333333;
@@ -4740,7 +4741,7 @@ meta.foundation-mq-topbar {
   .top-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
     color: white;
     background-color: #555555;
-    background: #3c4147;
+    background: #f9f9f9;
   }
   /* line 584, ../scss/framework/components/_top-bar.scss */
   .top-bar-section .dropdown li label {
@@ -4756,16 +4757,16 @@ meta.foundation-mq-topbar {
   .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px #535962;
+    border-right: solid 1px #fafafa;
     clear: none;
-    height: 40px;
+    height: 86px;
     width: 0;
   }
   /* line 607, ../scss/framework/components/_top-bar.scss */
   .top-bar-section .has-form {
-    background: #3c4147;
+    background: #f9f9f9;
     padding: 0 10px;
-    height: 40px;
+    height: 86px;
   }
   /* line 615, ../scss/framework/components/_top-bar.scss */
   .top-bar-section .right li .dropdown {
@@ -4789,12 +4790,12 @@ meta.foundation-mq-topbar {
   /* line 637, ../scss/framework/components/_top-bar.scss */
   .no-js .top-bar-section ul li:hover > a {
     background-color: #555555;
-    background: #3c4147;
+    background: #f9f9f9;
     color: white;
   }
   /* line 646, ../scss/framework/components/_top-bar.scss */
   .no-js .top-bar-section ul li:active > a {
-    background: #3c4147;
+    background: #f9f9f9;
     color: white;
   }
   /* line 654, ../scss/framework/components/_top-bar.scss */
@@ -6018,5 +6019,89 @@ th.hide-for-touch {
   /* line 404, ../scss/framework/components/_visibility.scss */
   th.show-for-print {
     display: table-cell !important;
+  }
+}
+/* line 30, ../scss/global.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* line 35, ../scss/global.scss */
+.browsehappy {
+  padding: 20px;
+  background: #f04124;
+  color: #FFF;
+  margin-bottom: 0 !important;
+}
+/* line 41, ../scss/global.scss */
+.browsehappy a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* line 48, ../scss/global.scss */
+.inner-wrap {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 53, ../scss/global.scss */
+#content {
+  padding-bottom: 50px;
+}
+
+/* line 57, ../scss/global.scss */
+footer {
+  border-top: 1px solid #e8e8e8;
+  color: #797f84;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #f9f9f9;
+}
+/* line 68, ../scss/global.scss */
+footer nav {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 74, ../scss/global.scss */
+footer nav ul {
+  margin: 0;
+}
+/* line 77, ../scss/global.scss */
+footer nav ul li {
+  position: relative;
+  line-height: 50px;
+  display: inline;
+}
+/* line 83, ../scss/global.scss */
+footer nav ul li a {
+  font-size: 14px;
+  color: #797f84;
+}
+/* line 89, ../scss/global.scss */
+footer nav ul li + li:before {
+  content: "•";
+  font-size: 12px;
+  padding: 0 10px;
+}
+/* line 97, ../scss/global.scss */
+footer p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 50px;
+  float: left;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 107, ../scss/global.scss */
+  footer {
+    padding: 0 15px;
   }
 }
