@@ -46,6 +46,185 @@ header {
 	}
 }
 
+#content {
+	padding-top: 45px;
+
+	// FILTER BLOCK
+
+	#result-filter {
+
+		.filter-block {
+			margin-bottom: 20px;
+
+			span.filter-title {
+				font-size: 12px;
+				font-weight: bold;
+				color: #a6a6a6;
+				text-transform: uppercase;
+			}
+
+			ul {
+				list-style: none;
+				margin: 8px 0 0 0;
+
+				li {
+
+					input[type="checkbox"] {
+						margin: 0;
+						
+					}
+
+					label {
+						color: $secondary-color;
+						display: inline;
+
+						&:after {
+							content:"\a";
+    						white-space:pre;
+						}
+					}
+
+					&.checked {
+
+						label {
+							color: $black-color;
+							font-weight: 600;
+						}
+					}
+
+					&.more {
+						img {
+							
+							padding: 0 9px 0 0;
+						}
+
+						a {
+							color: #a6a6a6;
+							font-size: 0.875rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// RESULT LISTING
+
+	.result-list {
+
+		.result-header {
+			padding-bottom: 15px;
+			border-bottom: 1px solid #e7e7e7;
+
+			h1 {
+				font-size: 16px;
+				font-weight: bold;
+				margin:0;
+			}
+		}
+
+		.result {
+			padding: 20px 0;
+			border-bottom: 1px solid #e7e7e7;
+
+			h2.jobtitle {
+				color: $primary-color;
+				font-size: 20px;
+				margin: 0 0 5px 0;
+				font-weight: bold;
+			}
+
+			p.description {
+				color: $secondary-color;
+				font-size: 13px;
+				margin: 10px 0 0 0;
+				height: 40px;
+				overflow: hidden;
+    			text-overflow: ellipsis;
+    			display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+
+			span {
+				font-size: 14px;
+
+				&.company {
+					font-weight: bold;
+				}
+
+				&.date {
+					color: #a6a6a6;
+				}
+			}
+
+			span + span:before{
+			  content: "•";
+			  font-size: 12px;
+			  padding: 0 5px;
+			  color: #a6a6a6;
+			}
+		}
+
+		.result-ads {
+			padding: 20px;
+			margin: 20px 0;
+			background: $orange-color;
+
+			img {
+				display: block;
+				float: left;
+				margin-right: 15px;
+			}
+
+			span {
+				font-size: 18px;
+				color: #FFF;
+				font-weight: bold;
+				display: block;
+
+				&.alert {
+					font-size: 12px;
+					color: #763307;
+					font-weight: normal;
+				}
+			}
+
+			.large-9 {
+				padding-left: 0;
+			}
+
+			.large-8 {
+				padding: 10px 0;
+				display: block;
+				clear: both;
+
+				input[type="text"] {
+					margin:0;
+					border: none;
+					@include box-shadow(none);
+				}
+
+				.button {
+					margin: 0;
+					background: $black-color;
+					font-weight: bold;
+				}
+			}
+
+		}
+
+		.pages {
+			border-top: 1px solid #e7e7e7;
+			padding-right: 0;
+
+			.pagination {
+				padding: 15px 0;
+			}
+		}
+	}
+}
+
 
 
 

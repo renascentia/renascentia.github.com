@@ -16,9 +16,6 @@
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/search.css">
 
-  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-  <script src="js/vendor/jquery-1.10.2.min.js"></script>
-
 </head>
 
 
@@ -65,7 +62,7 @@
           </div>
 
           <div class="large-2 columns">
-            <a href="#" class="button tiny">Find Jobs</a>
+            <a href="#" class="button tiny expand">Find Jobs</a>
           </div>
         </div>
       </div>
@@ -76,35 +73,35 @@
 
       <div class="row">
 
-        <div class="large-3 columns result-filter">
+        <div id="result-filter" class="large-3 columns">
           <div class="filter-block">
-            <span class="filter-title">Title</span>
+            <span class="filter-title">Job Title</span>
             <ul>
-              <li><input id="checkbox1" type="checkbox" class="selected"><label for="checkbox1">Web Developer (41)</label></li>
+              <li class="checked"><input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1">Web Developer (41)</label></li>
               <li><input id="checkbox2" type="checkbox"><label for="checkbox2">Frontend Engineer (8)</label></li>
-              <li><input id="checkbox3" type="checkbox"><label for="checkbox3">Backend Engineer (13)</label></li>
+              <li class="checked"><input id="checkbox3" type="checkbox" checked="checked"><label for="checkbox3">Backend Engineer (13)</label></li>
               <li><input id="checkbox4" type="checkbox"><label for="checkbox4">Full Stack Developer (3)</label></li>
-              <li><input id="checkbox5" type="checkbox"><label for="checkbox5">Show more</label></li>
-            </ul>
-          </div>
-          <div class="filter-block">
-            <span class="filter-title">Company</span>
-            <ul>
-              <li><input id="checkbox1" type="checkbox" class="selected"><label for="checkbox1">Web Developer (41)</label></li>
-              <li><input id="checkbox2" type="checkbox"><label for="checkbox2">Frontend Engineer (8)</label></li>
-              <li><input id="checkbox3" type="checkbox"><label for="checkbox3">Backend Engineer (13)</label></li>
-              <li><input id="checkbox4" type="checkbox"><label for="checkbox4">Full Stack Developer (3)</label></li>
-              <li><input id="checkbox5" type="checkbox"><label for="checkbox5">Show more</label></li>
+              <li class="more"><img src="img/icon-showMore.png" alt="Show me more"><a href="#">View More</a></li>
             </ul>
           </div>
           <div class="filter-block">
             <span class="filter-title">Location</span>
             <ul>
-              <li><input id="checkbox1" type="checkbox" class="selected"><label for="checkbox1">Web Developer (41)</label></li>
-              <li><input id="checkbox2" type="checkbox"><label for="checkbox2">Frontend Engineer (8)</label></li>
-              <li><input id="checkbox3" type="checkbox"><label for="checkbox3">Backend Engineer (13)</label></li>
-              <li><input id="checkbox4" type="checkbox"><label for="checkbox4">Full Stack Developer (3)</label></li>
-              <li><input id="checkbox5" type="checkbox"><label for="checkbox5">Show more</label></li>
+              <li class="checked"><input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1">San Francisco, CA</label></li>
+              <li><input id="checkbox2" type="checkbox"><label for="checkbox2">San Diego, CA (8)</label></li>
+              <li><input id="checkbox3" type="checkbox"><label for="checkbox3">Oakland, CA (13)</label></li>
+              <li><input id="checkbox4" type="checkbox"><label for="checkbox4">Palo Alto, CA (3)</label></li>
+              <li class="more"><img src="img/icon-showMore.png" alt="Show me more"><a href="#">View More</a></li>
+            </ul>
+          </div>
+          <div class="filter-block">
+            <span class="filter-title">Company</span>
+            <ul>
+              <li><input id="checkbox1" type="checkbox"><label for="checkbox1">Google (41)</label></li>
+              <li><input id="checkbox2" type="checkbox"><label for="checkbox2">Facebook (8)</label></li>
+              <li><input id="checkbox3" type="checkbox"><label for="checkbox3">LinkedIn (13)</label></li>
+              <li><input id="checkbox4" type="checkbox"><label for="checkbox4">Microsoft (3)</label></li>
+              <li class="more"><img src="img/icon-showMore.png" alt="Show me more"><a href="#">View More</a></li>
             </ul>
           </div>
         </div>
@@ -114,55 +111,76 @@
             <h1>980 Web Developer jobs in San Francisco, CA</h1>
           </div>
           <div class="result">
-            <h2 class="jobtitle">Web Developer Engineer</h2>
+            <h2 class="jobtitle"><a href="#">Web Developer Engineer</a></h2>
             <span class="company">Google</span>
             <span class="location">San Francisco, CA</span>
             <span class="date">Posted 3 days ago</span>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at lorem porta...</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at testing more words here</p>
           </div>
           <div class="result">
-            <h2 class="jobtitle">Web Developer Engineer</h2>
+            <h2 class="jobtitle"><a href="#">Web Developer Engineer</a></h2>
             <span class="company">Google</span>
             <span class="location">San Francisco, CA</span>
             <span class="date">Posted 3 days ago</span>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at lorem porta...</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at...</p>
           </div>
           <div class="result">
-            <h2 class="jobtitle">Web Developer Engineer</h2>
+            <h2 class="jobtitle"><a href="#">Web Developer Engineer</a></h2>
             <span class="company">Google</span>
             <span class="location">San Francisco, CA</span>
             <span class="date">Posted 3 days ago</span>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at lorem porta...</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at...</p>
           </div>
           <div class="result">
-            <h2 class="jobtitle">Web Developer Engineer</h2>
+            <h2 class="jobtitle"><a href="#">Web Developer Engineer</a></h2>
             <span class="company">Google</span>
             <span class="location">San Francisco, CA</span>
             <span class="date">Posted 3 days ago</span>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at lorem porta...</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at...</p>
           </div>
           <div class="result">
-            <h2 class="jobtitle">Web Developer Engineer</h2>
+            <h2 class="jobtitle"><a href="#">Web Developer Engineer</a></h2>
             <span class="company">Google</span>
             <span class="location">San Francisco, CA</span>
             <span class="date">Posted 3 days ago</span>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at lorem porta...</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lacus eu mi pretium, et lacinia nisl aliquam. Quisque auctor ex ut dui elementum hendrerit. Donec rhoncus eros id sollicitudin gravida. Suspendisse at...</p>
           </div>
-          <div class="result-ads">
-            <img src="" alt="">
-            <span>Get email updates for the latest Web Developer jobs in San Francisco, CA</span>
-            <div class="large-5 columns">
-              <div class="row collapse">
-                <div class="small-8 columns">
-                  <input type="text" placeholder="Your Email">
-                </div>
-                <div class="small-4 columns">
-                  <a href="#" class="button postfix">Activate</a>
+
+          <div class="large-12 columns result-ads">
+            <div class="large-3 columns">
+              <img src="img/img-emailAlert.png" class="show-for-large-up" alt="Get job updates!">
+            </div>
+            <div class="large-9 columns">
+              <span>Get email updates for the latest Web Developer jobs in San Francisco, CA</span>
+              <div class="large-8 columns">
+                <div class="row collapse">
+                  <div class="small-7 columns">
+                    <input type="text" placeholder="Your Email">
+                  </div>
+                  <div class="small-5 columns">
+                    <a href="#" class="button postfix">Activate</a>
+                  </div>
                 </div>
               </div>
+              <div class="clearfix"></div>
+              <span class="alert">You can cancel email alerts at any time.</span>
             </div>
-            <span class="alert">You can cancel email alerts at any time.</span>
           </div>
+
+          <div class="large-12 columns pages">
+            <ul class="pagination right">
+              <li class="arrow unavailable"><a href="">&laquo;</a></li>
+              <li class="current"><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li class="unavailable"><a href="">&hellip;</a></li>
+              <li><a href="">12</a></li>
+              <li><a href="">13</a></li>
+              <li class="arrow"><a href="">&raquo;</a></li>
+            </ul>
+          </div>
+
         </div>
 
       </div>
@@ -181,6 +199,9 @@
         </nav>
       </div>
     </footer>
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
 
   <script src="js/foundation.js"></script>
   <script src="js/foundation.interchange.js"></script>
