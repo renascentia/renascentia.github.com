@@ -219,7 +219,7 @@ header .button {
   font-weight: bold;
 }
 /* line 81, ../scss/description.scss */
-#content #job-description .job-details .first {
+#content #job-description .job-details .large-4 {
   padding-left: 0;
 }
 /* line 87, ../scss/description.scss */
@@ -256,38 +256,72 @@ header .button {
 #content #job-description .apply-bottom a.button {
   margin: 0;
 }
+/* line 126, ../scss/description.scss */
+#content #apply-sidebar h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 7px 0;
+}
+/* line 132, ../scss/description.scss */
+#content #apply-sidebar span {
+  display: block;
+  margin-bottom: 15px;
+  color: #797f84;
+}
+/* line 138, ../scss/description.scss */
+#content #apply-sidebar .form {
+  padding-left: 5px;
+}
 
 @media only screen and (max-width: 40em) {
-  /* line 134, ../scss/description.scss */
+  /* line 150, ../scss/description.scss */
   #content {
-    padding-bottom: 200px;
+    padding-bottom: 100px;
+  }
+  /* line 155, ../scss/description.scss */
+  #content #job-description .job-details {
+    padding: 0 0 10px 0;
+  }
+  /* line 158, ../scss/description.scss */
+  #content #job-description .job-details .large-4 {
+    padding: 10px 0;
   }
 
-  /* line 138, ../scss/description.scss */
+  /* line 166, ../scss/description.scss */
   footer {
     padding: 10px 15px;
     height: 80px;
     text-align: center;
   }
-  /* line 143, ../scss/description.scss */
+  /* line 171, ../scss/description.scss */
   footer p {
     float: none !important;
     display: block;
     line-height: 30px;
   }
 
-  /* line 151, ../scss/description.scss */
+  /* line 179, ../scss/description.scss */
   nav {
     float: none !important;
     text-align: center;
   }
-  /* line 155, ../scss/description.scss */
+  /* line 183, ../scss/description.scss */
   nav ul {
     margin: 0;
   }
-  /* line 159, ../scss/description.scss */
+  /* line 187, ../scss/description.scss */
   nav ul li {
     display: inline;
     line-height: 30px !important;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 203, ../scss/description.scss */
+  #content #job-description .job-details {
+    padding: 0 0 10px 0;
+  }
+  /* line 206, ../scss/description.scss */
+  #content #job-description .job-details .large-4 {
+    padding: 10px 0;
   }
 }

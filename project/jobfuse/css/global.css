@@ -6111,32 +6111,36 @@ h2 {
   font-weight: bold;
 }
 
-/* line 121, ../scss/global.scss */
+/* line 119, ../scss/global.scss */
+.button {
+  -webkit-font-smoothing: antialiased;
+}
+/* line 122, ../scss/global.scss */
 .button.small {
   font-size: 18px;
   font-weight: bold;
   padding: 12px 20px;
 }
-/* line 127, ../scss/global.scss */
+/* line 128, ../scss/global.scss */
 .button.orange {
   background: #ff6908;
   font-weight: bold;
 }
-/* line 131, ../scss/global.scss */
+/* line 132, ../scss/global.scss */
 .button.orange:hover {
   background: #e05801;
 }
-/* line 135, ../scss/global.scss */
+/* line 136, ../scss/global.scss */
 .button.orange:focus {
   background: #ff6908;
 }
 
-/* line 141, ../scss/global.scss */
+/* line 142, ../scss/global.scss */
 input[type="checkbox"] {
   display: none;
 }
 
-/* line 145, ../scss/global.scss */
+/* line 146, ../scss/global.scss */
 input[type="checkbox"] + label span {
   display: inline-block;
   width: 16px;
@@ -6146,22 +6150,22 @@ input[type="checkbox"] + label span {
   background: url(../img/checkbox.png) left top no-repeat;
   cursor: pointer;
 }
-/* line 154, ../scss/global.scss */
+/* line 155, ../scss/global.scss */
 input[type="checkbox"] + label span:hover {
   background: url(../img/checkbox.png) left -16px no-repeat;
 }
 
-/* line 159, ../scss/global.scss */
+/* line 160, ../scss/global.scss */
 input[type="checkbox"]:checked + label span {
   background: url(../img/checkbox.png) left -32px no-repeat;
 }
-/* line 162, ../scss/global.scss */
+/* line 163, ../scss/global.scss */
 input[type="checkbox"]:checked + label span:hover {
   background: url(../img/checkbox.png) left -48px no-repeat;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 170, ../scss/global.scss */
+  /* line 171, ../scss/global.scss */
   footer {
     padding: 0 15px;
   }

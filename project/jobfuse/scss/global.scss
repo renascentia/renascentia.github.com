@@ -117,6 +117,7 @@ h2 {
 // FORMS
 
   .button {
+    -webkit-font-smoothing: antialiased;
 
     &.small {
       font-size: 18px;
