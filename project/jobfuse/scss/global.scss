@@ -102,6 +102,69 @@ footer {
   }
 }
 
+// TYPE
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+// FORMS
+
+  .button {
+
+    &.small {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px 20px;
+    }
+
+    &.orange {
+      background: $orange-color;
+      font-weight: bold;
+
+      &:hover {
+        background: #e05801;
+      }
+
+      &:focus {
+        background: $orange-color;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+      display:none;
+  }
+
+  input[type="checkbox"] + label span{
+      display:inline-block;
+      width:16px;
+      height:16px;
+      margin:0px 7px 0 0;
+      vertical-align:middle;
+      background: url(../img/checkbox.png) left top no-repeat;
+      cursor:pointer;
+
+      &:hover {
+        background: url(../img/checkbox.png) left -16px no-repeat;
+      }
+  }
+
+  input[type="checkbox"]:checked + label span{
+      background:url(../img/checkbox.png) left -32px no-repeat;
+
+      &:hover {
+        background:url(../img/checkbox.png) left -48px no-repeat;
+      }
+  }
+
+
 @media #{$medium-only} { 
 
   footer {
