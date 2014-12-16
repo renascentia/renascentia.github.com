@@ -234,93 +234,100 @@ header .button {
 #content #job-description .apply-bottom {
   background: #FFF;
   border: 1px solid #e1e1e1;
+  position: relative;
   padding: 15px 20px;
   margin: 10px 0 50px 0;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
-/* line 103, ../scss/description.scss */
+/* line 104, ../scss/description.scss */
 #content #job-description .apply-bottom h3 {
   font-size: 20px;
   font-weight: bold;
   margin: 0 0 7px 0;
 }
-/* line 109, ../scss/description.scss */
+/* line 110, ../scss/description.scss */
 #content #job-description .apply-bottom span {
   display: block;
   margin-bottom: 10px;
   color: #797f84;
 }
-/* line 115, ../scss/description.scss */
+/* line 116, ../scss/description.scss */
 #content #job-description .apply-bottom a.button {
   margin: 0;
 }
-/* line 126, ../scss/description.scss */
+/* line 120, ../scss/description.scss */
+#content #job-description .apply-bottom .icon-apply {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+/* line 133, ../scss/description.scss */
 #content #apply-sidebar h3 {
   font-size: 20px;
   font-weight: bold;
   margin: 0 0 7px 0;
 }
-/* line 132, ../scss/description.scss */
+/* line 139, ../scss/description.scss */
 #content #apply-sidebar span {
   display: block;
   margin-bottom: 15px;
   color: #797f84;
 }
-/* line 138, ../scss/description.scss */
+/* line 145, ../scss/description.scss */
 #content #apply-sidebar .form {
   padding-left: 5px;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 150, ../scss/description.scss */
+  /* line 157, ../scss/description.scss */
   #content {
     padding-bottom: 100px;
   }
-  /* line 155, ../scss/description.scss */
+  /* line 162, ../scss/description.scss */
   #content #job-description .job-details {
     padding: 0 0 10px 0;
   }
-  /* line 158, ../scss/description.scss */
+  /* line 165, ../scss/description.scss */
   #content #job-description .job-details .large-4 {
     padding: 10px 0;
   }
 
-  /* line 166, ../scss/description.scss */
+  /* line 173, ../scss/description.scss */
   footer {
     padding: 10px 15px;
     height: 80px;
     text-align: center;
   }
-  /* line 171, ../scss/description.scss */
+  /* line 178, ../scss/description.scss */
   footer p {
     float: none !important;
     display: block;
     line-height: 30px;
   }
 
-  /* line 179, ../scss/description.scss */
+  /* line 186, ../scss/description.scss */
   nav {
     float: none !important;
     text-align: center;
   }
-  /* line 183, ../scss/description.scss */
+  /* line 190, ../scss/description.scss */
   nav ul {
     margin: 0;
   }
-  /* line 187, ../scss/description.scss */
+  /* line 194, ../scss/description.scss */
   nav ul li {
     display: inline;
     line-height: 30px !important;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 203, ../scss/description.scss */
+  /* line 210, ../scss/description.scss */
   #content #job-description .job-details {
     padding: 0 0 10px 0;
   }
-  /* line 206, ../scss/description.scss */
+  /* line 213, ../scss/description.scss */
   #content #job-description .job-details .large-4 {
     padding: 10px 0;
   }
