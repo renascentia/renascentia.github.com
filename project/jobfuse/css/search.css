@@ -380,8 +380,12 @@ header .button {
   header .button {
     margin: 0 0 30px 0;
   }
+  /* line 260, ../scss/search.scss */
+  header .large-2 {
+    padding-left: 0;
+  }
 
-  /* line 261, ../scss/search.scss */
+  /* line 265, ../scss/search.scss */
   #result-filter {
     display: none;
     padding-top: 15px;
@@ -390,70 +394,74 @@ header .button {
     background: #f9f9f9;
   }
 
-  /* line 269, ../scss/search.scss */
+  /* line 273, ../scss/search.scss */
   .filter-toggle {
     display: block;
   }
 
-  /* line 273, ../scss/search.scss */
+  /* line 277, ../scss/search.scss */
   .search-toggle {
     display: block;
   }
 
-  /* line 277, ../scss/search.scss */
+  /* line 281, ../scss/search.scss */
   footer {
     padding: 10px 15px;
     height: 80px;
     text-align: center;
   }
-  /* line 282, ../scss/search.scss */
+  /* line 286, ../scss/search.scss */
   footer p {
     float: none !important;
     display: block;
     line-height: 30px;
   }
 
-  /* line 290, ../scss/search.scss */
+  /* line 294, ../scss/search.scss */
   nav {
     float: none !important;
     text-align: center;
   }
-  /* line 294, ../scss/search.scss */
+  /* line 298, ../scss/search.scss */
   nav ul {
     margin: 0;
   }
-  /* line 298, ../scss/search.scss */
+  /* line 302, ../scss/search.scss */
   nav ul li {
     display: inline;
     line-height: 30px !important;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 309, ../scss/search.scss */
+  /* line 313, ../scss/search.scss */
   #content {
     padding-bottom: 100px;
     padding-top: 20px;
   }
-  /* line 313, ../scss/search.scss */
+  /* line 317, ../scss/search.scss */
   #content .result-header {
     margin-top: 20px;
   }
 
-  /* line 318, ../scss/search.scss */
+  /* line 322, ../scss/search.scss */
   header {
     height: 100%;
   }
-  /* line 321, ../scss/search.scss */
+  /* line 325, ../scss/search.scss */
   header .header-search {
     background: red;
     display: none;
   }
-  /* line 326, ../scss/search.scss */
+  /* line 330, ../scss/search.scss */
   header .button {
     margin: 0 0 30px 0;
   }
+  /* line 334, ../scss/search.scss */
+  header .large-2 {
+    padding-left: 0;
+  }
 
-  /* line 331, ../scss/search.scss */
+  /* line 339, ../scss/search.scss */
   #result-filter {
     display: none;
     padding-top: 15px;
@@ -462,12 +470,12 @@ header .button {
     background: #f9f9f9;
   }
 
-  /* line 339, ../scss/search.scss */
+  /* line 347, ../scss/search.scss */
   .filter-toggle {
     display: block;
   }
 
-  /* line 343, ../scss/search.scss */
+  /* line 351, ../scss/search.scss */
   .search-toggle {
     display: block;
   }

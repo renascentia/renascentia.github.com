@@ -281,3 +281,9 @@ select {
     display: none;
   }
 }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 146, ../scss/home.scss */
+  #content {
+    padding-bottom: 200px;
+  }
+}
