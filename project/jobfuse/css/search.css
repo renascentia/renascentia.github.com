@@ -228,7 +228,7 @@ header .button {
 }
 /* line 94, ../scss/search.scss */
 #content #result-filter .filter-block ul li.more img {
-  padding: 0 9px 0 0;
+  margin: 0 9px 0 0;
 }
 /* line 99, ../scss/search.scss */
 #content #result-filter .filter-block ul li.more a {
@@ -396,30 +396,79 @@ header .button {
   }
 
   /* line 273, ../scss/search.scss */
+  .search-toggle {
+    display: block;
+  }
+
+  /* line 277, ../scss/search.scss */
   footer {
     padding: 10px 15px;
     height: 80px;
     text-align: center;
   }
-  /* line 278, ../scss/search.scss */
+  /* line 282, ../scss/search.scss */
   footer p {
     float: none !important;
     display: block;
     line-height: 30px;
   }
 
-  /* line 286, ../scss/search.scss */
+  /* line 290, ../scss/search.scss */
   nav {
     float: none !important;
     text-align: center;
   }
-  /* line 290, ../scss/search.scss */
+  /* line 294, ../scss/search.scss */
   nav ul {
     margin: 0;
   }
-  /* line 294, ../scss/search.scss */
+  /* line 298, ../scss/search.scss */
   nav ul li {
     display: inline;
     line-height: 30px !important;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 309, ../scss/search.scss */
+  #content {
+    padding-bottom: 100px;
+    padding-top: 20px;
+  }
+  /* line 313, ../scss/search.scss */
+  #content .result-header {
+    margin-top: 20px;
+  }
+
+  /* line 318, ../scss/search.scss */
+  header {
+    height: 100%;
+  }
+  /* line 321, ../scss/search.scss */
+  header .header-search {
+    background: red;
+    display: none;
+  }
+  /* line 326, ../scss/search.scss */
+  header .button {
+    margin: 0 0 30px 0;
+  }
+
+  /* line 331, ../scss/search.scss */
+  #result-filter {
+    display: none;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 1px;
+    background: #f9f9f9;
+  }
+
+  /* line 339, ../scss/search.scss */
+  .filter-toggle {
+    display: block;
+  }
+
+  /* line 343, ../scss/search.scss */
+  .search-toggle {
+    display: block;
   }
 }

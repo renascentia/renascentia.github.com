@@ -47,11 +47,23 @@ body {
 
 .filter-toggle {
   display: none;
-  border: 1px solid #f2f2f2;
+  //background: #fcfcfc;
+  border: 1px solid #e1e1e1;
   padding: 15px 10px;
 
   span {
     color: $secondary-color;
+  }
+}
+
+.search-toggle {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 15px;
+
+  img {
+    margin-right: 5px;
   }
 }
 

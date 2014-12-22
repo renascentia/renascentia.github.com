@@ -93,7 +93,7 @@ header {
 					&.more {
 						img {
 							
-							padding: 0 9px 0 0;
+							margin: 0 9px 0 0;
 						}
 
 						a {
@@ -270,6 +270,10 @@ header {
 		display: block;
 	}
 
+	.search-toggle {
+		display: block;
+	}
+
 	footer {
 	padding: 10px 15px;
 	height: 80px;
@@ -296,6 +300,48 @@ header {
 		    line-height: 30px !important;
 		  }
 		}
+	}
+
+}
+
+@media #{$medium-only} { 
+
+	#content {
+		padding-bottom: 100px;
+		padding-top: 20px;
+
+		.result-header {
+			margin-top: 20px;
+		}
+	}
+
+	header {
+		height: 100%;
+
+		.header-search {
+			background: red;
+			display: none;
+		}
+
+		.button {
+			margin: 0 0 30px 0;
+		}
+	}
+
+	#result-filter {
+		display: none;
+		padding-top: 15px;
+		padding-left: 15px;
+		padding-bottom: 1px;
+		background: #f9f9f9;
+	}
+
+	.filter-toggle {
+		display: block;
+	}
+
+	.search-toggle {
+		display: block;
 	}
 
 }

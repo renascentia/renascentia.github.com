@@ -6044,26 +6044,38 @@ body {
 /* line 48, ../scss/global.scss */
 .filter-toggle {
   display: none;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #e1e1e1;
   padding: 15px 10px;
 }
-/* line 53, ../scss/global.scss */
+/* line 54, ../scss/global.scss */
 .filter-toggle span {
   color: #797f84;
 }
 
-/* line 58, ../scss/global.scss */
+/* line 59, ../scss/global.scss */
+.search-toggle {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 15px;
+}
+/* line 65, ../scss/global.scss */
+.search-toggle img {
+  margin-right: 5px;
+}
+
+/* line 70, ../scss/global.scss */
 .inner-wrap {
   min-height: 100%;
   position: relative;
 }
 
-/* line 63, ../scss/global.scss */
+/* line 75, ../scss/global.scss */
 #content {
   padding-bottom: 50px;
 }
 
-/* line 67, ../scss/global.scss */
+/* line 79, ../scss/global.scss */
 footer {
   border-top: 1px solid #e8e8e8;
   color: #797f84;
@@ -6074,35 +6086,35 @@ footer {
   left: 0;
   background: #f9f9f9;
 }
-/* line 78, ../scss/global.scss */
+/* line 90, ../scss/global.scss */
 footer nav {
   float: right;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 84, ../scss/global.scss */
+/* line 96, ../scss/global.scss */
 footer nav ul {
   margin: 0;
 }
-/* line 87, ../scss/global.scss */
+/* line 99, ../scss/global.scss */
 footer nav ul li {
   position: relative;
   line-height: 50px;
   display: inline;
 }
-/* line 93, ../scss/global.scss */
+/* line 105, ../scss/global.scss */
 footer nav ul li a {
   font-size: 14px;
   color: #797f84;
 }
-/* line 99, ../scss/global.scss */
+/* line 111, ../scss/global.scss */
 footer nav ul li + li:before {
   content: "•";
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 107, ../scss/global.scss */
+/* line 119, ../scss/global.scss */
 footer p {
   font-size: 14px;
   margin: 0;
@@ -6110,48 +6122,48 @@ footer p {
   float: left;
 }
 
-/* line 117, ../scss/global.scss */
+/* line 129, ../scss/global.scss */
 h1 {
   font-size: 22px;
   font-weight: bold;
 }
 
-/* line 122, ../scss/global.scss */
+/* line 134, ../scss/global.scss */
 h2 {
   font-size: 20px;
   font-weight: bold;
 }
 
-/* line 129, ../scss/global.scss */
+/* line 141, ../scss/global.scss */
 .button {
   -webkit-font-smoothing: antialiased;
 }
-/* line 132, ../scss/global.scss */
+/* line 144, ../scss/global.scss */
 .button.small {
   font-size: 18px;
   font-weight: bold;
   padding: 12px 20px;
 }
-/* line 138, ../scss/global.scss */
+/* line 150, ../scss/global.scss */
 .button.orange {
   background: #ff6908;
   font-weight: bold;
 }
-/* line 142, ../scss/global.scss */
+/* line 154, ../scss/global.scss */
 .button.orange:hover {
   background: #e05801;
 }
-/* line 146, ../scss/global.scss */
+/* line 158, ../scss/global.scss */
 .button.orange:focus {
   background: #ff6908;
 }
 
-/* line 152, ../scss/global.scss */
+/* line 164, ../scss/global.scss */
 input[type="checkbox"] {
   display: none;
 }
 
-/* line 156, ../scss/global.scss */
+/* line 168, ../scss/global.scss */
 input[type="checkbox"] + label span {
   display: inline-block;
   width: 16px;
@@ -6161,22 +6173,22 @@ input[type="checkbox"] + label span {
   background: url(../img/checkbox.png) left top no-repeat;
   cursor: pointer;
 }
-/* line 165, ../scss/global.scss */
+/* line 177, ../scss/global.scss */
 input[type="checkbox"] + label span:hover {
   background: url(../img/checkbox.png) left -16px no-repeat;
 }
 
-/* line 170, ../scss/global.scss */
+/* line 182, ../scss/global.scss */
 input[type="checkbox"]:checked + label span {
   background: url(../img/checkbox.png) left -32px no-repeat;
 }
-/* line 173, ../scss/global.scss */
+/* line 185, ../scss/global.scss */
 input[type="checkbox"]:checked + label span:hover {
   background: url(../img/checkbox.png) left -48px no-repeat;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 181, ../scss/global.scss */
+  /* line 193, ../scss/global.scss */
   footer {
     padding: 0 15px;
   }
