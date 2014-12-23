@@ -124,6 +124,12 @@ footer {
   }
 }
 
+header {
+  .logo-block {
+      padding-left: 0;
+    }
+}
+
 // TYPE
 
 h1 {
@@ -192,6 +198,19 @@ h2 {
 
   footer {
     padding: 0 15px;
+  }
+
+
+}
+
+@media #{$large-only} { 
+
+  #result-filter {
+    display: block;
+  }
+
+  .header-search {
+    display: block;
   }
 
 

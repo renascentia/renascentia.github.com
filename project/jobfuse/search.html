@@ -33,7 +33,7 @@
     <header>
       <div class="row">
         <div class="large-12 columns">
-          <div class="large-2 columns">
+          <div class="large-2 columns logo-block">
             <a href="index.html" class="header-logo"><img src="img/logo-small.png" data-interchange="[img/logo-small.png, (default)], [img/logo-small@2x.png, (retina)]" width="132" height="46" alt="JobFuse"></a>
           </div>
 
@@ -230,10 +230,25 @@
       $('#result-filter').toggle();
     });
 
+    jQuery(window).on('resize', function(){     
+      if(!jQuery(".filter-toggle").is(":visible") && !jQuery("#result-filter").is(':visible'))
+      {
+          jQuery("#result-filter").show();   
+      }
+    });  
+
+
     $('.search-toggle').click(function(event) {
       event.preventDefault();
       $('.header-search').toggle();
     });
+
+    jQuery(window).on('resize', function(){     
+      if(!jQuery(".search-toggle").is(":visible") && !jQuery(".header-search").is(':visible'))
+      {
+          jQuery(".header-search").show();   
+      }
+    });  
 
   </script>
 </body>

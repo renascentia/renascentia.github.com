@@ -6122,48 +6122,53 @@ footer p {
   float: left;
 }
 
-/* line 129, ../scss/global.scss */
+/* line 128, ../scss/global.scss */
+header .logo-block {
+  padding-left: 0;
+}
+
+/* line 135, ../scss/global.scss */
 h1 {
   font-size: 22px;
   font-weight: bold;
 }
 
-/* line 134, ../scss/global.scss */
+/* line 140, ../scss/global.scss */
 h2 {
   font-size: 20px;
   font-weight: bold;
 }
 
-/* line 141, ../scss/global.scss */
+/* line 147, ../scss/global.scss */
 .button {
   -webkit-font-smoothing: antialiased;
 }
-/* line 144, ../scss/global.scss */
+/* line 150, ../scss/global.scss */
 .button.small {
   font-size: 18px;
   font-weight: bold;
   padding: 12px 20px;
 }
-/* line 150, ../scss/global.scss */
+/* line 156, ../scss/global.scss */
 .button.orange {
   background: #ff6908;
   font-weight: bold;
 }
-/* line 154, ../scss/global.scss */
+/* line 160, ../scss/global.scss */
 .button.orange:hover {
   background: #e05801;
 }
-/* line 158, ../scss/global.scss */
+/* line 164, ../scss/global.scss */
 .button.orange:focus {
   background: #ff6908;
 }
 
-/* line 164, ../scss/global.scss */
+/* line 170, ../scss/global.scss */
 input[type="checkbox"] {
   display: none;
 }
 
-/* line 168, ../scss/global.scss */
+/* line 174, ../scss/global.scss */
 input[type="checkbox"] + label span {
   display: inline-block;
   width: 16px;
@@ -6173,23 +6178,34 @@ input[type="checkbox"] + label span {
   background: url(../img/checkbox.png) left top no-repeat;
   cursor: pointer;
 }
-/* line 177, ../scss/global.scss */
+/* line 183, ../scss/global.scss */
 input[type="checkbox"] + label span:hover {
   background: url(../img/checkbox.png) left -16px no-repeat;
 }
 
-/* line 182, ../scss/global.scss */
+/* line 188, ../scss/global.scss */
 input[type="checkbox"]:checked + label span {
   background: url(../img/checkbox.png) left -32px no-repeat;
 }
-/* line 185, ../scss/global.scss */
+/* line 191, ../scss/global.scss */
 input[type="checkbox"]:checked + label span:hover {
   background: url(../img/checkbox.png) left -48px no-repeat;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 193, ../scss/global.scss */
+  /* line 199, ../scss/global.scss */
   footer {
     padding: 0 15px;
+  }
+}
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  /* line 208, ../scss/global.scss */
+  #result-filter {
+    display: block;
+  }
+
+  /* line 212, ../scss/global.scss */
+  .header-search {
+    display: block;
   }
 }
