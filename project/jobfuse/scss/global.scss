@@ -2,6 +2,8 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
+@import "framework/mixins";
+
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
@@ -178,6 +180,7 @@ h2 {
       margin:0px 7px 0 0;
       vertical-align:middle;
       background: url(../img/checkbox.png) left top no-repeat;
+      @include image-2x("../img/checkbox@2x.png", 16px, 16px);
       cursor:pointer;
 
       &:hover {
