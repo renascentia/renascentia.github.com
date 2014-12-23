@@ -14,7 +14,14 @@
   <link rel="stylesheet" href="css/global.css">
 
   <!-- Custom styles -->
-  <link rel="stylesheet" href="css/description.css">
+  <link rel="stylesheet" href="css/search.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+<![endif]-->
 
 </head>
 
@@ -33,37 +40,46 @@
     <header>
       <div class="row">
         <div class="large-12 columns">
-          <div class="large-2 columns">
-            <a href="index.html" class="header-logo"><img src="img/logo-small.png" alt="JobFuse"></a>
-          </div>
-                
-          <div class="large-4 columns">
-              <div class="row collapse input">
-                <p>job title, position or keyword</p>
-                <div class="small-3 large-3 columns">
-                  <span class="prefix">What</span>
-                </div>
-                <div class="small-9 large-9 columns">
-                  <input type="text" value="Web Developer">
-                </div>
-              </div>
-          </div>
-                
-          <div class="large-4 columns">
-              <div class="row collapse input">
-                <p>city, state or zip code</p>
-                <div class="small-3 large-3 columns">
-                  <span class="prefix">Where</span>
-                </div>
-                <div class="small-9 large-9 columns">
-                  <input type="text" value="San Francisco, CA">
-                </div>
-              </div>
+          <div class="large-2 columns logo-block">
+            <a href="index.html" class="header-logo"><img src="img/logo-small.png" data-interchange="[img/logo-small.png, (default)], [img/logo-small@2x.png, (retina)]" width="132" height="46" alt="JobFuse"></a>
           </div>
 
-          <div class="large-2 columns">
-            <a href="#" class="button orange tiny expand">Find Jobs</a>
+          <div class="search-toggle">
+            <img src="img/icon-search.png" data-interchange="[img/icon-search.png, (default)], [img/icon-search@2x.png, (retina)]" width="16" height="16" alt="Show search" class="left">
+            <span>SEARCH</span>
           </div>
+
+          <div class="header-search">
+                
+            <div class="large-4 columns">
+                <div class="row collapse input">
+                  <p>job title, position or keyword</p>
+                  <div class="small-3 large-3 columns">
+                    <span class="prefix">What</span>
+                  </div>
+                  <div class="small-9 large-9 columns">
+                    <input type="text" value="Web Developer">
+                  </div>
+                </div>
+            </div>
+                  
+            <div class="large-4 columns">
+                <div class="row collapse input">
+                  <p>city, state or zip code</p>
+                  <div class="small-3 large-3 columns">
+                    <span class="prefix">Where</span>
+                  </div>
+                  <div class="small-9 large-9 columns">
+                    <input type="text" value="San Francisco, CA">
+                  </div>
+                </div>
+            </div>
+
+            <div class="large-2 columns">
+              <a href="#" class="button orange tiny expand">Find Jobs</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </header>
@@ -158,8 +174,22 @@
 
   <script src="js/foundation.js"></script>
   <script src="js/foundation.interchange.js"></script>
+  <script src="js/rem.min.js"></script>
   <script>
     $(document).foundation();
+
+
+    $('.search-toggle').click(function(event) {
+      event.preventDefault();
+      $('.header-search').toggle();
+    });
+
+    jQuery(window).on('resize', function(){     
+      if(!jQuery(".search-toggle").is(":visible") && !jQuery(".header-search").is(':visible'))
+      {
+          jQuery(".header-search").show();   
+      }
+    });
   </script>
 </body>
 </html>
