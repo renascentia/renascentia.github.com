@@ -6063,19 +6063,25 @@ body {
 .search-toggle img {
   margin-right: 5px;
 }
+/* line 68, ../scss/global.scss */
+.search-toggle span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #797f84;
+}
 
-/* line 70, ../scss/global.scss */
+/* line 75, ../scss/global.scss */
 .inner-wrap {
   min-height: 100%;
   position: relative;
 }
 
-/* line 75, ../scss/global.scss */
+/* line 80, ../scss/global.scss */
 #content {
   padding-bottom: 50px;
 }
 
-/* line 79, ../scss/global.scss */
+/* line 84, ../scss/global.scss */
 footer {
   border-top: 1px solid #e8e8e8;
   color: #797f84;
@@ -6086,35 +6092,35 @@ footer {
   left: 0;
   background: #f9f9f9;
 }
-/* line 90, ../scss/global.scss */
+/* line 95, ../scss/global.scss */
 footer nav {
   float: right;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 96, ../scss/global.scss */
+/* line 101, ../scss/global.scss */
 footer nav ul {
   margin: 0;
 }
-/* line 99, ../scss/global.scss */
+/* line 104, ../scss/global.scss */
 footer nav ul li {
   position: relative;
   line-height: 50px;
   display: inline;
 }
-/* line 105, ../scss/global.scss */
+/* line 110, ../scss/global.scss */
 footer nav ul li a {
   font-size: 14px;
   color: #797f84;
 }
-/* line 111, ../scss/global.scss */
+/* line 116, ../scss/global.scss */
 footer nav ul li + li:before {
   content: "•";
   font-size: 12px;
   padding: 0 10px;
 }
-/* line 119, ../scss/global.scss */
+/* line 124, ../scss/global.scss */
 footer p {
   font-size: 14px;
   margin: 0;
@@ -6122,74 +6128,61 @@ footer p {
   float: left;
 }
 
-/* line 128, ../scss/global.scss */
+/* line 133, ../scss/global.scss */
 header .logo-block {
   padding-left: 0;
 }
 
-/* line 135, ../scss/global.scss */
+/* line 140, ../scss/global.scss */
 h1 {
   font-size: 22px;
   font-weight: bold;
 }
 
-/* line 140, ../scss/global.scss */
+/* line 145, ../scss/global.scss */
 h2 {
   font-size: 20px;
   font-weight: bold;
 }
 
-/* line 147, ../scss/global.scss */
+/* line 152, ../scss/global.scss */
 .button {
   -webkit-font-smoothing: antialiased;
 }
-/* line 150, ../scss/global.scss */
+/* line 155, ../scss/global.scss */
 .button.small {
   font-size: 18px;
   font-weight: bold;
   padding: 12px 20px;
 }
-/* line 156, ../scss/global.scss */
+/* line 161, ../scss/global.scss */
 .button.orange {
   background: #ff6908;
   font-weight: bold;
 }
-/* line 160, ../scss/global.scss */
+/* line 165, ../scss/global.scss */
 .button.orange:hover {
   background: #e05801;
 }
-/* line 164, ../scss/global.scss */
+/* line 169, ../scss/global.scss */
 .button.orange:focus {
   background: #ff6908;
 }
 
-/* line 170, ../scss/global.scss */
+/* line 175, ../scss/global.scss */
 input[type=checkbox] {
   display: none;
 }
 
-/* line 174, ../scss/global.scss */
+/* line 179, ../scss/global.scss */
 input[type=checkbox] + label {
   display: inline-block;
   cursor: pointer;
+  position: relative;
+  padding-left: 25px;
 }
 
-/* line 178, ../scss/global.scss */
-input[type=checkbox]:checked + label:before {
-  background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20standalone%3D%22no%22%3F%3E%3C%21DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20width%3D%22100%25%22%20height%3D%22100%25%22%20version%3D%221.0%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22100%25%22%20x2%3D%22100%25%22%20y2%3D%220%22%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E") white;
-    /* Base 64 encoded SVG image, source:
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" version="1.0"
-xmlns="http://www.w3.org/2000/svg">
-<line x1="0" y1="0" x2="100%" y2="100%" stroke="#000000 "/>
-<line x1="0" y1="100%" x2="100%" y2="0" stroke="#000000"/>
-</svg>
-    */
-}
-
-/* line 190, ../scss/global.scss */
+/* line 187, ../scss/global.scss */
 input[type=checkbox] + label:before {
   content: " ";
   display: inline-block;
@@ -6199,6 +6192,9 @@ input[type=checkbox] + label:before {
   border-radius: 0.2em;
   background: #FFF;
   margin-right: 7px;
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 5px;
 }
 
 /* line 201, ../scss/global.scss */
@@ -6209,18 +6205,17 @@ input[type=checkbox]:checked + label:before {
   background-size: 10px;
   background-position: 2px 2px;
   border-color: #007ee5;
-  fill: red;
 }
 
 /* line 211, ../scss/global.scss */
 input[type="checkbox"][disabled] + label:before {
-  background: #cfcfcf;
-  border-color: #888;
+  background: #f9f9f9;
+  border-color: #cfcfcf;
 }
 
 /* line 215, ../scss/global.scss */
 input[type="checkbox"][disabled] + label {
-  color: #888;
+  color: #a6a6a6;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
