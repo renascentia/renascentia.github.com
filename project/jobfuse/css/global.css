@@ -6193,8 +6193,8 @@ input[type=checkbox] + label:before {
   background: #FFF;
   margin-right: 7px;
   position: absolute;
-  margin-left: -25px;
-  margin-top: 5px;
+  left: 0;
+  top: 1px;
 }
 
 /* line 201, ../scss/global.scss */

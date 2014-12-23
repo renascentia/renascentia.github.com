@@ -194,8 +194,8 @@ h2 {
       background:#FFF;
       margin-right:7px;
       position: absolute;
-      margin-left: -25px;
-      margin-top: 5px;
+      left: 0;
+      top: 1px;
   }
 
   input[type=checkbox]:checked + label:before {
