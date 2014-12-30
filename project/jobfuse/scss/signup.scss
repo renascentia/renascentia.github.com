@@ -3,6 +3,10 @@
 @import "framework/components/global";
 
 
+body {
+	background-color: #f7f7f7;
+}
+
 header {
 	background: #FFF;
 	border-bottom: 1px solid #e8e8e8;
@@ -48,7 +52,6 @@ header {
 
 #content {
 	padding-top: 45px;
-	background-color: #f7f7f7;
 
 	// PROMO
  
@@ -138,19 +141,34 @@ header {
 
 @media #{$small-only} { 
 
+	header {
+		height: 100%;
+
+		.header-search {
+			background: red;
+			display: none;
+		}
+
+		.button {
+			margin: 0 0 30px 0;
+		}
+
+	}
+
+	.search-toggle {
+		display: block;
+	}
+
 	#content {
 		padding-bottom: 100px;
+		padding-top: 20px;
 
-		#job-description {
+		h1 {
+			font-size: 18px;
+		}
 
-			.job-details {
-				padding: 0 0 10px 0;
-
-				.large-4 {
-					padding: 10px 0;
-				}
-
-			}
+		p {
+			font-size: 14px;
 		}
 	}
 
@@ -185,6 +203,24 @@ header {
 }
 
 @media #{$medium-only} { 
+
+	header {
+		height: 100%;
+
+		.header-search {
+			background: red;
+			display: none;
+		}
+
+		.button {
+			margin: 0 0 30px 0;
+		}
+
+	}
+
+	.search-toggle {
+		display: block;
+	}
 
 	#content {
 		//padding-bottom: 100px;
