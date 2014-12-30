@@ -20,6 +20,7 @@
   "framework/components/labels",
   "framework/components/pagination",
   "framework/components/panels",
+  "framework/components/reveal",
   "framework/components/split-buttons",
   "framework/components/tooltips",
   "framework/components/top-bar",
@@ -151,6 +152,9 @@ h2 {
 
   .button {
     -webkit-font-smoothing: antialiased;
+    background-color: #2596f3;
+    border: 1px solid #2d88e5;
+    font-weight: bold;
 
     &.small {
       font-size: 18px;
@@ -160,7 +164,7 @@ h2 {
 
     &.orange {
       background: $orange-color;
-      font-weight: bold;
+      border-color: #e25f0a;
 
       &:hover {
         background: #e05801;
@@ -199,11 +203,11 @@ h2 {
   }
 
   input[type=checkbox]:checked + label:before {
-      background-image: url("../img/checkmark.svg");
+      background-image: url("../img/check.svg");
       background-repeat: no-repeat;
       background-color: $primary-color;
-      background-size: 10px;
-      background-position: 2px 2px;
+      background-size: 12px;
+      background-position: 1px 1px;
       border-color: #007ee5;
 
   }
@@ -242,6 +246,66 @@ h2 {
   //     }
   // }
 
+
+//MODAL
+
+.reveal-modal {
+  padding: 0;
+
+  .large-12 {
+    padding: 0;
+  }
+
+  .modal-title {
+    padding: 25px 30px;
+    border-bottom: 1px solid #f2f2f2;
+
+    span {
+      color: #a6a6a6;
+      font-size: 16px;
+    }
+  }
+
+  .modal-content {
+    padding: 25px 30px;
+
+    label {
+      font-weight: bold;
+    }
+
+    .button {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .link {
+      font-size: 14px;
+      padding-top: 13px;
+      color: #a6a6a6;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .modal-bottom {
+    padding: 25px 30px;
+    border-top: 1px solid #e1ecf8;
+    background-color: #fafcfe;
+    text-align: center;
+
+    a {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+  .close-reveal-modal {
+    font-size: 1.5rem;
+    top: 20px;
+  }
+}
 
 @media #{$medium-only} { 
 

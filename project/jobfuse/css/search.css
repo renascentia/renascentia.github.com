@@ -341,47 +341,51 @@ header .button {
   box-shadow: none;
 }
 /* line 214, ../scss/search.scss */
-#content .result-list .result-ads .large-8 .button {
+#content .result-list .result-ads .large-8 a.button {
   margin: 0;
   background: #363e45;
   font-weight: bold;
 }
-/* line 223, ../scss/search.scss */
+/* line 219, ../scss/search.scss */
+#content .result-list .result-ads .large-8 a.button:hover {
+  background: #42494f;
+}
+/* line 227, ../scss/search.scss */
 #content .result-list .pages {
   border-top: 1px solid #e7e7e7;
   padding-right: 0;
 }
-/* line 227, ../scss/search.scss */
+/* line 231, ../scss/search.scss */
 #content .result-list .pages .pagination {
   padding: 15px 0;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 239, ../scss/search.scss */
+  /* line 243, ../scss/search.scss */
   #content {
     padding-bottom: 100px;
     padding-top: 20px;
   }
-  /* line 243, ../scss/search.scss */
+  /* line 247, ../scss/search.scss */
   #content .result-header {
     margin-top: 20px;
   }
 
-  /* line 248, ../scss/search.scss */
+  /* line 252, ../scss/search.scss */
   header {
     height: 100%;
   }
-  /* line 251, ../scss/search.scss */
+  /* line 255, ../scss/search.scss */
   header .header-search {
     background: red;
     display: none;
   }
-  /* line 256, ../scss/search.scss */
+  /* line 260, ../scss/search.scss */
   header .button {
     margin: 0 0 30px 0;
   }
 
-  /* line 262, ../scss/search.scss */
+  /* line 266, ../scss/search.scss */
   #result-filter {
     display: none;
     padding-top: 15px;
@@ -390,70 +394,70 @@ header .button {
     background: #f9f9f9;
   }
 
-  /* line 270, ../scss/search.scss */
+  /* line 274, ../scss/search.scss */
   .filter-toggle {
     display: block;
   }
 
-  /* line 274, ../scss/search.scss */
+  /* line 278, ../scss/search.scss */
   .search-toggle {
     display: block;
   }
 
-  /* line 278, ../scss/search.scss */
+  /* line 282, ../scss/search.scss */
   footer {
     padding: 10px 15px;
     height: 80px;
     text-align: center;
   }
-  /* line 283, ../scss/search.scss */
+  /* line 287, ../scss/search.scss */
   footer p {
     float: none !important;
     display: block;
     line-height: 30px;
   }
 
-  /* line 291, ../scss/search.scss */
+  /* line 295, ../scss/search.scss */
   nav {
     float: none !important;
     text-align: center;
   }
-  /* line 295, ../scss/search.scss */
+  /* line 299, ../scss/search.scss */
   nav ul {
     margin: 0;
   }
-  /* line 299, ../scss/search.scss */
+  /* line 303, ../scss/search.scss */
   nav ul li {
     display: inline;
     line-height: 30px !important;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 310, ../scss/search.scss */
+  /* line 314, ../scss/search.scss */
   #content {
     padding-bottom: 100px;
     padding-top: 20px;
   }
-  /* line 314, ../scss/search.scss */
+  /* line 318, ../scss/search.scss */
   #content .result-header {
     margin-top: 20px;
   }
 
-  /* line 319, ../scss/search.scss */
+  /* line 323, ../scss/search.scss */
   header {
     height: 100%;
   }
-  /* line 322, ../scss/search.scss */
+  /* line 326, ../scss/search.scss */
   header .header-search {
     background: red;
     display: none;
   }
-  /* line 327, ../scss/search.scss */
+  /* line 331, ../scss/search.scss */
   header .button {
     margin: 0 0 30px 0;
   }
 
-  /* line 332, ../scss/search.scss */
+  /* line 336, ../scss/search.scss */
   #result-filter {
     display: none;
     padding-top: 15px;
@@ -462,12 +466,12 @@ header .button {
     background: #f9f9f9;
   }
 
-  /* line 340, ../scss/search.scss */
+  /* line 344, ../scss/search.scss */
   .filter-toggle {
     display: block;
   }
 
-  /* line 344, ../scss/search.scss */
+  /* line 348, ../scss/search.scss */
   .search-toggle {
     display: block;
   }

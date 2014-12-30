@@ -211,10 +211,14 @@ header {
 					@include box-shadow(none);
 				}
 
-				.button {
+				a.button {
 					margin: 0;
 					background: $black-color;
 					font-weight: bold;
+
+					&:hover {
+						background: #42494f;
+					}
 				}
 			}
 

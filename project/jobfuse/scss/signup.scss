@@ -1,0 +1,204 @@
+@import "compass/css3";
+@import "framework/mixins";
+@import "framework/components/global";
+
+
+header {
+	background: #FFF;
+	border-bottom: 1px solid #e8e8e8;
+	height: 86px;
+	@include box-shadow(1px 0 4px rgba(0,0,0, .1));
+
+	.header-logo {
+		line-height: 86px;
+	}
+
+	.input {
+
+		p {
+			font-size: 12px;
+			color: $secondary-color;
+			margin: 10px 0 3px 0;
+
+		}
+
+		span.prefix {
+			font-weight: 600;
+			color: $black-color;
+			background: #fcfcfc;
+			border-color: #e8e8e8;
+		}
+
+		input[type="text"] {
+			@include box-shadow(none);
+			border-color: #e8e8e8;
+
+			&:hover, &:focus {
+				background: #FFF;
+			}
+		}
+	}
+
+	.button {
+		font-size: 14px !important;
+		text-transform: uppercase;
+		margin: 31px 0 0 0;
+	}
+}
+
+#content {
+	padding-top: 45px;
+	background-color: #f7f7f7;
+
+	// PROMO
+ 
+	h1 {
+		color: $primary-color;
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 18px;
+	}
+
+
+	// SIDEBAR APPLY
+
+	#signup-form {
+	  padding: 0;
+
+	  .panel {
+	    padding: 0;
+	    background-color: #FFF;
+	    border: none;
+	    @include box-shadow(0 1px 3px rgba(0,0,0,.2));
+	  }
+
+	  .panel-title {
+	    padding: 25px 30px;
+	    border-bottom: 1px solid #f2f2f2;
+
+	    span {
+	      color: $black-color;
+	      font-size: 16px;
+	      font-weight: bold;
+	    }
+	  }
+
+	  .panel-content {
+	    padding: 25px 30px;
+
+	    span {
+	    	&.login-link{
+		    	font-size: 14px;
+		    	color: #a6a6a6;
+		    	margin-bottom: 15px;
+		    	display: block;
+		    }
+
+		    &.file-type {
+		    	font-size: 12px;
+		    	color: #a6a6a6;
+		    	display: block;
+		    }
+	    }
+
+	    label {
+	    	font-weight: bold;
+	    }
+
+	    input[type="text"], input[type="email"] {
+	    	//border-color: #e8e8e8;
+	    	@include box-shadow(none);
+	    }
+
+	    input[type="file"] {
+	    	margin: 10px 0;
+	    	font-size: 14px;
+	    }
+
+	    .checkbox-terms {
+	    	//padding: 0;
+	    	margin: 15px 0 0 0;
+	    	font-weight: normal;
+	    	font-size: 12px;
+	    }
+
+	    .button {
+	      font-size: 14px;
+	      margin: 0;
+	    }
+	  }
+	}
+
+}
+
+
+
+
+@media #{$small-only} { 
+
+	#content {
+		padding-bottom: 100px;
+
+		#job-description {
+
+			.job-details {
+				padding: 0 0 10px 0;
+
+				.large-4 {
+					padding: 10px 0;
+				}
+
+			}
+		}
+	}
+
+	footer {
+	padding: 10px 15px;
+	height: 80px;
+	text-align: center;
+
+		p {
+		  float: none !important;
+		  //text-align: center;
+		  display: block;
+		  line-height: 30px;
+		}
+	}
+
+	nav {
+		float: none !important;
+		text-align: center;
+
+		ul {
+		  margin: 0;
+
+
+		  li {
+		    display: inline;
+		    line-height: 30px !important;
+		  }
+		}
+	}
+
+}
+
+@media #{$medium-only} { 
+
+	#content {
+		//padding-bottom: 100px;
+
+		#job-description {
+
+			.job-details {
+				padding: 0 0 10px 0;
+
+				.large-4 {
+					padding: 10px 0;
+				}
+
+			}
+		}
+	}
+}
