@@ -102,13 +102,13 @@
             </div>
             <div class="panel-content clearfix">
               <span class="login-link">Already have an account? <a href="#">Sign In</a></span>
-              <form method="post" action="">
+              <form method="post">
                 <input type="text" placeholder="First Name" />
                 <input type="text" placeholder="Last Name" />
                 <input type="email" placeholder="Email Address" />
                 <input type="text" placeholder="Phone Number" />
                 <input type="text" placeholder="ZIP Code" />
-                <label for="resume">Upload your resume</label>
+                <label>Upload your resume</label>
                 <input type="file" name="resume" />
                 <span class="file-type">accepted formats: pdf, doc, docx, or txt</span>
                 <input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1" class="checkbox-terms"><span>I've read and accepted the <a href="#">Terms & Privacy</a></span></label>
@@ -137,43 +137,11 @@
     </footer>
   </div>
 
-  <div id="signInModal" class="reveal-modal tiny login" data-reveal>
-    <div class="large-12 columns">
-      <div class="modal-title">
-        <span>Sign In to your account</span>
-      </div>
-      <div data-alert class="alert-box secondary" style="display: none">
-          Invalid username or password
-      </div>
-
-      <div class="modal-content">
-        <form method="post" action="">
-            <label>Email
-                <input id="_u_email" name="email" type="email"  placeholder="" required />
-                <small class='error invalid_email hide' style="display: none">Please Enter valid email</small>
-            </label>
-            <label>Password
-                <input id="_u_password" name="password" type="password" placeholder="" required />
-                <small class='error hide empty_password' style="display: none">Please enter password.</small>
-            </label>
-            <a href="#" class="link left">Forgot password?</a>
-            <button type="submit" class="button small right">SIGN IN</button>
-        </form>
-        <div class="clearfix"></div>
-      </div>
-      <div class="modal-bottom">
-        <a href="#">Create an Account</a>
-      </div>
-      <a class="close-reveal-modal">&times;</a>
-    </div>
-  </div>
-
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
 
   <script src="js/foundation.js"></script>
   <script src="js/foundation.interchange.js"></script>
-  <script src="js/foundation.reveal.js"></script>
   <script src="js/rem.min.js"></script>
   <script>
     $(document).foundation();

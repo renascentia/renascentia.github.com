@@ -3,46 +3,6 @@
 @import "framework/components/global";
 
 
-header {
-	background: #f9f9f9;
-	border-bottom: 1px solid #e8e8e8;
-	height: 86px;
-
-	.header-logo {
-		line-height: 86px;
-	}
-
-	.input {
-
-		p {
-			font-size: 12px;
-			color: $secondary-color;
-			margin: 10px 0 3px 0;
-
-		}
-
-		span.prefix {
-			font-weight: 600;
-			color: $orange-color;
-			background: #fcfcfc;
-		}
-
-		input[type="text"] {
-			@include box-shadow(none);
-
-			&:hover, &:focus {
-				background: #FFF;
-			}
-		}
-	}
-
-	.button {
-		font-size: 14px !important;
-		text-transform: uppercase;
-		margin: 30px 0 0 0;
-	}
-}
-
 #content {
 	padding-top: 45px;
 
@@ -154,6 +114,24 @@ header {
 
 @media #{$small-only} { 
 
+	header {
+		height: 100%;
+
+		.header-search {
+			background: red;
+			display: none;
+		}
+
+		.button {
+			margin: 0 0 30px 0;
+		}
+
+	}
+
+	.search-toggle {
+		display: block;
+	}
+
 	#content {
 		padding-bottom: 100px;
 
@@ -201,6 +179,24 @@ header {
 }
 
 @media #{$medium-only} { 
+
+	header {
+		height: 100%;
+
+		.header-search {
+			background: red;
+			display: none;
+		}
+
+		.button {
+			margin: 0 0 30px 0;
+		}
+
+	}
+
+	.search-toggle {
+		display: block;
+	}
 
 	#content {
 		//padding-bottom: 100px;
