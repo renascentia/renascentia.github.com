@@ -29,7 +29,7 @@ $topbar-dropdown-link-color: #fff !default;
 $topbar-dropdown-link-bg: #333 !default;
 $topbar-dropdown-link-weight: $font-weight-normal !default;
 $topbar-dropdown-toggle-size: 5px !default;
-$topbar-dropdown-toggle-color: #fff !default;
+$topbar-dropdown-toggle-color: $secondary-color !default;
 $topbar-dropdown-toggle-alpha: 0.4 !default;
 
 // Set the link colors and styles for top-level nav
@@ -62,10 +62,10 @@ $topbar-dropdown-label-bg: #333 !default;
 $topbar-menu-link-transform: uppercase !default;
 $topbar-menu-link-font-size: rem-calc(13) !default;
 $topbar-menu-link-weight: $font-weight-bold !default;
-$topbar-menu-link-color: #fff !default;
-$topbar-menu-icon-color: #fff !default;
-$topbar-menu-link-color-toggled: #FFF !default;
-$topbar-menu-icon-color-toggled: #FFF !default;
+$topbar-menu-link-color: $secondary-color !default;
+$topbar-menu-icon-color: $black-color !default;
+$topbar-menu-link-color-toggled: $secondary-color !default;
+$topbar-menu-icon-color-toggled: $black-color !default;
 
 // Transitions and breakpoint styles
 $topbar-transition-speed: 300ms !default;
@@ -242,7 +242,7 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
               // $color - icon color
               // $hover-color - icon color during hover, here it is set the same as $color because the values are changed on line 264
               // $offcanvas - Set to false of @include in topbar
-              @include hamburger(16px, false, 0, 1px, 6px, #FFF, $topbar-menu-icon-color, false);
+              @include hamburger(16px, false, 0, 1px, 6px, $secondary-color, $topbar-menu-icon-color, false);
             }
           }
         }

@@ -39,12 +39,21 @@
 
     <!-- TOP MENU -->
     <div class="contain-to-grid">
-      <nav class="top-bar" data-topbar>
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name"><h1>&nbsp;</h1></li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
 
         <section class="top-bar-section">
           <ul class="right">
             <li><a href="#">Entrar</a></li>
             <li><a href="#" class="nav-signup">Criar Conta</a></li>
+          </ul>
+
+          <ul class="left">
+            <li><a href="#">Quer postar uma vaga?</a></li>
           </ul>
         </section>
       </nav>
@@ -100,10 +109,11 @@
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
 
-  <script src="js/foundation.js"></script>
-  <script src="js/foundation.interchange.js"></script>
-  <script src="js/rem.min.js"></script>
-  <script src="js/placeholders.min.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.interchange.js"></script>
+  <script src="js/foundation/foundation.topbar.js"></script>
+  <script src="js/utilities/rem.min.js"></script>
+  <script src="js/utilities/placeholders.min.js"></script>
   <script>
     $(document).foundation();
   </script>
