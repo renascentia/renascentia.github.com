@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobzi - Encontre seu próximo emprego.</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/search.css">
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+
+<body>
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">Você está usando um browser muito <strong>antigo</strong>. Por favor <a href="http://browsehappy.com/">clique aqui e atualize seu browser</a> para ter disponível todas as funcionalidades de nosso website.</p>
+  <![endif]-->
+
+  <div class="inner-wrap">
+
+    <!-- TOP MENU -->
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name"><h1>&nbsp;</h1></li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+<!--           <ul class="right">
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#" class="nav-signup">Criar Conta</a></li>
+          </ul> -->
+
+          <ul class="left">
+            <li><a href="index-company.html">Quero anunciar uma vaga</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <!-- END TOP MENU -->
+    <header>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="large-2 columns logo-block">
+            <a href="index.html" class="header-logo"><img src="img/logo-small.png" data-interchange="[img/logo-small.png, (default)], [img/logo-small@2x.png, (retina)]" width="120" height="54" alt="Jobzi"></a>
+          </div>
+
+          <div class="search-toggle">
+            <img src="img/icon-search.png" data-interchange="[img/icon-search.png, (default)], [img/icon-search@2x.png, (retina)]" width="16" height="16" alt="Show search" class="left">
+            <span>SEARCH</span>
+          </div>
+
+          <div class="header-search">
+                
+            <div class="large-4 columns">
+              <div class="input">
+                  <label>O que <span>(cargo, habilidade ou empresa)</span>
+                    <input type="text" value="Designer Gráfico">
+                  </label>
+              </div>
+            </div>
+
+            <div class="large-4 columns">
+              <div class="input">
+                  <label>Onde <span>(cidade, estado ou CEP)</span>
+                    <input type="text" value="São Paulo, SP">
+                  </label>
+              </div>
+            </div>
+                  
+
+            <div class="large-2 columns">
+              <a href="#" class="button small orange expand">BUSCAR</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <!-- END TOP MENU -->
+
+    <div id="content">
+
+      <div class="row">
+
+      <!-- FILTERS -->
+        <div class="large-12 columns">
+          <div class="filter-toggle">
+            <span>Exibir Filtros de Busca</span>
+            <img src="img/icon-filter.png" data-interchange="[img/icon-filter.png, (default)], [img/icon-filter@2x.png, (retina)]" width="16" height="16" alt="Show search filters" class="right">
+          </div>
+        </div>
+
+        <div class="large-3 columns">
+          <div id="result-filter">
+            <div class="result-header">
+            <h1>Filtrar Resultados</h1>
+          </div>
+          <div class="filter-block">
+            <span class="filter-title">Distância</span>
+            <select>
+              <option value="20">20km de distância</option>
+              <option value="40">40km de distância</option>
+              <option value="50">60km de distância</option>
+              <option value="100">Mais de 100km</option>
+            </select>
+          </div>
+
+          <div class="filter-block">
+              <span class="filter-title">Dia Postado</span>
+              <ul>
+                <li><input id="input1" value="input1" type="radio" name="test" checked="checked"><label for="input1"><span></span>Todos</label></li>
+                <li><input id="input3" value="input3" type="radio" name="test"><label for="input3"><span></span>Últimas 24hr</label></li>
+                <li><input id="input4" value="input4" type="radio" name="test"><label for="input4"><span></span>Semana Passada</label></li>
+                <li><input id="input2" value="input2" type="radio" name="test"><label for="input2"><span></span>Mês Passado</label></li>
+              </ul>
+            </div>
+
+          <div class="filter-block">
+            <span class="filter-title">Cidade</span>
+            <ul>
+              <li class="checked"><input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1"><span>São Paulo, SP (41)</span></label></li>
+              <li><input id="checkbox2" type="checkbox"><label for="checkbox2"><span></span>Rio de Janeiro, RJ (8)</label></li>
+              <li class="checked"><input id="checkbox3" type="checkbox" checked="checked"><label for="checkbox3"><span></span>Curitiba, PR (13)</label></li>
+              <li><input id="checkbox4" type="checkbox"><label for="checkbox4"><span></span>Belo Horizonte, MG (3)</label></li>
+              <li class="more"><img src="img/icon-showMore.png" data-interchange="[img/icon-showMore.png, (default)], [img/icon-showMore@2x.png, (retina)]" width="16" height="16" alt="Show me more"><a href="#">Ver Mais</a></li>
+            </ul>
+          </div>
+          
+          <div class="filter-block">
+            <span class="filter-title">Categoria</span>
+            <ul>
+              <li class="checked"><input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1"><span>TI/Criação de Software (41)</span></label></li>
+              <li><input id="checkbox2" type="checkbox"><label for="checkbox2"><span></span>Engenharia (8)</label></li>
+              <li><input id="checkbox3" type="checkbox"><label for="checkbox3"><span></span>Venda / Retail (13)</label></li>
+              <li><input id="checkbox4" type="checkbox"><label for="checkbox4"><span></span>Financeiro (3)</label></li>
+              <li class="more"><img src="img/icon-showMore.png" data-interchange="[img/icon-showMore.png, (default)], [img/icon-showMore@2x.png, (retina)]" width="16" height="16" alt="Show me more"><a href="#">Ver Mais</a></li>
+            </ul>
+          </div>
+            
+          </div>
+        </div>
+        <!-- END FILTERS -->
+
+        <div class="large-9 columns result-list">
+          <div class="result-header">
+            <h1>980 vagas encontradas para Designer Gráfico em São Paulo,SP</h1>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Designer Gráfico</a></h2>
+              <span class="company">Google</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">há 1hr</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Desenvolver materiais gráficos, mais especificadamente catálogos e embalagens. Dominínio de Photoshop e Adobe Illustrator.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Designer Experiência de Usuário</a></h2>
+              <span class="company">Instituto USP</span>
+              <span class="location">Curitiba, PR</span>
+              <span class="date">há 2hr</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Publicidade e propaganda, Marketing e ou Design gráfico. Capacidade de aplicar conceitos gráficos e programação com confiabilidade.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">UI/UX Designer</a></h2>
+              <span class="company">Facebook</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">há 1 dia</span>
+            </div>
+            <div class="label concurso right">CONCURSO</div>
+            <div class="clearfix"></div>
+            <p class="description">Desenvolver materiais gráficos, mais especificadamente catálogos e embalagens. Dominínio de Photoshop e Adobe Illustrator.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
+              <span class="company">Moobly</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">20/03/2015</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Publicidade e propaganda, Marketing e ou Design gráfico. Capacidade de aplicar conceitos gráficos e programação com confiabilidade.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
+              <span class="company">Moobly</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">20/03/2015</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Publicidade e propaganda, Marketing e ou Design gráfico. Capacidade de aplicar conceitos gráficos e programação com confiabilidade.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
+              <span class="company">Moobly</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">20/03/2015</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Publicidade e propaganda, Marketing e ou Design gráfico. Capacidade de aplicar conceitos gráficos e programação com confiabilidade.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
+              <span class="company">Moobly</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">20/03/2015</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Publicidade e propaganda, Marketing e ou Design gráfico. Capacidade de aplicar conceitos gráficos e programação com confiabilidade.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
+              <span class="company">Moobly</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">20/03/2015</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Publicidade e propaganda, Marketing e ou Design gráfico. Capacidade de aplicar conceitos gráficos e programação com confiabilidade.</p>
+          </div>
+
+          <div class="result">
+            <div class="left">
+              <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
+              <span class="company">Moobly</span>
+              <span class="location">São Paulo, SP</span>
+              <span class="date">20/03/2015</span>
+            </div>
+            <div class="clearfix"></div>
+            <p class="description">Publicidade e propaganda, Marketing e ou Design gráfico. Capacidade de aplicar conceitos gráficos e programação com confiabilidade.</p>
+          </div>
+          
+
+          <div class="large-12 columns pages">
+            <ul class="pagination right">
+              <li class="arrow unavailable"><a href="">&laquo;</a></li>
+              <li class="current"><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li class="unavailable"><a href="">&hellip;</a></li>
+              <li><a href="">12</a></li>
+              <li><a href="">13</a></li>
+              <li class="arrow"><a href="">&raquo;</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    
+    </div>
+
+    <footer>
+      <div class="row">
+        <p>Jobzi © 2015. Todos os direitos reservados.</p>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+
+
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.interchange.js"></script>
+  <script src="js/foundation/foundation.topbar.js"></script>
+  <script src="js/utilities/rem.min.js"></script>
+  <script src="js/utilities/placeholder.min.js"></script>
+  <script>
+    $(document).foundation();
+
+    $('.filter-toggle').click(function(event) {
+      event.preventDefault();
+      $('#result-filter').toggle();
+    });
+
+    jQuery(window).on('resize', function(){     
+      if(!jQuery(".filter-toggle").is(":visible") && !jQuery("#result-filter").is(':visible'))
+      {
+          jQuery("#result-filter").show();   
+      }
+    });  
+
+
+    $('.search-toggle').click(function(event) {
+      event.preventDefault();
+      $('.header-search').toggle();
+    });
+
+    jQuery(window).on('resize', function(){     
+      if(!jQuery(".search-toggle").is(":visible") && !jQuery(".header-search").is(':visible'))
+      {
+          jQuery(".header-search").show();   
+      }
+    });  
+
+  </script>
+</body>
+</html>

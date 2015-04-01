@@ -7,33 +7,31 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jobzi - Encontre Seu Próximo Emprego.</title>
+  <title>Jobzi - Encontre seu próximo emprego.</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/global.css">
+
   <!-- Custom styles -->
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/home-company.css">
 
   <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-  <![endif]-->
-
-  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+<![endif]-->
 
 </head>
 
 
 <body>
 
+
   <!--[if lt IE 7]>
       <p class="browsehappy">Você está usando um browser muito <strong>antigo</strong>. Por favor <a href="http://browsehappy.com/">clique aqui e atualize seu browser</a> para ter disponível todas as funcionalidades de nosso website.</p>
   <![endif]-->
-
 
   <div class="inner-wrap">
 
@@ -47,13 +45,9 @@
         </ul>
 
         <section class="top-bar-section">
-          <!-- <ul class="right">
-            <li><a href="#">Entrar</a></li>
-            <li><a href="#" class="nav-signup">Criar Conta</a></li>
-          </ul> -->
 
           <ul class="left">
-            <li><a href="index-company.html">Quero anunciar uma vaga</a></li>
+            <li><a href="index.html" class="has-icon">« Procurar Trabalho</a></li>
           </ul>
         </section>
       </nav>
@@ -61,35 +55,39 @@
     <!-- END TOP MENU -->
 
     <div id="content">
-      <section id="search">
-        <div class="row">
-          <div class="large-12 columns text-center">
-            <img src="img/img-logo.jpg" data-interchange="[img/img-logo.jpg, (default)], [img/img-logo@2x.jpg, (retina)]" width="260" height="118" alt="Jobzi" class="logo">
-            <h1>Encontre Seu Próximo Emprego</h1>
-            <div class="block-search text-left">
-              <form>
-                <div class="row">
-                  <div class="large-5 columns">
-                    <label>O que
-                      <input type="text" placeholder="cargo, habilidade ou empresa" />
-                    </label>
-                  </div>
-                  <div class="large-5 columns">
-                    <label>Onde
-                      <input type="text" placeholder="cidade, estado ou CEP" />
-                    </label>
-                  </div>
-                  <div class="large-2 columns">
-                    <label> <br></label>
-                    <a href="search.html" class="button orange expand">Buscar Vagas</a>
-                  </div>
-                </div>
+
+      <div class="row">
+
+        <div class="large-12 columns text-center logo">
+          <img src="img/logo-empresa.png" width="433" height="118" alt="Jobzi Empresas">
+        </div>
+
+        <div class="large-7 columns">
+          <h1>Quer obter acesso antecipado ao nosso sistema para Empresas?</h1>
+          <p>Estamos trabalhando em um sistema para a sua Empresa poder postar e gerenciar suas vagas em um único lugar.</p>
+        </div>
+
+        <div id="signup-form" class="large-5 columns">
+          <div class="panel">
+            <div class="panel-title">
+              <span>Inscreva-se agora</span>
+            </div>
+            <div class="panel-content clearfix">
+              <span class="login-link">Preencha todos os campos</span>
+              <form method="post">
+                <input type="text" placeholder="Seu Nome" />
+                <input type="text" placeholder="Nome da empresa" />
+                <input type="email" placeholder="Email" />
+                <input type="text" placeholder="Telefone" />
+                <hr>
+                <button class="button small orange right">ENVIAR</button>
               </form>
             </div>
           </div>
         </div>
-      </section>
 
+      </div>
+    
     </div>
 
     <footer>
