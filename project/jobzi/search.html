@@ -115,7 +115,7 @@
             <div class="result-header">
             <h1>Filtrar Resultados</h1>
           </div>
-          <div class="filter-block">
+          <!-- <div class="filter-block">
             <span class="filter-title">Distância</span>
             <select>
               <option value="20">20km de distância</option>
@@ -123,17 +123,33 @@
               <option value="50">60km de distância</option>
               <option value="100">Mais de 100km</option>
             </select>
+          </div> -->
+
+          <div class="filter-block">
+            <!-- <span class="filter-title">Distância</span> -->
+            <span class="text">Gostaria de receber alertas quando novas vagas forem abertas?</span>
+            <a href="#" class="button secondary tiny" data-reveal-id="saveSearchModal">Salvar Minha Busca</a>
           </div>
 
           <div class="filter-block">
-              <span class="filter-title">Dia Postado</span>
-              <ul>
-                <li><input id="input1" value="input1" type="radio" name="test" checked="checked"><label for="input1"><span></span>Todos</label></li>
-                <li><input id="input3" value="input3" type="radio" name="test"><label for="input3"><span></span>Últimas 24hr</label></li>
-                <li><input id="input4" value="input4" type="radio" name="test"><label for="input4"><span></span>Semana Passada</label></li>
-                <li><input id="input2" value="input2" type="radio" name="test"><label for="input2"><span></span>Mês Passado</label></li>
-              </ul>
-            </div>
+            <span class="filter-title">Dia Postado</span>
+            <ul>
+              <li><input id="input1" value="input1" type="radio" name="test" checked="checked"><label for="input1"><span></span>Todos</label></li>
+              <li><input id="input3" value="input3" type="radio" name="test"><label for="input3"><span></span>Últimas 24hr</label></li>
+              <li><input id="input4" value="input4" type="radio" name="test"><label for="input4"><span></span>Semana Passada</label></li>
+              <li><input id="input2" value="input2" type="radio" name="test"><label for="input2"><span></span>Mês Passado</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-block">
+            <span class="filter-title">Salário</span>
+            <ul>
+              <li class="checked"><input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1"><span>Até R$1.000,00</span></label></li>
+              <li><input id="checkbox2" type="checkbox"><label for="checkbox2"><span></span>R$1.000,00 a R$5.000,00</label></li>
+              <li><input id="checkbox3" type="checkbox"><label for="checkbox3"><span></span>R$5.000,00 a R$10.000,00</label></li>
+              <li><input id="checkbox4" type="checkbox"><label for="checkbox4"><span></span>Mais de R$10.000,00</label></li>
+            </ul>
+          </div>
 
           <div class="filter-block">
             <span class="filter-title">Cidade</span>
@@ -142,17 +158,6 @@
               <li><input id="checkbox2" type="checkbox"><label for="checkbox2"><span></span>Rio de Janeiro, RJ (8)</label></li>
               <li class="checked"><input id="checkbox3" type="checkbox" checked="checked"><label for="checkbox3"><span></span>Curitiba, PR (13)</label></li>
               <li><input id="checkbox4" type="checkbox"><label for="checkbox4"><span></span>Belo Horizonte, MG (3)</label></li>
-              <li class="more"><img src="img/icon-showMore.png" data-interchange="[img/icon-showMore.png, (default)], [img/icon-showMore@2x.png, (retina)]" width="16" height="16" alt="Show me more"><a href="#">Ver Mais</a></li>
-            </ul>
-          </div>
-          
-          <div class="filter-block">
-            <span class="filter-title">Categoria</span>
-            <ul>
-              <li class="checked"><input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1"><span>TI/Criação de Software (41)</span></label></li>
-              <li><input id="checkbox2" type="checkbox"><label for="checkbox2"><span></span>Engenharia (8)</label></li>
-              <li><input id="checkbox3" type="checkbox"><label for="checkbox3"><span></span>Venda / Retail (13)</label></li>
-              <li><input id="checkbox4" type="checkbox"><label for="checkbox4"><span></span>Financeiro (3)</label></li>
               <li class="more"><img src="img/icon-showMore.png" data-interchange="[img/icon-showMore.png, (default)], [img/icon-showMore@2x.png, (retina)]" width="16" height="16" alt="Show me more"><a href="#">Ver Mais</a></li>
             </ul>
           </div>
@@ -171,6 +176,7 @@
               <h2 class="jobtitle"><a href="description.html">Designer Gráfico</a></h2>
               <span class="company">Google</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ 1.000,00</span>
               <span class="date">há 1hr</span>
             </div>
             <div class="clearfix"></div>
@@ -182,6 +188,7 @@
               <h2 class="jobtitle"><a href="description.html">Designer Experiência de Usuário</a></h2>
               <span class="company">Instituto USP</span>
               <span class="location">Curitiba, PR</span>
+              <span class="salary">R$ a combinar</span>
               <span class="date">há 2hr</span>
             </div>
             <div class="clearfix"></div>
@@ -193,6 +200,7 @@
               <h2 class="jobtitle"><a href="description.html">UI/UX Designer</a></h2>
               <span class="company">Facebook</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ 5.750,00</span>
               <span class="date">há 1 dia</span>
             </div>
             <div class="label concurso right">CONCURSO</div>
@@ -205,6 +213,7 @@
               <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
               <span class="company">Moobly</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ 750,00</span>
               <span class="date">20/03/2015</span>
             </div>
             <div class="clearfix"></div>
@@ -216,6 +225,7 @@
               <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
               <span class="company">Moobly</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ a combinar</span>
               <span class="date">20/03/2015</span>
             </div>
             <div class="clearfix"></div>
@@ -227,6 +237,7 @@
               <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
               <span class="company">Moobly</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ a combinar</span>
               <span class="date">20/03/2015</span>
             </div>
             <div class="clearfix"></div>
@@ -238,6 +249,7 @@
               <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
               <span class="company">Moobly</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ a combinar</span>
               <span class="date">20/03/2015</span>
             </div>
             <div class="clearfix"></div>
@@ -249,6 +261,7 @@
               <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
               <span class="company">Moobly</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ a combinar</span>
               <span class="date">20/03/2015</span>
             </div>
             <div class="clearfix"></div>
@@ -260,6 +273,7 @@
               <h2 class="jobtitle"><a href="description.html">Interface Designer</a></h2>
               <span class="company">Moobly</span>
               <span class="location">São Paulo, SP</span>
+              <span class="salary">R$ a combinar</span>
               <span class="date">20/03/2015</span>
             </div>
             <div class="clearfix"></div>
@@ -299,6 +313,35 @@
     </footer>
   </div>
 
+  <div id="saveSearchModal" class="reveal-modal alert-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <div class="large-12 columns">
+        <div class="modal-title feature text-center">
+            <img src="img/icon-alertEmail.png" width="80" height="80" class="alert-img">
+            <span>NÃO PERCA OUTRA OPORTUNIDADE!</span>
+        </div>
+
+        <div class="modal-content text-center">
+          <div class="content-email">
+            <p>Receba novas vagas para <b>Designer Gráfico</b> semanalmente em seu email.</p>
+            <form method="post" action="">
+                <label>Email
+                    <input id="" name="email" type="email"  placeholder="" required />
+                </label>
+                <button type="submit"  class="button expand">INSCREVER-ME</button>
+            </form>
+            <span class="secondary">* Você pode cancelar alertas a qualquer momento.</span>
+          </div>
+
+          <div class="content-success hide">
+            <img src="img/icon-alertSuccess.png" width="60" height="60" class="alert-icon">
+            <p>Obrigado! Sua inscrição foi completada com sucesso e você receberá um email semanalmente com novas vagas.</p>
+            <a href="#" class="button secondary small">Fechar</a>
+          </div>
+        </div>
+        <a class="close-reveal-modal">&times;</a>
+    </div>
+  </div>
+
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
 
@@ -306,6 +349,7 @@
   <script src="js/foundation/foundation.js"></script>
   <script src="js/foundation/foundation.interchange.js"></script>
   <script src="js/foundation/foundation.topbar.js"></script>
+  <script src="js/foundation/foundation.reveal.js"></script>
   <script src="js/utilities/rem.min.js"></script>
   <script src="js/utilities/placeholder.min.js"></script>
   <script>
