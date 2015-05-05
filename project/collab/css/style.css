@@ -1,0 +1,42 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 10, ../sass/style.scss */
+body {
+  background: #1d2023;
+}
+
+/* line 14, ../sass/style.scss */
+nav {
+  background: #1d2023;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 18, ../sass/style.scss */
+nav .brand-logo {
+  font-size: 18px;
+}
+
+/* line 27, ../sass/style.scss */
+.container .card .card-content .card-title {
+  color: #0077b5;
+  font-weight: 500;
+}
+/* line 32, ../sass/style.scss */
+.container .card .card-action {
+  background: #f1f2f6;
+  padding: 10px 20px;
+}
+/* line 36, ../sass/style.scss */
+.container .card .card-action a {
+  margin-right: 0;
+  line-height: 35px;
+  display: inline-flex;
+}
+/* line 42, ../sass/style.scss */
+.container .card .card-action .progress {
+  margin-bottom: 0;
+  margin-top: 3px;
+}
