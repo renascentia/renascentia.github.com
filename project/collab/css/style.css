@@ -2,41 +2,204 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 10, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 body {
   background: #1d2023;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 nav {
   background: #1d2023;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 18, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 nav .brand-logo {
   font-size: 18px;
 }
 
-/* line 27, ../sass/style.scss */
-.container .card .card-content .card-title {
+/* line 28, ../sass/style.scss */
+.container .section {
+  padding: 0;
+}
+/* line 32, ../sass/style.scss */
+.container .vote-section {
+  padding: 0 10px;
+}
+/* line 35, ../sass/style.scss */
+.container .vote-section .counter {
+  padding-top: 20px;
+  color: #696c6f;
+  font-size: 12px;
+}
+/* line 40, ../sass/style.scss */
+.container .vote-section .counter .title {
+  display: block;
+  line-height: 14px;
+}
+/* line 45, ../sass/style.scss */
+.container .vote-section .counter .numbers {
+  font-size: 30px;
+  line-height: 34px;
+}
+/* line 49, ../sass/style.scss */
+.container .vote-section .counter .numbers b {
+  font-weight: normal;
+  color: white;
+}
+/* line 56, ../sass/style.scss */
+.container .vote-section .btn-floating {
+  background-color: #24272a;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #5c6166;
+  line-height: 0;
+  font-size: 11px;
+  font-weight: bold;
+  color: #696c6f;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+/* line 69, ../sass/style.scss */
+.container .vote-section .btn-floating i {
+  font-size: 1.7rem;
+  line-height: 55px;
+}
+/* line 76, ../sass/style.scss */
+.container .card {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  margin-top: 0;
+}
+/* line 82, ../sass/style.scss */
+.container .card.position .card-content .card-title {
   color: #0077b5;
   font-weight: 500;
 }
-/* line 32, ../sass/style.scss */
-.container .card .card-action {
+/* line 87, ../sass/style.scss */
+.container .card.position .card-action {
   background: #f1f2f6;
   padding: 10px 20px;
 }
-/* line 36, ../sass/style.scss */
-.container .card .card-action a {
+/* line 91, ../sass/style.scss */
+.container .card.position .card-action a {
   margin-right: 0;
   line-height: 35px;
   display: inline-flex;
 }
-/* line 42, ../sass/style.scss */
-.container .card .card-action .progress {
+/* line 97, ../sass/style.scss */
+.container .card.position .card-action .progress {
   margin-bottom: 0;
   margin-top: 3px;
+}
+/* line 106, ../sass/style.scss */
+.container .card.profile .top-profile {
+  padding: 20px;
+  height: 70px;
+  background: #00a0dc;
+  position: relative;
+  margin-bottom: 10px;
+}
+/* line 113, ../sass/style.scss */
+.container .card.profile .top-profile .user-avatar {
+  position: absolute;
+  padding: 3px;
+  background: #FFF;
+}
+/* line 118, ../sass/style.scss */
+.container .card.profile .top-profile .user-avatar img {
+  width: 60px;
+  height: 60px;
+}
+/* line 124, ../sass/style.scss */
+.container .card.profile .top-profile .user-info {
+  padding-left: 75px;
+}
+/* line 127, ../sass/style.scss */
+.container .card.profile .top-profile .user-info .user-name {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-weight: 600;
+}
+/* line 134, ../sass/style.scss */
+.container .card.profile .top-profile .user-info .user-headline {
+  color: #9bdaf3;
+}
+/* line 140, ../sass/style.scss */
+.container .card.profile .card-content {
+  padding: 0;
+}
+/* line 143, ../sass/style.scss */
+.container .card.profile .card-content .top-skills {
+  padding: 10px 20px;
+}
+/* line 146, ../sass/style.scss */
+.container .card.profile .card-content .top-skills p {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+/* line 151, ../sass/style.scss */
+.container .card.profile .card-content .top-skills .badge {
+  background: #f0f0f0;
+  border: 1px solid #c0c0c0;
+  left: 0;
+  margin-right: 3px;
+  position: relative;
+  padding: 5px 7px;
+  font-weight: 500;
+  color: #3a3c3e;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 164, ../sass/style.scss */
+.container .card.profile .card-content .collection {
+  border: none;
+}
+/* line 167, ../sass/style.scss */
+.container .card.profile .card-content .collection .collection-header {
+  background: #f1f3f5;
+  color: #696c6f;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+/* line 177, ../sass/style.scss */
+.container .card.profile .card-content .collection .collection-item.avatar {
+  border-bottom-color: #f0f0f0;
+  padding-left: 52px;
+  height: 70px;
+}
+/* line 182, ../sass/style.scss */
+.container .card.profile .card-content .collection .collection-item.avatar .circle {
+  left: 0;
+}
+/* line 186, ../sass/style.scss */
+.container .card.profile .card-content .collection .collection-item.avatar .title {
+  color: #4d4f51;
+  font-weight: 500;
+}
+/* line 191, ../sass/style.scss */
+.container .card.profile .card-content .collection .collection-item.avatar p {
+  color: #737577;
+}
+/* line 195, ../sass/style.scss */
+.container .card.profile .card-content .collection .collection-item.avatar .secondary-content {
+  color: #9d9fa1;
+  font-size: 12px;
+}
+/* line 201, ../sass/style.scss */
+.container .card.profile .card-content .collection .collection-item.no-pic {
+  padding-left: 20px;
 }
