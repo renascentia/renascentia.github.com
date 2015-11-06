@@ -4,67 +4,405 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samples.com</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,700italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+.example_responsive_1 { width: 320px; height: 50px; }
+@media(min-width: 500px) { .example_responsive_1 { width: 468px; height: 60px; } }
+@media(min-width: 800px) { .example_responsive_1 { width: 728px; height: 90px; } }
+</style>
+
   </head>
+
+
   <body>
-    
 
-    <div class="row">
-      <div class="large-16 medium-16 columns">
-        <h5>Here&rsquo;s sample.com basic grid:</h5>
-        <!-- Grid Example -->
+    <!-- ADS TOP NAV -->
+    <div class="ads-block top-nav-ads">
+      <div class="row text-center">
+        <div class="ads-content">
+          <img src="img/dummy-ads/728x90.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- END ADS TOP NAV -->
 
-        <div class="row">
-          <div class="large-16 columns">
-            <div class="callout panel">
-              <p><strong>This is a sixteen column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
+    <!-- TOP NAV -->
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <a href="index.html" class="header-logo show-for-large-up"><img src="img/logo.png" data-interchange="[img/logo.png, (default)], [img/logo@2x.png, (retina)]" width="84" height="71" alt="Samples.com"></a>
+            <a href="index.html" class="header-logo-mobile show-for-medium-down"><img src="img/logo-mobile.png" data-interchange="[img/logo-mobile.png, (default)], [img/logo-mobile@2x.png, (retina)]" width="118" height="22" alt="Samples.com Mobile"></a>
+          </li>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class=""><a href="#">ABOUT US</a></li>
+            <li class="divider"></li>
+            <li class="with-icon"><a href="#" class="item"><img src="img/search.svg" alt=""></a></li>
+            <li class="divider"></li>
+            <li class="with-icon social-icon social-icon-first"><a href="#" class="item"><img src="img/facebook-box.svg" alt=""></a></li>
+            <li class="with-icon social-icon"><a href="#" class="item"><img src="img/twitter-box.svg" alt=""></a></li>
+            <li class="with-icon social-icon"><a href="#" class="item"><img src="img/pinterest-box.svg" alt=""></a></li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li><a href="#">Samples</a></li>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">Deals</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="block-featured">
+      <div class="large-6 columns featured-product">
+        <div class="img-container">
+          <div class="img-wrapper">
+            <img src="img/dummy-sample/img-sample-1.png" alt="">
           </div>
         </div>
-        <div class="row">
-          <div class="large-8 medium-8 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-8 medium-8 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
+      </div>
+
+      <div class="large-6 columns featured-product">
+        <div class="img-container">
+          <div class="img-wrapper">
+            <img src="img/dummy-sample/img-sample-2.png" alt="">
           </div>
         </div>
-        <div class="row">
-          <div class="large-4 medium-8 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
+      </div>
+
+      <div class="row">
+          <div class="large-5 columns">
+            <div class="featured-content">
+              <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+                <button type="button" class="button button-icon">
+                  <span>Redeem Now</span>
+                  <i class="icon-arrow"></i>
+                </button>
+                <span class="redeem-number"><a href="#">SAMPLES</a> / 13.800 got this</span>
             </div>
           </div>
-          <div class="large-4 medium-8 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
+          <div class="large-5 columns">
+            <div class="featured-content">
+              <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+                <button type="button" class="button button-icon">
+                  <span>Redeem Now</span>
+                  <i class="icon-arrow"></i>
+                </button>
+                <span class="redeem-number"><a href="#">DEALS</a> / 13.800 got this</span>
             </div>
           </div>
-          <div class="large-4 medium-8 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-8 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>     
+      </div>
 
     </div>
+
+    <div class="clearfix"></div>
+
+    <div class="row">
+      <div class="large-12 columns ">
+        <div class="row ads-block ads-dark text-center">
+          <div class="ads-content">
+            <img src="img/dummy-ads/728x90.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-11 large-centered columns text-center">
+        <h1 class="heading-block site-title">Your Home of Samples, Coupons, & Deals</h1>
+      </div>
+    </div>
+
+
+    <!-- SECTION SAMPLES -->
+
+    <section class="listing first-title dark-bg">
+
+      <div class="row offer-listing">
+        <div class="large-12 columns">
+          <h2 class="color-blue">Samples</h2>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="https://d136x9ho2w5w1d.cloudfront.net/posts/300x215/rockland-luggage.jpg" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="https://d136x9ho2w5w1d.cloudfront.net/posts/300x215/bredawatch.jpg" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save $369.00 Off The Rockland Luggage Melbourne 3-Piece Abs Luggage Set NOW!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="https://d136x9ho2w5w1d.cloudfront.net/posts/300x215/marshall.jpg" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="large-8 large-centered columns">
+          <button type="button" class="button blue large button-icon expand">
+              <span>View all Samples</span>
+              <i class="icon-arrow"></i>
+            </button>
+        </div>
+
+        <div class="row">
+          <div class="large-12 columns ads-block">
+            <div class="text-center">
+              <div class="ads-content">
+                <img src="img/dummy-ads/728x90.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <!-- END SECTION SAMPLES -->
+
+
+    <!-- SECTION COUPONS -->
+
+    <section class="listing">
+
+      <div class="row offer-listing">
+        <div class="large-12 columns">
+          <h2 class="color-green">Coupons</h2>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="img/dummy-sample/img-sample-1.png" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="img/dummy-sample/img-sample-2.png" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="img/dummy-sample/img-sample-1.png" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="large-8 large-centered columns">
+          <button type="button" class="button green large button-icon expand">
+              <span>View all Coupons</span>
+              <i class="icon-arrow"></i>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- END SECTION COUPONS -->
+
+    <!-- SECTION DEALS -->
+
+    <section class="listing dark-bg">
+
+      <div class="row offer-listing">
+        <div class="large-12 columns">
+          <h2 class="color-purple">Deals</h2>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="img/dummy-sample/img-sample-1.png" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Get a FREE United States Holocaust Memorial Museum Of the New 2016 Calendar!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="img/dummy-sample/img-sample-2.png" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save 50% Off on Citizen Women's Eco Drive "Regional Savings” Get Today!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+
+        <div class="large-4 columns">
+          <div class="product-block">
+            <div class="img-container">
+              <div class="img-wrapper">
+                <img src="img/dummy-sample/img-sample-1.png" alt="">
+              </div>
+            </div>
+            <a href="#" class="product-title">Save $189.92 Off The DEWALT Cordless 18-Volt Compact Drill/Driver!</a>
+            <button type="button" class="button small button-icon">
+              <span>Redeem</span>
+              <i class="icon-arrow"></i>
+            </button>
+            <span class="redeem-number">13.800 got this</span>
+          </div>
+        </div>
+      </div>
+      <div class="large-8 large-centered columns">
+        <button type="button" class="button purple large button-icon expand">
+            <span>View all Deals</span>
+            <i class="icon-arrow"></i>
+          </button>
+      </div>
+
+    </section>
+
+    <!-- END SECTION DEALS -->
+
+    <div class="clearfix"></div>
+
+    <!-- BEGIN FOOTER -->
+    <div class="footer">
+      <div class="row">
+        <div class="large-6 columns">
+        <img src="img/logo-mobile.png" data-interchange="[img/logo-mobile.png, (default)], [img/logo-mobile@2x.png, (retina)]" width="118" height="22" alt="Samples.com Mobile">
+        <div class="social-icons">
+          <img src="img/facebook-box.svg" alt="">
+          <img src="img/twitter-box.svg" alt="">
+          <img src="img/pinterest-box.svg" alt="">
+        </div>
+        <div class="copyright">© Copyright 2015 Samples, All Rights Reserved.</div>
+        </div>
+        <div class="large-2 columns">
+          <ul>
+            <li class="list-title">General</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Browse</a></li>
+          </ul>
+        </div>
+        <div class="large-2 columns">
+          <ul>
+            <li class="list-title">Offers</li>
+            <li><a href="category-samples.html">Samples</a></li>
+            <li><a href="category-coupons.html">Coupons</a></li>
+            <li><a href="category-deals.html">Deals</a></li>
+          </ul>
+        </div>
+        <div class="large-2 columns">
+          <ul>
+            <li class="list-title">Support</li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms & Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
     
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/foundation/foundation.topbar.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
