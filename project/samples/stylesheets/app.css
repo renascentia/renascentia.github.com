@@ -10545,7 +10545,6 @@ h1.product-title {
   }
   /* line 863, ../scss/app.scss */
   .ads-block .ads-content.ads-square-column {
-    padding-left: 0.9375rem;
     padding-top: 12px;
   }
 
@@ -10699,8 +10698,8 @@ h1.product-title {
 }
 /* line 1022, ../scss/app.scss */
 .responsive-banner {
-  width: 325px;
-  height: 57px;
+  width: 320px;
+  height: 55px;
 }
 
 @media (min-width: 500px) {
