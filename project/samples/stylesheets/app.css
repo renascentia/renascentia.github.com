@@ -9779,449 +9779,328 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 44, ../scss/app.scss */
-html, body {
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
+/* line 5, ../scss/_carousel.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 12, ../scss/_carousel.scss */
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* line 45, ../scss/_carousel.scss */
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+/* line 54, ../scss/_carousel.scss */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 60, ../scss/_carousel.scss */
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+/* line 63, ../scss/_carousel.scss */
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+/* line 66, ../scss/_carousel.scss */
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+/* line 93, ../scss/_carousel.scss */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+/* line 104, ../scss/_carousel.scss */
+.owl-carousel {
+  display: none;
   width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-}
-
-/* line 56, ../scss/app.scss */
-h2, h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* line 61, ../scss/app.scss */
-a {
-  color: #181818;
-}
-/* line 64, ../scss/app.scss */
-a:hover {
-  color: #181818;
-  text-decoration: underline;
-}
-
-/* line 70, ../scss/app.scss */
-.grow {
-  transition: all .2s ease-in-out;
-  cursor: pointer;
-}
-
-/* line 71, ../scss/app.scss */
-.grow:hover {
-  transform: scale(1.1);
-}
-
-/* line 73, ../scss/app.scss */
-.color-blue {
-  color: #3E91AC;
-}
-
-/* line 77, ../scss/app.scss */
-.color-green {
-  color: #33816C;
-}
-
-/* line 81, ../scss/app.scss */
-.color-purple {
-  color: #845489;
-}
-
-/* line 85, ../scss/app.scss */
-.ads-block {
-  background: url("../img/ads-pattern.jpg") repeat;
-  margin: 20px 0 !important;
-}
-/* line 91, ../scss/app.scss */
-.ads-block.last-row-ads {
-  margin-top: 0 !important;
-}
-/* line 95, ../scss/app.scss */
-.ads-block.ads-dark {
-  background: url("../img/ads-pattern-dark.jpg") repeat;
-}
-/* line 99, ../scss/app.scss */
-.ads-block .ads-content {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-/* line 105, ../scss/app.scss */
-.ads-block .ads-content.ads-square {
-  width: 307px;
-  margin-bottom: 10px;
-}
-
-/* line 113, ../scss/app.scss */
-.top-nav-ads {
-  margin: 0 !important;
-}
-
-/* line 119, ../scss/app.scss */
-.button {
-  font-family: "Oswald", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-transform: uppercase;
-}
-/* line 126, ../scss/app.scss */
-.button.button-icon i {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-}
-/* line 132, ../scss/app.scss */
-.button.button-icon span {
-  display: inline-block;
-  vertical-align: top;
-}
-/* line 140, ../scss/app.scss */
-.button.button-icon.small i {
-  margin-top: 1px;
-}
-/* line 148, ../scss/app.scss */
-.button.button-icon.large i {
-  margin-top: 5px;
-}
-/* line 152, ../scss/app.scss */
-.button.button-icon.large.expand {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 1.375rem;
-}
-
-/* line 163, ../scss/app.scss */
-i.icon-arrow {
-  background: url("../img/arrow-right.svg");
-  width: 22px;
-  height: 22px;
-}
-/* line 168, ../scss/app.scss */
-i.icon-arrow path {
-  fill: #FFFFFF;
-}
-
-/* line 179, ../scss/app.scss */
-.contain-to-grid.top-bar-blue {
-  background: #3E91AC;
-}
-/* line 182, ../scss/app.scss */
-.contain-to-grid.top-bar-blue .top-bar {
-  background: #3E91AC;
-}
-/* line 186, ../scss/app.scss */
-.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul {
-  background: #3E91AC;
-}
-/* line 188, ../scss/app.scss */
-.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li {
-  background: #3E91AC;
-}
-/* line 190, ../scss/app.scss */
-.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li a {
-  background: #3E91AC;
-}
-/* line 193, ../scss/app.scss */
-.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li a:hover {
-  background: #37829A;
-}
-/* line 202, ../scss/app.scss */
-.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li.with-icon a:hover {
-  background: inherit;
-}
-/* line 213, ../scss/app.scss */
-.contain-to-grid.top-bar-green {
-  background: #33816C;
-}
-/* line 216, ../scss/app.scss */
-.contain-to-grid.top-bar-green .top-bar {
-  background: #33816C;
-}
-/* line 220, ../scss/app.scss */
-.contain-to-grid.top-bar-green .top-bar .top-bar-section ul {
-  background: #33816C;
-}
-/* line 222, ../scss/app.scss */
-.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li {
-  background: #33816C;
-}
-/* line 224, ../scss/app.scss */
-.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li a {
-  background: #33816C;
-}
-/* line 227, ../scss/app.scss */
-.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li a:hover {
-  background: #266856;
-}
-/* line 236, ../scss/app.scss */
-.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li.with-icon a:hover {
-  background: inherit;
-}
-/* line 247, ../scss/app.scss */
-.contain-to-grid.top-bar-purple {
-  background: #845489;
-}
-/* line 250, ../scss/app.scss */
-.contain-to-grid.top-bar-purple .top-bar {
-  background: #845489;
-}
-/* line 254, ../scss/app.scss */
-.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul {
-  background: #845489;
-}
-/* line 256, ../scss/app.scss */
-.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li {
-  background: #845489;
-}
-/* line 258, ../scss/app.scss */
-.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li a {
-  background: #845489;
-}
-/* line 261, ../scss/app.scss */
-.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li a:hover {
-  background: #764B7B;
-}
-/* line 270, ../scss/app.scss */
-.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li.with-icon a:hover {
-  background: inherit;
-}
-
-/* line 282, ../scss/app.scss */
-.top-bar {
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
-  background: #3A3E4A;
-}
-/* line 286, ../scss/app.scss */
-.top-bar .name {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-/* line 291, ../scss/app.scss */
-.top-bar .top-bar-section {
-  background: #3A3E4A;
-}
-/* line 296, ../scss/app.scss */
-.top-bar .top-bar-section ul li {
-  background: #3A3E4A;
-}
-/* line 299, ../scss/app.scss */
-.top-bar .top-bar-section ul li a {
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold;
-  background: #3A3E4A;
-}
-/* line 304, ../scss/app.scss */
-.top-bar .top-bar-section ul li a:hover {
-  text-decoration: none;
-}
-/* line 311, ../scss/app.scss */
-.top-bar .top-bar-section ul li.with-icon a {
-  background: #3A3E4A;
-}
-/* line 314, ../scss/app.scss */
-.top-bar .top-bar-section ul li.with-icon a:hover {
-  background: inherit;
-}
-/* line 321, ../scss/app.scss */
-.top-bar .top-bar-section ul li.with-icon.social-icon a {
-  padding-left: 8px;
-  padding-right: 0px;
-}
-/* line 329, ../scss/app.scss */
-.top-bar .top-bar-section ul li.with-icon.social-icon-first a {
-  padding-left: 1.25rem;
-}
-/* line 337, ../scss/app.scss */
-.top-bar .top-bar-section ul .divider {
-  border-right-color: rgba(0, 0, 0, 0.2) !important;
-  margin-top: 20px;
-  height: 20px !important;
-}
-/* line 348, ../scss/app.scss */
-.top-bar .header-logo {
-  position: relative;
-  top: -18px;
-}
-/* line 356, ../scss/app.scss */
-.top-bar .header-logo-mobile {
-  padding-top: 15px;
-  padding-left: 10px;
-}
-
-/* line 367, ../scss/app.scss */
-section.listing {
-  padding: 40px 0;
-}
-/* line 372, ../scss/app.scss */
-section.listing .row.offer-listing {
-  margin-bottom: 30px;
-}
-/* line 377, ../scss/app.scss */
-section.listing.dark-bg {
-  background-color: #f8f9fa;
-}
-/* line 381, ../scss/app.scss */
-section.listing.first-title {
-  padding-top: 80px;
-}
-
-/* line 392, ../scss/app.scss */
-.block-tags h3 {
-  margin-bottom: 0;
-}
-/* line 396, ../scss/app.scss */
-.block-tags p {
-  margin-bottom: 10px;
-}
-/* line 400, ../scss/app.scss */
-.block-tags ul {
-  list-style: none;
-}
-/* line 406, ../scss/app.scss */
-.block-tags ul.blue-tags li {
-  display: inline-block;
-  background: #FFFFFF;
-  padding: 8px 15px;
-  margin: 10px 10px 0 0;
-  cursor: pointer;
-  font-family: "Oswald", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #3E91AC;
-  border: 1px solid #e1e1e1;
-  font-size: 1rem;
-}
-/* line 418, ../scss/app.scss */
-.block-tags ul.blue-tags li:hover {
-  border-color: #3E91AC;
-}
-/* line 422, ../scss/app.scss */
-.block-tags ul.blue-tags li.active {
-  background: #3E91AC;
-  border-color: #3E91AC;
-  color: #FFFFFF;
-}
-/* line 427, ../scss/app.scss */
-.block-tags ul.blue-tags li.active:hover {
-  background: #37829A;
-  border-color: #37829A;
-}
-/* line 437, ../scss/app.scss */
-.block-tags ul.green-tags li {
-  display: inline-block;
-  background: #FFFFFF;
-  padding: 8px 15px;
-  margin: 10px 10px 0 0;
-  cursor: pointer;
-  font-family: "Oswald", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #33816C;
-  border: 1px solid #e1e1e1;
-  font-size: 1rem;
-}
-/* line 449, ../scss/app.scss */
-.block-tags ul.green-tags li:hover {
-  border-color: #33816C;
-}
-/* line 453, ../scss/app.scss */
-.block-tags ul.green-tags li.active {
-  background: #33816C;
-  border-color: #33816C;
-  color: #FFFFFF;
-}
-/* line 458, ../scss/app.scss */
-.block-tags ul.green-tags li.active:hover {
-  background: #266856;
-  border-color: #266856;
-}
-/* line 468, ../scss/app.scss */
-.block-tags ul.purple-tags li {
-  display: inline-block;
-  background: #FFFFFF;
-  padding: 8px 15px;
-  margin: 10px 10px 0 0;
-  cursor: pointer;
-  font-family: "Oswald", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #845489;
-  border: 1px solid #e1e1e1;
-  font-size: 1rem;
-}
-/* line 480, ../scss/app.scss */
-.block-tags ul.purple-tags li:hover {
-  border-color: #845489;
-}
-/* line 484, ../scss/app.scss */
-.block-tags ul.purple-tags li.active {
-  background: #845489;
-  border-color: #845489;
-  color: #FFFFFF;
-}
-/* line 489, ../scss/app.scss */
-.block-tags ul.purple-tags li.active:hover {
-  background: #764B7B;
-  border-color: #764B7B;
-}
-
-/* line 503, ../scss/app.scss */
-.block-contact {
-  margin-top: 50px;
+  z-index: 1;
   margin-bottom: 50px;
 }
-/* line 507, ../scss/app.scss */
-.block-contact .required {
-  display: block;
-  float: left;
-  font-size: 0.75rem;
-  color: #959595;
-  margin-bottom: 15px;
-}
-/* line 515, ../scss/app.scss */
-.block-contact textarea {
-  height: 150px;
-}
-/* line 519, ../scss/app.scss */
-.block-contact input {
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+/* line 113, ../scss/_carousel.scss */
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
 }
 
-/* line 529, ../scss/app.scss */
-.block-featured {
-  margin-bottom: 10px;
+/* line 117, ../scss/_carousel.scss */
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
-/* line 532, ../scss/app.scss */
-.block-featured .featured-product {
-  padding: 0;
+
+/* line 125, ../scss/_carousel.scss */
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
 }
-/* line 535, ../scss/app.scss */
-.block-featured .featured-product .img-container {
-  height: 440px;
-  overflow: hidden;
+
+/* line 131, ../scss/_carousel.scss */
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-/* line 539, ../scss/app.scss */
-.block-featured .featured-product .img-container .img-wrapper {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  width: 30000000px;
+
+/* line 142, ../scss/_carousel.scss */
+.owl-carousel.owl-loaded {
+  display: block;
 }
-/* line 543, ../scss/app.scss */
-.block-featured .featured-product .img-container .img-wrapper img {
-  height: 440px;
+
+/* line 145, ../scss/_carousel.scss */
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
 }
-/* line 547, ../scss/app.scss */
-.block-featured .featured-product .img-container .img-wrapper .label {
+
+/* line 149, ../scss/_carousel.scss */
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+/* line 152, ../scss/_carousel.scss */
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+
+/* line 155, ../scss/_carousel.scss */
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 167, ../scss/_carousel.scss */
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+
+/* line 172, ../scss/_carousel.scss */
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+/* line 178, ../scss/_carousel.scss */
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+
+/* line 185, ../scss/_carousel.scss */
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+/* line 188, ../scss/_carousel.scss */
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+/* line 193, ../scss/_carousel.scss */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+/* line 200, ../scss/_carousel.scss */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+/* line 208, ../scss/_carousel.scss */
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}
+
+/* 
+ * 	Owl Carousel - Video Plugin
+ */
+/* line 215, ../scss/_carousel.scss */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+/* line 220, ../scss/_carousel.scss */
+.owl-carousel .owl-video-play-icon {
   position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: scale 100ms ease;
+  -moz-transition: scale 100ms ease;
+  -ms-transition: scale 100ms ease;
+  -o-transition: scale 100ms ease;
+  transition: scale 100ms ease;
+}
+
+/* line 238, ../scss/_carousel.scss */
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transition: scale(1.3, 1.3);
+  -moz-transition: scale(1.3, 1.3);
+  -ms-transition: scale(1.3, 1.3);
+  -o-transition: scale(1.3, 1.3);
+  transition: scale(1.3, 1.3);
+}
+
+/* line 245, ../scss/_carousel.scss */
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+
+/* line 249, ../scss/_carousel.scss */
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+/* line 264, ../scss/_carousel.scss */
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 272, ../scss/_carousel.scss */
+.owl-carousel .owl-controls {
+  display: none;
+}
+/* line 277, ../scss/_carousel.scss */
+.owl-carousel .item .img-container {
+  position: relative;
+}
+/* line 280, ../scss/_carousel.scss */
+.owl-carousel .item .img-container .label {
+  position: absolute;
+  z-index: 999;
   left: 0;
   bottom: 0;
   padding: 10px 15px;
@@ -10230,9 +10109,25 @@ section.listing.first-title {
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
-/* line 562, ../scss/app.scss */
-.block-featured .featured-content {
-  margin-top: -70px;
+/* line 291, ../scss/_carousel.scss */
+.owl-carousel .item .img-container .label.blue {
+  background: #3E91AC;
+}
+/* line 295, ../scss/_carousel.scss */
+.owl-carousel .item .img-container .label.green {
+  background: #33816C;
+}
+/* line 299, ../scss/_carousel.scss */
+.owl-carousel .item .img-container .label.purple {
+  background: #845489;
+}
+/* line 305, ../scss/_carousel.scss */
+.owl-carousel .item .featured-content {
+  position: absolute;
+  z-index: 9999;
+  margin-right: 20px;
+  bottom: -50px;
+  left: 150px;
   background: #FFF;
   padding: 15px 20px;
   border: 1px solid #959595;
@@ -10240,8 +10135,8 @@ section.listing.first-title {
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 4px 4px 0;
   box-shadow: rgba(0, 0, 0, 0.05) 4px 4px 0;
 }
-/* line 569, ../scss/app.scss */
-.block-featured .featured-content .product-title {
+/* line 316, ../scss/_carousel.scss */
+.owl-carousel .item .featured-content .product-title {
   display: block;
   /* Fallback for non-webkit */
   display: -webkit-box;
@@ -10258,56 +10153,640 @@ section.listing.first-title {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 586, ../scss/app.scss */
-.block-featured .featured-content .redeem-number {
+/* line 333, ../scss/_carousel.scss */
+.owl-carousel .item .featured-content .redeem-number {
   font-size: 0.875rem;
   color: #959595;
   padding-left: 10px;
 }
-/* line 592, ../scss/app.scss */
-.block-featured .featured-content button {
+/* line 339, ../scss/_carousel.scss */
+.owl-carousel .item .featured-content button {
   margin: 0;
 }
 
-/* line 605, ../scss/app.scss */
-.product-block .img-container {
-  height: 280px;
-  overflow: hidden;
+/* line 362, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.two-up .item {
+  width: 50%;
 }
-/* line 609, ../scss/app.scss */
-.product-block .img-container .img-wrapper {
+/* line 363, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.two-up.vertical .item, .icon-bar.two-up.small-vertical .item {
+  width: auto;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 364, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.two-up.medium-vertical .item {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 369, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.two-up.large-vertical .item {
+    width: auto;
+  }
+}
+/* line 376, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.three-up .item {
+  width: 33.3333%;
+}
+/* line 377, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.three-up.vertical .item, .icon-bar.three-up.small-vertical .item {
+  width: auto;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 378, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.three-up.medium-vertical .item {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 383, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.three-up.large-vertical .item {
+    width: auto;
+  }
+}
+/* line 390, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.four-up .item {
+  width: 25%;
+}
+/* line 391, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.four-up.vertical .item, .icon-bar.four-up.small-vertical .item {
+  width: auto;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 392, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.four-up.medium-vertical .item {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 397, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.four-up.large-vertical .item {
+    width: auto;
+  }
+}
+/* line 404, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.five-up .item {
+  width: 20%;
+}
+/* line 405, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.five-up.vertical .item, .icon-bar.five-up.small-vertical .item {
+  width: auto;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 406, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.five-up.medium-vertical .item {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 411, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.five-up.large-vertical .item {
+    width: auto;
+  }
+}
+/* line 418, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.six-up .item {
+  width: 16.66667%;
+}
+/* line 419, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.six-up.vertical .item, .icon-bar.six-up.small-vertical .item {
+  width: auto;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 420, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.six-up.medium-vertical .item {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 425, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.six-up.large-vertical .item {
+    width: auto;
+  }
+}
+/* line 432, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.seven-up .item {
+  width: 14.28571%;
+}
+/* line 433, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.seven-up.vertical .item, .icon-bar.seven-up.small-vertical .item {
+  width: auto;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 434, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.seven-up.medium-vertical .item {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 439, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.seven-up.large-vertical .item {
+    width: auto;
+  }
+}
+/* line 446, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.eight-up .item {
+  width: 12.5%;
+}
+/* line 447, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+.icon-bar.eight-up.vertical .item, .icon-bar.eight-up.small-vertical .item {
+  width: auto;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 448, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.eight-up.medium-vertical .item {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 453, ../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+  .icon-bar.eight-up.large-vertical .item {
+    width: auto;
+  }
+}
+
+/* line 45, ../scss/app.scss */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/* line 57, ../scss/app.scss */
+h2, h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 62, ../scss/app.scss */
+a {
+  color: #181818;
+}
+/* line 65, ../scss/app.scss */
+a:hover {
+  color: #181818;
+  text-decoration: underline;
+}
+
+/* line 71, ../scss/app.scss */
+.grow {
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+/* line 72, ../scss/app.scss */
+.grow:hover {
+  transform: scale(1.1);
+}
+
+/* line 74, ../scss/app.scss */
+.color-blue {
+  color: #3E91AC;
+}
+
+/* line 78, ../scss/app.scss */
+.color-green {
+  color: #33816C;
+}
+
+/* line 82, ../scss/app.scss */
+.color-purple {
+  color: #845489;
+}
+
+/* line 86, ../scss/app.scss */
+.ads-block {
+  background: url("../img/ads-pattern.jpg") repeat;
+}
+/* line 89, ../scss/app.scss */
+.ads-block.featured-ads {
+  margin: 20px 0 !important;
+}
+/* line 93, ../scss/app.scss */
+.ads-block.last-row-ads {
+  margin-bottom: 20px !important;
+}
+/* line 97, ../scss/app.scss */
+.ads-block.ads-dark {
+  background: url("../img/ads-pattern-dark.jpg") repeat;
+}
+/* line 101, ../scss/app.scss */
+.ads-block .ads-content {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  width: 3000px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-/* line 613, ../scss/app.scss */
-.product-block .img-container .img-wrapper img {
+/* line 107, ../scss/app.scss */
+.ads-block .ads-content.ads-square {
+  width: 307px;
+  margin-bottom: 10px;
+}
+
+/* line 115, ../scss/app.scss */
+.top-nav-ads {
+  margin: 0 !important;
+}
+
+/* line 121, ../scss/app.scss */
+.button {
+  font-family: "Oswald", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+}
+/* line 128, ../scss/app.scss */
+.button.button-icon i {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 133, ../scss/app.scss */
+.button.button-icon span {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 143, ../scss/app.scss */
+.button.button-icon.large.expand {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 1.375rem;
+}
+
+/* line 154, ../scss/app.scss */
+i.icon-arrow {
+  background: url("../img/arrow-right.svg");
+  width: 22px;
+  height: 22px;
+}
+/* line 159, ../scss/app.scss */
+i.icon-arrow path {
+  fill: #FFFFFF;
+}
+
+/* line 170, ../scss/app.scss */
+.contain-to-grid.top-bar-blue {
+  background: #3E91AC;
+}
+/* line 173, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar {
+  background: #3E91AC;
+}
+/* line 177, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul {
+  background: #3E91AC;
+}
+/* line 179, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li {
+  background: #3E91AC;
+}
+/* line 181, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li a {
+  background: #3E91AC;
+}
+/* line 184, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li a:hover {
+  background: #37829A;
+}
+/* line 189, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li.active {
+  background: #37829A;
+}
+/* line 192, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li.active a {
+  background: #37829A;
+}
+/* line 201, ../scss/app.scss */
+.contain-to-grid.top-bar-blue .top-bar .top-bar-section ul li.with-icon a:hover {
+  background: inherit;
+}
+/* line 212, ../scss/app.scss */
+.contain-to-grid.top-bar-green {
+  background: #33816C;
+}
+/* line 215, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar {
+  background: #33816C;
+}
+/* line 219, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar .top-bar-section ul {
+  background: #33816C;
+}
+/* line 221, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li {
+  background: #33816C;
+}
+/* line 223, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li a {
+  background: #33816C;
+}
+/* line 226, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li a:hover {
+  background: #266856;
+}
+/* line 231, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li.active {
+  background: #266856;
+}
+/* line 234, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li.active a {
+  background: #266856;
+}
+/* line 243, ../scss/app.scss */
+.contain-to-grid.top-bar-green .top-bar .top-bar-section ul li.with-icon a:hover {
+  background: inherit;
+}
+/* line 254, ../scss/app.scss */
+.contain-to-grid.top-bar-purple {
+  background: #845489;
+}
+/* line 257, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar {
+  background: #845489;
+}
+/* line 261, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul {
+  background: #845489;
+}
+/* line 263, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li {
+  background: #845489;
+}
+/* line 265, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li a {
+  background: #845489;
+}
+/* line 268, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li a:hover {
+  background: #764B7B;
+}
+/* line 273, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li.active {
+  background: #764B7B;
+}
+/* line 276, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li.active a {
+  background: #764B7B;
+}
+/* line 285, ../scss/app.scss */
+.contain-to-grid.top-bar-purple .top-bar .top-bar-section ul li.with-icon a:hover {
+  background: inherit;
+}
+
+/* line 297, ../scss/app.scss */
+.top-bar {
+  position: relative;
+  background: #3A3E4A;
+}
+/* line 301, ../scss/app.scss */
+.top-bar .name {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 306, ../scss/app.scss */
+.top-bar .top-bar-section {
+  background: #3A3E4A;
+}
+/* line 311, ../scss/app.scss */
+.top-bar .top-bar-section ul li {
+  background: #3A3E4A;
+}
+/* line 314, ../scss/app.scss */
+.top-bar .top-bar-section ul li a {
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  background: #3A3E4A;
+}
+/* line 319, ../scss/app.scss */
+.top-bar .top-bar-section ul li a:hover {
+  text-decoration: none;
+}
+/* line 326, ../scss/app.scss */
+.top-bar .top-bar-section ul li.with-icon a {
+  background: #3A3E4A;
+}
+/* line 329, ../scss/app.scss */
+.top-bar .top-bar-section ul li.with-icon a:hover {
+  background: inherit;
+}
+/* line 333, ../scss/app.scss */
+.top-bar .top-bar-section ul li.with-icon a img:hover {
+  opacity: .75;
+}
+/* line 340, ../scss/app.scss */
+.top-bar .top-bar-section ul li.with-icon.social-icon a {
+  padding-left: 8px;
+  padding-right: 0px;
+}
+/* line 348, ../scss/app.scss */
+.top-bar .top-bar-section ul li.with-icon.social-icon-first a {
+  padding-left: 1.25rem;
+}
+/* line 356, ../scss/app.scss */
+.top-bar .top-bar-section ul .divider {
+  border-right-color: rgba(0, 0, 0, 0.2) !important;
+  margin-top: 20px;
+  height: 20px !important;
+}
+/* line 367, ../scss/app.scss */
+.top-bar .header-logo {
+  position: relative;
+  top: -18px;
+}
+/* line 372, ../scss/app.scss */
+.top-bar .header-logo-mobile {
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+/* line 383, ../scss/app.scss */
+section.listing {
+  padding: 20px 0;
+}
+/* line 388, ../scss/app.scss */
+section.listing .row.offer-listing {
+  margin-bottom: 30px;
+}
+/* line 393, ../scss/app.scss */
+section.listing.dark-bg {
+  background-color: #f8f9fa;
+}
+/* line 397, ../scss/app.scss */
+section.listing.first-title {
+  padding-top: 80px;
+}
+/* line 401, ../scss/app.scss */
+section.listing .large {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 406, ../scss/app.scss */
+section.listing .large.last {
+  margin-bottom: 20px;
+}
+
+/* line 414, ../scss/app.scss */
+.block-tags h3 {
+  margin-bottom: 0;
+}
+/* line 418, ../scss/app.scss */
+.block-tags p {
+  margin-bottom: 10px;
+}
+/* line 422, ../scss/app.scss */
+.block-tags ul {
+  list-style: none;
+}
+/* line 428, ../scss/app.scss */
+.block-tags ul.blue-tags li {
+  display: inline-block;
+  background: #FFFFFF;
+  padding: 8px 15px;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #3E91AC;
+  border: 1px solid #e1e1e1;
+  font-size: 1rem;
+}
+/* line 440, ../scss/app.scss */
+.block-tags ul.blue-tags li:hover {
+  border-color: #3E91AC;
+}
+/* line 444, ../scss/app.scss */
+.block-tags ul.blue-tags li.active {
+  background: #3E91AC;
+  border-color: #3E91AC;
+  color: #FFFFFF;
+}
+/* line 449, ../scss/app.scss */
+.block-tags ul.blue-tags li.active:hover {
+  background: #37829A;
+  border-color: #37829A;
+}
+/* line 459, ../scss/app.scss */
+.block-tags ul.green-tags li {
+  display: inline-block;
+  background: #FFFFFF;
+  padding: 8px 15px;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #33816C;
+  border: 1px solid #e1e1e1;
+  font-size: 1rem;
+}
+/* line 471, ../scss/app.scss */
+.block-tags ul.green-tags li:hover {
+  border-color: #33816C;
+}
+/* line 475, ../scss/app.scss */
+.block-tags ul.green-tags li.active {
+  background: #33816C;
+  border-color: #33816C;
+  color: #FFFFFF;
+}
+/* line 480, ../scss/app.scss */
+.block-tags ul.green-tags li.active:hover {
+  background: #266856;
+  border-color: #266856;
+}
+/* line 490, ../scss/app.scss */
+.block-tags ul.purple-tags li {
+  display: inline-block;
+  background: #FFFFFF;
+  padding: 8px 15px;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #845489;
+  border: 1px solid #e1e1e1;
+  font-size: 1rem;
+}
+/* line 502, ../scss/app.scss */
+.block-tags ul.purple-tags li:hover {
+  border-color: #845489;
+}
+/* line 506, ../scss/app.scss */
+.block-tags ul.purple-tags li.active {
+  background: #845489;
+  border-color: #845489;
+  color: #FFFFFF;
+}
+/* line 511, ../scss/app.scss */
+.block-tags ul.purple-tags li.active:hover {
+  background: #764B7B;
+  border-color: #764B7B;
+}
+
+/* line 525, ../scss/app.scss */
+.block-contact {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* line 529, ../scss/app.scss */
+.block-contact .required {
+  display: block;
+  float: left;
+  font-size: 0.75rem;
+  color: #959595;
+  margin-bottom: 15px;
+}
+/* line 537, ../scss/app.scss */
+.block-contact textarea {
+  height: 150px;
+}
+/* line 541, ../scss/app.scss */
+.block-contact input {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 589, ../scss/app.scss */
+.product-block {
+  margin-bottom: 20px;
+}
+/* line 591, ../scss/app.scss */
+.product-block .img-container {
+  height: 280px;
+  overflow: hidden;
+}
+/* line 595, ../scss/app.scss */
+.product-block .img-container img {
+  width: 100%;
   height: 280px;
 }
-/* line 621, ../scss/app.scss */
+/* line 603, ../scss/app.scss */
 .product-block.with-ads .ads-block {
   margin: 0 !important;
   height: 280px;
 }
-/* line 625, ../scss/app.scss */
+/* line 607, ../scss/app.scss */
 .product-block.with-ads .ads-block .ads-content {
   width: 360px;
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 632, ../scss/app.scss */
+/* line 614, ../scss/app.scss */
 .product-block.with-ads .product-title {
   height: 25px;
   margin-bottom: 0;
 }
-/* line 637, ../scss/app.scss */
+/* line 619, ../scss/app.scss */
 .product-block.with-ads .redeem-number {
+  padding-top: 15px;
   padding-left: 0;
+  display: block;
 }
-/* line 642, ../scss/app.scss */
+/* line 626, ../scss/app.scss */
 .product-block .product-title {
   display: block;
   /* Fallback for non-webkit */
@@ -10326,14 +10805,14 @@ section.listing.first-title {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 659, ../scss/app.scss */
+/* line 643, ../scss/app.scss */
 .product-block .redeem-number {
   font-size: 0.875rem;
   color: #959595;
   padding-left: 10px;
 }
 
-/* line 666, ../scss/app.scss */
+/* line 650, ../scss/app.scss */
 .heading-block {
   background: #FFF;
   padding: 15px 20px;
@@ -10344,42 +10823,42 @@ section.listing.first-title {
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 4px 4px 0;
   box-shadow: rgba(0, 0, 0, 0.05) 4px 4px 0;
 }
-/* line 674, ../scss/app.scss */
+/* line 658, ../scss/app.scss */
 .heading-block.site-title {
   margin-bottom: -50px;
 }
 
-/* line 683, ../scss/app.scss */
+/* line 667, ../scss/app.scss */
 section.product {
   padding-top: 30px;
   padding-bottom: 70px;
 }
-/* line 687, ../scss/app.scss */
+/* line 671, ../scss/app.scss */
 section.product .product-ads {
   margin-top: 15px;
 }
-/* line 692, ../scss/app.scss */
+/* line 676, ../scss/app.scss */
 section.product .product-column {
   padding-right: 0;
 }
-/* line 697, ../scss/app.scss */
+/* line 681, ../scss/app.scss */
 section.product .block-title {
   padding: 10px 20px;
   background: #FFFFFF;
   border: 1px solid #e1e1e1;
   height: 300px;
 }
-/* line 703, ../scss/app.scss */
+/* line 687, ../scss/app.scss */
 section.product .block-title h1 {
   font-size: 2.375rem;
   line-height: 50px;
   font-weight: bold;
 }
-/* line 709, ../scss/app.scss */
+/* line 693, ../scss/app.scss */
 section.product .block-title .details {
   margin-top: 10px;
 }
-/* line 713, ../scss/app.scss */
+/* line 697, ../scss/app.scss */
 section.product .block-title .details .item {
   display: inline-block;
   vertical-align: middle;
@@ -10389,28 +10868,28 @@ section.product .block-title .details .item {
   padding: 10px 0;
   margin-right: 20px;
 }
-/* line 718, ../scss/app.scss */
+/* line 702, ../scss/app.scss */
 section.product .block-title .details .item img {
   float: left;
   margin-right: 10px;
 }
-/* line 724, ../scss/app.scss */
+/* line 708, ../scss/app.scss */
 section.product .block-title .details .item span {
   color: #959595;
 }
-/* line 731, ../scss/app.scss */
+/* line 715, ../scss/app.scss */
 section.product .block-img {
   background: #3A3E4A;
   height: 300px;
 }
-/* line 735, ../scss/app.scss */
+/* line 719, ../scss/app.scss */
 section.product .block-img .img-container {
   height: 280px;
   width: 380px;
   overflow: hidden;
   margin-top: 10px;
 }
-/* line 741, ../scss/app.scss */
+/* line 725, ../scss/app.scss */
 section.product .block-img .img-container .img-wrapper {
   display: inline-block;
   vertical-align: middle;
@@ -10419,469 +10898,447 @@ section.product .block-img .img-container .img-wrapper {
   *display: inline;
   width: 3000px;
 }
-/* line 745, ../scss/app.scss */
+/* line 729, ../scss/app.scss */
 section.product .block-img .img-container .img-wrapper img {
   height: 280px;
 }
-/* line 753, ../scss/app.scss */
+/* line 737, ../scss/app.scss */
 section.product .block-description {
   padding: 10px 20px;
   background: #FFFFFF;
   border: 1px solid #e1e1e1;
   height: 280px;
 }
-/* line 759, ../scss/app.scss */
+/* line 743, ../scss/app.scss */
 section.product .block-description .title {
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 5px;
 }
-/* line 765, ../scss/app.scss */
+/* line 749, ../scss/app.scss */
 section.product .block-description p {
   line-height: 22px;
 }
-/* line 771, ../scss/app.scss */
+/* line 755, ../scss/app.scss */
 section.product.bg-blue {
   background: #EEF3F5;
 }
-/* line 775, ../scss/app.scss */
+/* line 759, ../scss/app.scss */
 section.product.bg-green {
   background: #EDF3F2;
 }
-/* line 779, ../scss/app.scss */
+/* line 763, ../scss/app.scss */
 section.product.bg-purple {
   background: #F5F1F5;
 }
 
-/* line 784, ../scss/app.scss */
+/* line 768, ../scss/app.scss */
 h1.product-title {
   margin-top: -45px;
 }
 
-/* line 791, ../scss/app.scss */
+/* line 775, ../scss/app.scss */
 .footer {
   background: #3A3E4A;
   padding: 30px 0;
 }
-/* line 795, ../scss/app.scss */
+/* line 779, ../scss/app.scss */
 .footer .social-icons {
   margin: 10px 0;
 }
-/* line 798, ../scss/app.scss */
+/* line 782, ../scss/app.scss */
 .footer .social-icons img {
   margin-right: 5px;
 }
-/* line 803, ../scss/app.scss */
+/* line 787, ../scss/app.scss */
 .footer .copyright {
   font-size: 0.75rem;
   color: #878C91;
 }
-/* line 808, ../scss/app.scss */
+/* line 792, ../scss/app.scss */
 .footer ul {
   list-style: none;
   margin: 0;
 }
-/* line 812, ../scss/app.scss */
+/* line 796, ../scss/app.scss */
 .footer ul li {
   font-size: 0.8125rem;
   color: #FFF;
 }
-/* line 816, ../scss/app.scss */
+/* line 800, ../scss/app.scss */
 .footer ul li.list-title {
   font-weight: bold;
 }
-/* line 820, ../scss/app.scss */
+/* line 804, ../scss/app.scss */
 .footer ul li a {
   color: #AFB2B6;
 }
 
-/* line 827, ../scss/app.scss */
+/* line 811, ../scss/app.scss */
 .breadcrumbs {
   padding: 0;
   border: none;
   background: inherit;
   margin-bottom: 15px;
 }
-/* line 834, ../scss/app.scss */
+/* line 818, ../scss/app.scss */
 .breadcrumbs.blue a {
   color: #3E91AC !important;
 }
-/* line 835, ../scss/app.scss */
+/* line 819, ../scss/app.scss */
 .breadcrumbs.blue .current a {
   color: #181818 !important;
 }
-/* line 839, ../scss/app.scss */
+/* line 823, ../scss/app.scss */
 .breadcrumbs.green a {
   color: #33816C !important;
 }
-/* line 840, ../scss/app.scss */
+/* line 824, ../scss/app.scss */
 .breadcrumbs.green .current a {
   color: #181818 !important;
 }
-/* line 844, ../scss/app.scss */
+/* line 828, ../scss/app.scss */
 .breadcrumbs.purple a {
   color: #845489 !important;
 }
-/* line 845, ../scss/app.scss */
+/* line 829, ../scss/app.scss */
 .breadcrumbs.purple .current a {
   color: #181818 !important;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 851, ../scss/app.scss */
+  /* line 835, ../scss/app.scss */
   .responsive-square {
     width: 307px;
     height: 257px;
   }
 
-  /* line 852, ../scss/app.scss */
+  /* line 836, ../scss/app.scss */
   .responsive-banner {
     width: 320px;
     height: 55px;
   }
 
-  /* line 854, ../scss/app.scss */
+  /* line 838, ../scss/app.scss */
   .ads-column {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
 
-  /* line 859, ../scss/app.scss */
+  /* line 843, ../scss/app.scss */
   .ads-block {
     margin: 10px 0 !important;
   }
-  /* line 862, ../scss/app.scss */
+  /* line 846, ../scss/app.scss */
   .ads-block.ads-banner {
     margin: 0 !important;
     padding: 0;
   }
-  /* line 867, ../scss/app.scss */
+  /* line 851, ../scss/app.scss */
   .ads-block.ads-banner .ads-content {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
-  /* line 874, ../scss/app.scss */
+  /* line 858, ../scss/app.scss */
   .ads-block .ads-content.ads-square-column {
     padding-top: 12px;
   }
 
-  /* line 881, ../scss/app.scss */
+  /* line 865, ../scss/app.scss */
   h1 {
-    font-size: 1.375rem;
+    font-size: 1.625rem;
   }
-  /* line 884, ../scss/app.scss */
+  /* line 868, ../scss/app.scss */
   h1.category-title {
     font-size: 2rem;
-    margin-bottom: 0 !important;
+    margin-bottom: 10px !important;
   }
 
-  /* line 890, ../scss/app.scss */
+  /* line 874, ../scss/app.scss */
   h2 {
     font-size: 2rem;
   }
 
-  /* line 894, ../scss/app.scss */
+  /* line 878, ../scss/app.scss */
   .button {
     width: 100%;
   }
 
-  /* line 900, ../scss/app.scss */
-  .block-featured .img-container {
-    height: 280px !important;
+  /* line 882, ../scss/app.scss */
+  .owl-carousel {
+    margin-bottom: 0 !important;
+  }
+  /* line 885, ../scss/app.scss */
+  .owl-carousel .featured-content {
+    position: relative !important;
+    padding: 15px 10px 10px 10px !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    border: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  /* line 893, ../scss/app.scss */
+  .owl-carousel .featured-content .product-title {
+    max-width: 100% !important;
+    height: auto !important;
+    -webkit-line-clamp: 3 !important;
+  }
+  /* line 899, ../scss/app.scss */
+  .owl-carousel .featured-content .redeem-number {
+    padding-left: 0 !important;
   }
   /* line 903, ../scss/app.scss */
-  .block-featured .img-container .img-wrapper {
-    width: 100% !important;
-  }
-  /* line 907, ../scss/app.scss */
-  .block-featured .img-container img {
-    height: 280px !important;
-  }
-  /* line 912, ../scss/app.scss */
-  .block-featured .featured-content {
-    margin-top: 10px;
-    padding: 0;
-    border: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  /* line 918, ../scss/app.scss */
-  .block-featured .featured-content .product-title {
-    max-width: 100%;
-  }
-  /* line 922, ../scss/app.scss */
-  .block-featured .featured-content .redeem-number {
-    padding-left: 0;
-  }
-  /* line 926, ../scss/app.scss */
-  .block-featured .featured-content .button {
+  .owl-carousel .featured-content .button {
     margin-bottom: 10px;
   }
 
-  /* line 934, ../scss/app.scss */
+  /* line 909, ../scss/app.scss */
+  section.listing {
+    padding: 10px 0;
+  }
+  /* line 912, ../scss/app.scss */
   section.listing .product-block {
     margin-bottom: 20px;
   }
-  /* line 937, ../scss/app.scss */
+  /* line 915, ../scss/app.scss */
+  section.listing .product-block .img-container {
+    max-width: 100%;
+  }
+  /* line 917, ../scss/app.scss */
+  section.listing .product-block .img-container img {
+    width: 100%;
+  }
+  /* line 922, ../scss/app.scss */
   section.listing .product-block .button {
     margin-bottom: 5px;
   }
-  /* line 941, ../scss/app.scss */
+  /* line 926, ../scss/app.scss */
   section.listing .product-block .product-title {
     max-width: 100%;
+    height: auto;
+    -webkit-line-clamp: 3;
   }
-  /* line 945, ../scss/app.scss */
+  /* line 932, ../scss/app.scss */
   section.listing .product-block .redeem-number {
     padding-left: 0;
     line-height: 16px;
   }
-  /* line 953, ../scss/app.scss */
+  /* line 940, ../scss/app.scss */
   section.listing .row.offer-listing {
     margin-bottom: 0px;
   }
-  /* line 957, ../scss/app.scss */
+  /* line 944, ../scss/app.scss */
   section.listing .row.offer-listing .with-ads .redeem-number, section.listing .row.offer-listing .with-ads .product-title {
     padding-left: 0.9375rem;
   }
 
-  /* line 965, ../scss/app.scss */
+  /* line 952, ../scss/app.scss */
   h1.product-title {
     margin-top: 0px;
   }
 
-  /* line 969, ../scss/app.scss */
+  /* line 956, ../scss/app.scss */
   .breadcrumbs {
     margin-bottom: 10px;
   }
 
-  /* line 973, ../scss/app.scss */
+  /* line 960, ../scss/app.scss */
   section.product {
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  /* line 977, ../scss/app.scss */
+  /* line 964, ../scss/app.scss */
   section.product .block-title {
     padding: 0;
     border: none;
     height: 100%;
   }
-  /* line 982, ../scss/app.scss */
+  /* line 969, ../scss/app.scss */
   section.product .block-title h1 {
     font-size: 1.375rem;
     line-height: 30px;
     font-weight: bold;
     margin-bottom: 0;
   }
-  /* line 989, ../scss/app.scss */
+  /* line 976, ../scss/app.scss */
   section.product .block-title .details {
     margin-top: 0;
   }
-  /* line 992, ../scss/app.scss */
+  /* line 979, ../scss/app.scss */
   section.product .block-title .details .item {
     padding: 0;
     margin-right: 10px;
   }
-  /* line 996, ../scss/app.scss */
+  /* line 983, ../scss/app.scss */
   section.product .block-title .details .item span {
     font-size: 0.8125rem;
   }
-  /* line 1003, ../scss/app.scss */
+  /* line 990, ../scss/app.scss */
   section.product .block-img {
     background: #FFFFFF;
     height: 280px;
   }
-  /* line 1007, ../scss/app.scss */
+  /* line 994, ../scss/app.scss */
   section.product .block-img .img-container {
     width: 100%;
   }
-  /* line 1013, ../scss/app.scss */
+  /* line 1000, ../scss/app.scss */
   section.product .block-description {
     padding: 0 0.9375rem;
     background: #FFFFFF;
     border: none;
     height: 100%;
   }
-  /* line 1021, ../scss/app.scss */
+  /* line 1008, ../scss/app.scss */
   section.product.bg-blue {
     background: #FFF;
   }
-  /* line 1025, ../scss/app.scss */
+  /* line 1012, ../scss/app.scss */
   section.product.bg-green {
     background: #FFF;
   }
-  /* line 1029, ../scss/app.scss */
+  /* line 1016, ../scss/app.scss */
   section.product.bg-purple {
     background: #FFF;
   }
 
-  /* line 1034, ../scss/app.scss */
+  /* line 1021, ../scss/app.scss */
   .footer {
     text-align: center;
   }
-  /* line 1037, ../scss/app.scss */
+  /* line 1024, ../scss/app.scss */
   .footer ul {
     margin-bottom: 10px;
     margin-top: 10px;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 1053, ../scss/app.scss */
-  .block-featured .img-container {
-    height: 280px !important;
+  /* line 1038, ../scss/app.scss */
+  h1.site-title {
+    font-size: 2rem;
   }
-  /* line 1056, ../scss/app.scss */
-  .block-featured .img-container .img-wrapper {
-    width: 100% !important;
+
+  /* line 1042, ../scss/app.scss */
+  .owl-carousel {
+    margin-bottom: 0 !important;
   }
-  /* line 1060, ../scss/app.scss */
-  .block-featured .img-container img {
-    height: 280px !important;
-    width: 100%;
-  }
-  /* line 1066, ../scss/app.scss */
-  .block-featured .featured-content {
+  /* line 1045, ../scss/app.scss */
+  .owl-carousel .featured-content {
+    position: relative !important;
     margin-top: 10px;
-    padding: 0;
-    border: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    margin-left: 10px;
+    padding: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    border: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
   }
-  /* line 1072, ../scss/app.scss */
-  .block-featured .featured-content .product-title {
-    max-width: 100%;
+  /* line 1055, ../scss/app.scss */
+  .owl-carousel .featured-content .product-title {
+    max-width: 100% !important;
   }
-  /* line 1076, ../scss/app.scss */
-  .block-featured .featured-content .redeem-number {
+  /* line 1059, ../scss/app.scss */
+  .owl-carousel .featured-content .redeem-number {
     padding-left: 15px;
   }
-  /* line 1080, ../scss/app.scss */
-  .block-featured .featured-content .button {
+  /* line 1063, ../scss/app.scss */
+  .owl-carousel .featured-content .button {
     margin-bottom: 10px;
   }
 
-  /* line 1088, ../scss/app.scss */
+  /* line 1069, ../scss/app.scss */
+  section.listing {
+    padding: 10px 0;
+  }
+  /* line 1071, ../scss/app.scss */
+  section.listing h2 {
+    font-size: 1.75rem;
+  }
+  /* line 1075, ../scss/app.scss */
   section.listing .product-block {
     margin-bottom: 20px;
   }
-  /* line 1091, ../scss/app.scss */
+  /* line 1078, ../scss/app.scss */
   section.listing .product-block .img-container {
     margin: 0 auto !important;
   }
-  /* line 1095, ../scss/app.scss */
+  /* line 1082, ../scss/app.scss */
   section.listing .product-block .product-title {
     max-width: 100%;
     height: auto;
     overflow: none;
   }
-  /* line 1101, ../scss/app.scss */
+  /* line 1088, ../scss/app.scss */
   section.listing .product-block .button {
     margin-bottom: 5px;
   }
-  /* line 1105, ../scss/app.scss */
+  /* line 1092, ../scss/app.scss */
   section.listing .product-block .redeem-number {
     padding-left: 0;
     line-height: 16px;
   }
-  /* line 1113, ../scss/app.scss */
+  /* line 1100, ../scss/app.scss */
   section.listing .row.offer-listing {
     margin-bottom: 0px;
   }
-  /* line 1117, ../scss/app.scss */
-  section.listing .row.offer-listing .with-ads .redeem-number, section.listing .row.offer-listing .with-ads .product-title {
-    padding-left: 0.9375rem;
+  /* line 1104, ../scss/app.scss */
+  section.listing .row.offer-listing .with-ads .redeem-number {
+    padding-top: 20px;
+    height: 112px;
+    display: block;
   }
 
-  /* line 1125, ../scss/app.scss */
+  /* line 1114, ../scss/app.scss */
   h1.product-title {
     margin-top: 0px;
   }
 
-  /* line 1129, ../scss/app.scss */
+  /* line 1118, ../scss/app.scss */
   .breadcrumbs {
     margin-bottom: 10px;
   }
 
-  /* line 1133, ../scss/app.scss */
+  /* line 1122, ../scss/app.scss */
   section.product {
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  /* line 1137, ../scss/app.scss */
-  section.product .block-title {
-    padding: 0;
-    border: none;
-    height: 100%;
-  }
-  /* line 1142, ../scss/app.scss */
-  section.product .block-title h1 {
-    font-size: 1.375rem;
-    line-height: 30px;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-  /* line 1149, ../scss/app.scss */
-  section.product .block-title .details {
-    margin-top: 0;
-  }
-  /* line 1152, ../scss/app.scss */
-  section.product .block-title .details .item {
-    padding: 0;
-    margin-right: 10px;
-  }
-  /* line 1156, ../scss/app.scss */
-  section.product .block-title .details .item span {
-    font-size: 0.8125rem;
-  }
-  /* line 1163, ../scss/app.scss */
-  section.product .block-img {
-    background: #FFFFFF;
-    height: 280px;
-  }
-  /* line 1167, ../scss/app.scss */
-  section.product .block-img .img-container {
-    width: 100%;
-  }
-  /* line 1173, ../scss/app.scss */
-  section.product .block-description {
-    padding: 0 0.9375rem;
-    background: #FFFFFF;
-    border: none;
-    height: 100%;
-  }
-  /* line 1181, ../scss/app.scss */
+  /* line 1126, ../scss/app.scss */
   section.product.bg-blue {
     background: #FFF;
   }
-  /* line 1185, ../scss/app.scss */
+  /* line 1130, ../scss/app.scss */
   section.product.bg-green {
     background: #FFF;
   }
-  /* line 1189, ../scss/app.scss */
+  /* line 1134, ../scss/app.scss */
   section.product.bg-purple {
     background: #FFF;
   }
 
-  /* line 1194, ../scss/app.scss */
+  /* line 1139, ../scss/app.scss */
   .footer {
     text-align: center;
   }
-  /* line 1197, ../scss/app.scss */
+  /* line 1142, ../scss/app.scss */
   .footer ul {
     margin-bottom: 10px;
     margin-top: 10px;
   }
 }
 @media (min-width: 500px) {
-  /* line 1205, ../scss/app.scss */
+  /* line 1150, ../scss/app.scss */
   .responsive-banner {
     width: 468px;
     height: 60px;
   }
 }
 @media (min-width: 800px) {
-  /* line 1206, ../scss/app.scss */
+  /* line 1151, ../scss/app.scss */
   .responsive-banner {
     width: 728px;
     height: 90px;
