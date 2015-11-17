@@ -75,7 +75,7 @@
             <li><a href="category-samples.html">Samples</a></li>
             <li><a href="category-coupons.html">Coupons</a></li>
             <li><a href="category-deals.html">Deals</a></li>
-            <li class=""><a href="#">ABOUT US</a></li>
+            <li class="active"><a href="about.html">About us</a></li>
           </ul>
         </section>
       </nav>
@@ -83,51 +83,57 @@
 
     <div class="clearfix"></div>
 
+    <div id="video">
+      <div class="video-unit">
+        <div class="large-12 columns content text-center">
+          <img src="img/about-promo.png" data-interchange="[img/about-promo.png, (default)], [img/about-promo@2x.png, (retina)]" width="105" height="111" alt="Our Mission">
+          <h1>Our Mission</h1>
+          <p>We believe everyone should get something for free. Period.</p>
+        </div>
+        <div class="video-texture"></div>
+        <div id="video-container">
+          <video autoplay loop class="fillWidth">
+          <source src="img/dummy-sample/packing.mp4" type="video/mp4"/>
+          <source src="img/dummy-sample/packing.ogg" type="video/ogg"/>
+          <source src="img/dummy-sample/packing.webm" type="video/webm"/>
+          Your browser does not support the video tag. I suggest you upgrade your browser.
+          </video>
+        </div><!-- end video-container -->
+      </div><!-- end .video-unit -->
+    </div>
 
-    <div class="row block-contact">
-      <div class="medium-6 medium-centered columns">
-        <h2 class="">We'd Love to Hear From You</h1>
-        <p>How’s Samples.com workin’ out for you? Love it, hate it, have suggestions, or just want to say hi — we’re all ears!</p>
-        <form>
-          <div class="row">
-            <div class="large-6 columns">
-              <label>First Name *
-                <input type="text" placeholder="" required/>
-              </label>
-            </div>
-            <div class="large-6 columns">
-              <label>Last Name *
-                <input type="text" placeholder="" required/>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns">
-              <label>Email *
-                <input type="text" placeholder="" required/>
-              </label>
-            </div>
-            <div class="large-6 columns">
-              <label>Phone
-                <input type="text" placeholder="" required/>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Message *
-                <textarea placeholder="" required></textarea>
-              </label>
-            </div>
-          </div>
-          <span class="required">* Required fields</span>
-          <button type="submit" class="button button-icon right">
-            <span>Submit</span>
-            <i class="icon-arrow"></i>
-          </button>
-        </form>
+    <div id="about">
+      <div class="row">
+        <div class="large-12 columns text-center">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="large-6 columns block-item">
+          <h3>Who we are</h3>
+          <hr>
+          <p>Samples.com is where anyone and everyone can find products they love for free and discover savings they never even dreamed of.</p>
+        </div>
+
+        <div class="large-6 columns block-item">
+          <h3>What we do</h3>
+          <hr>
+          <p>We work hard to scour the Internet to find free samples, coupons and deals for products you love. Whether it’s laundry detergent, pet food, grocery coupons or coffee — we’ve got you covered.</p>
+        </div>
+
+        <div class="large-6 columns block-item">
+          <h3>How it works</h3>
+          <hr>
+          <p>Discover all of our samples, coupons and deals and browse by your favorite categories. When you find something you like, simply click on a post and get linked out! Create an account and be the first to hear about new savings.</p>
+        </div>
+
+        <div class="large-6 columns block-item">
+          <h3>Why we do it</h3>
+          <hr>
+          <p>So you don’t have to! We know there’s plenty of other things you’d rather do with your time, so let us do the legwork for you. All you have to do is save.</p>
+        </div>
       </div>
     </div>
+    
 
     <div class="clearfix"></div>
 
@@ -175,7 +181,7 @@
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/foundation/foundation.topbar.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
