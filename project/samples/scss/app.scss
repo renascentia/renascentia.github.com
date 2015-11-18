@@ -3,44 +3,6 @@
 @import "foundation";
 @import "compass/css3";
 
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
-
 
 html, body {
 	-webkit-font-smoothing: antialiased;
@@ -121,6 +83,7 @@ a {
 .block-content {
 	background: #FFF;
 	padding: 20px 40px;
+	margin-bottom: 20px;
 	border: 1px solid $grey;
 	@include box-shadow(rgba(0,0,0,.05) 4px 4px 0);
 }
@@ -905,6 +868,16 @@ h1.product-title {
 	}
 }
 
+.parallaxParent {
+	height: 400px;
+	overflow: hidden;
+}
+.parallaxParent > * {
+	height: 200%;
+	position: relative;
+	top: -100%;
+}
+
 #about {
 	margin: 30px 0;
 
@@ -913,22 +886,10 @@ h1.product-title {
 		margin-bottom: 40px;
 	}
 
-	.parallaxParent {
-		height: 100vh;
-		overflow: hidden;
+	#parallax1 {
+		background-image: url('../img/dummy-sample/sample-bg.jpg');
+		//height: 350px;
 	}
-	.parallaxParent > * {
-		height: 200%;
-		position: relative;
-		top: -100%;
-	}
-
-	// .what-we-do {
-	// 	background-image: url('../img/dummy-sample/sample-bg.jpg');
-	// 	//height: 350px;
-	// 	padding-top: 50px;
-	// 	padding-bottom: 80px; 
-	// }
 
 	hr {
 		width: 20px;
@@ -1099,6 +1060,39 @@ h1.product-title {
 				margin-bottom: 10px;
 			}
 		}
+
+		.owl-icon {
+			top: 30% !important;
+		}
+
+		.owl-prev {
+	      display: block !important;
+	    }
+	    .owl-next {
+	      display: block !important;
+	    }
+
+	}
+
+	.owl-carousel-category {
+		.owl-prev {
+	      display: block !important;
+	    }
+	    .owl-next {
+	      display: block !important;
+	    }
+	    .owl-icon {
+			top: 30% !important;
+		}
+
+		&:hover {
+			.owl-prev {
+		      display: block !important;
+		    }
+		    .owl-next {
+		      display: block !important;
+		    }
+		}
 	}
 
 	section.listing {
@@ -1259,6 +1253,17 @@ h1.product-title {
 				margin-bottom: 10px;
 			}
 		}
+
+		.owl-icon {
+			top: 30% !important;
+		}
+
+		.owl-prev {
+	      display: block !important;
+	    }
+	    .owl-next {
+	      display: block !important;
+	    }
 	}
 
 	section.listing {

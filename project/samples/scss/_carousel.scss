@@ -269,9 +269,7 @@
 
 
 .owl-carousel, .owl-carousel-category {
-  .owl-controls {
-    //display: none;
-  }
+  
   .item {
 
     .img-container {
@@ -381,6 +379,30 @@
     &.icon-arrow-left {
       margin-left: 12px;
       background: url('../img/icon-arrow-left.svg') no-repeat;
+    }
+  }
+}
+
+.owl-carousel {
+
+  &:hover {
+    .owl-prev {
+      display: block !important;
+    }
+    .owl-next {
+      display: block !important;
+    }
+  }
+}
+
+.owl-carousel-category {
+  
+  &:hover {
+    .owl-prev {
+      display: none !important;
+    }
+    .owl-next {
+      display: none !important;
     }
   }
 }

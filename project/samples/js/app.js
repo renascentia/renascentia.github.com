@@ -16,7 +16,7 @@ $('.owl-carousel').owlCarousel({
 	autoplay: true,
 	autoplayTimeout:5000,
 	autoplayHoverPause:true,
-	nav:true,
+	nav:false,
 	navText: [
 	"<div class='owl-icon prev'><i class='icon-arrow-left'></i></div>",
 	"<div class='owl-icon next'><i class='icon-arrow-right'></i></div>"
