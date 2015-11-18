@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samples.com</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
     <link rel="shortcut icon" href="favicon.ico"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,700italic,400italic' rel='stylesheet' type='text/css'>
@@ -102,25 +102,32 @@
       </div><!-- end .video-unit -->
     </div>
 
+    <div class="clearfix"></div>
+
     <div id="about">
       <div class="row">
         <div class="large-12 columns text-center">
           <h2>About Us</h2>
         </div>
+      </div>
 
-        <div class="large-6 columns block-item">
-          <h3>Who we are</h3>
-          <hr>
-          <p>Samples.com is where anyone and everyone can find products they love for free and discover savings they never even dreamed of.</p>
+      <div id="parallax1" class="parallaxParent">
+        <div style="background-image: url(img/dummy-sample/sample2.png);">
         </div>
+      </div>
 
-        <div class="large-6 columns block-item">
-          <h3>What we do</h3>
-          <hr>
-          <p>We work hard to scour the Internet to find free samples, coupons and deals for products you love. Whether it’s laundry detergent, pet food, grocery coupons or coffee — we’ve got you covered.</p>
+
+      <div class="who-we-are">
+        <div class="row">
+          <div class="large-12 columns text-center block-item">
+            <h3>What we do</h3>
+            <hr>
+            <p>We work hard to scour the Internet to find free samples, coupons and deals for products you love. Whether it’s laundry detergent, pet food, grocery coupons or coffee — we’ve got you covered.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="large-6 columns block-item">
+        <!-- <div class="large-6 columns block-item">
           <h3>How it works</h3>
           <hr>
           <p>Discover all of our samples, coupons and deals and browse by your favorite categories. When you find something you like, simply click on a post and get linked out! Create an account and be the first to hear about new savings.</p>
@@ -130,15 +137,15 @@
           <h3>Why we do it</h3>
           <hr>
           <p>So you don’t have to! We know there’s plenty of other things you’d rather do with your time, so let us do the legwork for you. All you have to do is save.</p>
-        </div>
-      </div>
+        </div> -->
+
     </div>
     
 
     <div class="clearfix"></div>
 
     <!-- BEGIN FOOTER -->
-    <div class="footer">
+    <div id="footer">
       <div class="row">
         <div class="large-6 columns">
         <img src="img/logo-mobile.png" data-interchange="[img/logo-mobile.png, (default)], [img/logo-mobile@2x.png, (retina)]" width="118" height="22" alt="Samples.com Mobile">
@@ -182,6 +189,17 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
-    <script src="js/app.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    
+    <script>
+      // init controller
+  var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+  // build scenes
+  new ScrollMagic.Scene({triggerElement: "#parallax1"})
+          .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
+          .addIndicators()
+          .addTo(controller);
+    </script>
   </body>
 </html>
