@@ -57,7 +57,7 @@
 
         <section class="top-bar-section">
           <!-- Right Nav Section -->
-          <ul class="right">
+          <ul class="right show-for-medium-up desktop-search">
             <li class="with-icon"><a href="#" class="item search-icon"><img src="img/search.svg" alt=""></a></li>
             <li class="search-field">
               <form>
@@ -75,11 +75,28 @@
             <li><a href="category-samples.html">Samples</a></li>
             <li><a href="category-coupons.html">Coupons</a></li>
             <li><a href="category-deals.html">Deals</a></li>
-            <li class="active"><a href="about.html">About us</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+
+          <ul class="right show-for-small-only mobile-search">
+            <li class="with-icon"><a href="#" class="item search-icon"><img src="img/search.svg" alt=""></a></li>
+            <li class="search-field">
+              <form>
+                <div class="row collapse form">
+                  <div class="small-8 columns">
+                    <input type="text" placeholder="Search offers...">
+                  </div>
+                  <div class="small-4 columns">
+                    <a href="#" class="button blue">SEARCH</a>
+                  </div>
+                </div>
+              </form>
+            </li>
           </ul>
         </section>
       </nav>
     </div>
+    <!-- END TOP NAV -->
 
     <div class="clearfix"></div>
 
@@ -106,23 +123,27 @@
 
     <div id="about">
 
-    <div class="row">
+      <div class="row">
         <div class="large-12 columns text-center">
           <h2>About Us</h2>
+          <p>asuhasuhasuhuasuhahuas</p>
+          <p>sauhhasuahshuashuashushu</p>
         </div>
       </div>
-
-    <div id="parallax1" class="parallaxParent">
-        <div class="row">
-          <div class="large-12 columns text-center block-item">
-            <h3>What we do</h3>
-            <hr>
-            <p>We work hard to scour the Internet to find free samples, coupons and deals for products you love. Whether it’s laundry detergent, pet food, grocery coupons or coffee — we’ve got you covered.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+      <div class="clearfix"></div>
+
+      <div class="photo what-we-do" data-stellar-background-ratio="0.5">
+          <div class="row">
+            <div class="large-12 columns text-center block-item">
+              <h3>What we do</h3>
+              <hr>
+              <p>We work hard to scour the Internet to find free samples, coupons and deals for products you love. Whether it’s laundry detergent, pet food, grocery coupons or coffee — we’ve got you covered.</p>
+            </div>
+          </div>
+      </div>
+
 
     <div class="clearfix"></div>
 
@@ -166,35 +187,14 @@
     </div>
     <!-- END FOOTER -->
 
-    
-
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery.stellar/jquery.stellar.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
-    <script src="js/scrollmagic/TweenMax.min.js"></script>
-    <script src="js/scrollmagic/ScrollMagic.min.js"></script>
-    <script src="js/scrollmagic/plugins/animation.gsap.min.js"></script>
-    <script src="js/scrollmagic/plugins/debug.addIndicators.min.js"></script>
-    
+    <script src="js/app.js"></script>
     <script>
-  // init controller
-  var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+    
+    </script>
 
-  // build scenes
-  new ScrollMagic.Scene({triggerElement: "#parallax1"})
-          .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-          .addIndicators()
-          .addTo(controller);
-
-  new ScrollMagic.Scene({triggerElement: "#parallax2"})
-          .setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
-          .addIndicators()
-          .addTo(controller);
-
-  new ScrollMagic.Scene({triggerElement: "#parallax3"})
-          .setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
-          .addIndicators()
-          .addTo(controller);
-</script>
   </body>
 </html>

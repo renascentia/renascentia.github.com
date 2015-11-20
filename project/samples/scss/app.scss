@@ -2,6 +2,7 @@
 @import "carousel";
 @import "foundation";
 @import "compass/css3";
+@import "progress";
 
 
 html, body {
@@ -11,7 +12,7 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     //@include transition();
 }
 
@@ -282,17 +283,27 @@ i {
 
 	.search-field {
 		width: 0;
+		margin-top: 15px !important;
 		
 		input{
 		  top: 0;
 		  height: 30px;
-		  margin-top: 15px;
 		  padding: 0;
 		  border: none;
 		}
 
+		.button {
+			background: $blue;
+			height: 30px;
+			top: 0;
+		}
+
 		&.open {
 			width: 300px;
+
+			input {
+				padding-left: 8px;
+			}
 		}
 	}
 
@@ -568,13 +579,13 @@ section.listing {
 .product-block {
 	margin-bottom: 20px;
 	.img-container {
-		height: 280px;
-		max-width: 360px;
+		height: 100%;
+		max-width: 100%;
 		overflow: hidden;
 
 		img {
 			width: 100%;
-        	height: 280px;
+        	height: 100%;
 		}
 		
 	}
@@ -582,7 +593,7 @@ section.listing {
 	&.with-ads {
 		.ads-block {
 			margin: 0 !important;
-			height: 280px;
+			height: 282px;
 
 			.ads-content {
 				width: 360px;
@@ -868,16 +879,6 @@ h1.product-title {
 	}
 }
 
-.parallaxParent {
-	height: 400px;
-	overflow: hidden;
-}
-.parallaxParent > * {
-	height: 200%;
-	position: relative;
-	top: -100%;
-}
-
 #about {
 	margin: 30px 0;
 
@@ -886,10 +887,6 @@ h1.product-title {
 		margin-bottom: 40px;
 	}
 
-	#parallax1 {
-		background-image: url('../img/dummy-sample/sample-bg.jpg');
-		//height: 350px;
-	}
 
 	hr {
 		width: 20px;
@@ -908,6 +905,26 @@ h1.product-title {
 	p {
 		font-size: rem-calc(16);
 		color: $grey;
+	}
+
+}
+
+.parallax-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.photo {
+	background-attachment: fixed;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	height: 300px;
+	position: relative;
+
+	&.what-we-do {
+		background-image: url('../img/dummy-sample/sample-bg.jpg');
+		width: 100%;
 	}
 }
 
@@ -947,10 +964,19 @@ h1.product-title {
 	h1 {
 		font-weight: bold;
 		font-size: rem-calc(32);
+		margin-top: 30px;
+	}
+
+	.progress-container {
 	}
 
 	img {
-		margin: 20px 0;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: rem-calc(20px);
 	}
 
 	span {
@@ -963,8 +989,9 @@ h1.product-title {
 
 @media only screen and (max-width: 40em) { 
 
-	.responsive-square { width: 307px; height: 257px; }
+	// .responsive-square { width: 307px; height: 257px; }
 	.responsive-banner { width: 320px; height: 55px; }
+	.product-banner { width: 320px; height: 55px; }
 
 	.ads-column {
 		padding-left: 0px !important;
@@ -1001,19 +1028,12 @@ h1.product-title {
 		}
 
 		.search-field {
-			width: 200px;
+			width: 70%;
 			float: left;
-			
-			input{
-			  top: 0;
-			  height: 30px;
-			  margin-top: 15px;
-			  padding: 0;
-			  border: none;
-			}
+			margin-top: 12px !important;
 
-			&.open {
-				width: 300px;
+			input {
+				padding-left: 8px;
 			}
 		}
 	}
@@ -1100,9 +1120,10 @@ h1.product-title {
 
 		.product-block {
 			margin-bottom: 20px;
+			border-bottom: 1px dotted #e1e1e1;
+			padding-bottom: 10px;
 
 			.img-container {
-					max-width: 360px;
 					margin: 0 auto;
 				img {
 					max-width: 100%;
@@ -1293,6 +1314,12 @@ h1.product-title {
 				padding-left: 0;
 				line-height: 16px;
 			}
+
+			&.with-ads {
+				.ads-block {
+					height: 370px;
+				}
+			}
 		}
 
 		.row {
@@ -1389,8 +1416,51 @@ h1.product-title {
 
 }
 
-@media(min-width: 500px) { .responsive-banner { width: 468px; height: 60px; } }
-@media(min-width: 800px) { .responsive-banner { width: 728px; height: 90px; } }
+// Media query for the search field fix on Tablet
+@media only screen and (min-width: 640px) and (max-width: 870px) {
+
+	.top-bar {
+
+		li.with-icon {
+			margin-right: 20px;
+			float: left;
+		}
+
+		.search-field {
+			width: 70%;
+			float: left;
+			margin-top: 12px !important;
+
+			input {
+				padding-left: 8px;
+			}
+		}
+	}
+
+	.desktop-search {
+		display: none !important;
+	}
+
+	.mobile-search {
+		display: block !important;
+	}
+}
+
+.product-banner {
+	display:inline-block; 
+	width: 320px; 
+	height: 55px;
+}
+
+@media(min-width: 500px) { 
+	.responsive-banner { width: 468px; height: 60px; } 
+	.product-banner { display: none; }
+}
+@media(min-width: 800px) { 
+	.responsive-banner { width: 728px; height: 90px; } 
+	.product-banner { display: none; }
+}
+
 
 
 // .responsive_square { width: 307px; height: 257px; }
