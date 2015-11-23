@@ -58,10 +58,10 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right show-for-medium-up desktop-search">
-            <li class="with-icon"><a href="#" class="item search-icon"><img src="img/search.svg" alt=""></a></li>
+            <li class="with-icon"><a href="#" class="item search-icon icon-expand"><img src="img/search.svg" alt=""></a></li>
             <li class="search-field">
               <form>
-                    <input type="search" class="dream-search" placeholder="Search offers">
+                    <input type="search" class="dream-search" placeholder="Search">
               </form>
             </li>
             <li class="divider show-for-large-up"></li>
@@ -79,19 +79,13 @@
           </ul>
 
           <ul class="right show-for-small-only mobile-search">
-            <li class="with-icon"><a href="#" class="item search-icon"><img src="img/search.svg" alt=""></a></li>
+            
             <li class="search-field">
               <form>
-                <div class="row collapse form">
-                  <div class="small-8 columns">
-                    <input type="text" placeholder="Search offers...">
-                  </div>
-                  <div class="small-4 columns">
-                    <a href="#" class="button blue">SEARCH</a>
-                  </div>
-                </div>
+                <input type="search" class="dream-search" placeholder="Search">
               </form>
             </li>
+            <li class="with-icon"><a href="#" class="item search-icon"><img src="img/search.svg" alt=""></a></li>
           </ul>
         </section>
       </nav>
@@ -107,12 +101,11 @@
           <h1>Our Mission</h1>
           <p>We believe everyone should get something for free. Period.</p>
         </div>
-        <div class="video-texture"></div>
         <div id="video-container">
           <video autoplay loop class="fillWidth">
-          <source src="img/dummy-sample/packing.mp4" type="video/mp4"/>
-          <source src="img/dummy-sample/packing.ogg" type="video/ogg"/>
-          <source src="img/dummy-sample/packing.webm" type="video/webm"/>
+          <source src="img/video/packing.mp4" type="video/mp4"/>
+          <source src="img/video/packing.ogg" type="video/ogg"/>
+          <source src="img/video/packing.webm" type="video/webm"/>
           Your browser does not support the video tag. I suggest you upgrade your browser.
           </video>
         </div><!-- end video-container -->
@@ -121,28 +114,33 @@
 
     <div class="clearfix"></div>
 
-    <div id="about">
-
-      <div class="row">
-        <div class="large-12 columns text-center">
-          <h2>About Us</h2>
-          <p>asuhasuhasuhuasuhahuas</p>
-          <p>sauhhasuahshuashuashushu</p>
-        </div>
+    <div class="parallax-background who-we-are">
+      <div class="parallax-content">
+        <h2>Who we are</h3>
+        <p>Samples.com is where anyone and everyone can find products they love for free and discover savings they never even dreamed of.</p>
       </div>
     </div>
 
-      <div class="clearfix"></div>
-
-      <div class="photo what-we-do" data-stellar-background-ratio="0.5">
-          <div class="row">
-            <div class="large-12 columns text-center block-item">
-              <h3>What we do</h3>
-              <hr>
-              <p>We work hard to scour the Internet to find free samples, coupons and deals for products you love. Whether it’s laundry detergent, pet food, grocery coupons or coffee — we’ve got you covered.</p>
-            </div>
-          </div>
+    <div class="parallax-background what-we-do">
+      <div class="parallax-content img">
+        <h2>What we do</h3>
+        <p>We work hard to scour the Internet to find free samples, coupons and deals for products you love. Whether it’s laundry detergent, pet food, grocery coupons or coffee — we’ve got you covered.</p>
       </div>
+    </div>
+
+    <div class="parallax-background how-it-works">
+      <div class="parallax-content">
+        <h2 class="color-white">How it Works</h3>
+        <p class="color-white">Discover all of our samples, coupons and deals and browse by your favorite categories. When you find something you like, simply click on a post and get linked out! Create an account and be the first to hear about new savings.</p>
+      </div>
+    </div>
+
+    <div class="parallax-background why-we-do">
+      <div class="parallax-content img">
+        <h2>Why we do it</h3>
+        <p>So you don’t have to! We know there’s plenty of other things you’d rather do with your time, so let us do the legwork for you. All you have to do is save.</p>
+      </div>
+    </div>
 
 
     <div class="clearfix"></div>
@@ -150,7 +148,7 @@
     <!-- BEGIN FOOTER -->
     <div id="footer">
       <div class="row">
-        <div class="large-6 columns">
+        <div class="large-6 medium-12 columns">
         <img src="img/logo-mobile.png" data-interchange="[img/logo-mobile.png, (default)], [img/logo-mobile@2x.png, (retina)]" width="118" height="22" alt="Samples.com Mobile">
         <div class="social-icons">
           <img src="img/facebook-box.svg" alt="">
@@ -159,7 +157,7 @@
         </div>
         <div class="copyright">© Copyright 2015 Samples, All Rights Reserved.</div>
         </div>
-        <div class="large-2 columns">
+        <div class="large-2 medium-4 columns">
           <ul>
             <li class="list-title">General</li>
             <li><a href="index.html">Home</a></li>
@@ -167,7 +165,7 @@
             <li><a href="browse.html">Browse</a></li>
           </ul>
         </div>
-        <div class="large-2 columns">
+        <div class="large-2 medium-4 columns">
           <ul>
             <li class="list-title">Offers</li>
             <li><a href="category-samples.html">Samples</a></li>
@@ -175,7 +173,7 @@
             <li><a href="category-deals.html">Deals</a></li>
           </ul>
         </div>
-        <div class="large-2 columns">
+        <div class="large-2 medium-4 columns">
           <ul>
             <li class="list-title">Support</li>
             <li><a href="contact.html">Contact Us</a></li>

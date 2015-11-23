@@ -1,4 +1,4 @@
-# Sample.com Quick Guide
+# Samples.com - Documentation
 
 ## Requirements
 
@@ -6,6 +6,15 @@
   * [Node.js](http://nodejs.org)
   * [compass](http://compass-style.org/): `gem install compass`
   * [bower](http://bower.io): `npm install bower -g`
+
+
+## IMAGE SIZES
+
+Featured Image
+`width: 720px; height: 440px;`
+
+Product Image 
+`width: 610px; height: 474px;`
 
 ## CSS FILES
 
@@ -18,29 +27,44 @@ bundle exec compass watch
 ```
 
 ## Imports
-For all the pages you will need to import the global.css.
 
 /*** JS FILES ***/
 
-I'm using Foundation framework for the JS, using it for the retina images and modal. For IE compatibility you will require the rem.js and placeholders.js.
+I'm using Foundation framework for the JS, and for the search it's custom JS that you can view inside js/app.js. 
 
-If you know grunt, I would recommend merging all js and creating a single one for production.
+For IE compatibility you will need to import the necessary js that you see inside the <head> tag.
 
-/*** A/B TEST ***/
+/*** CSS FILES ***/
 
-If you would like to test the button color just include the class="orange" on your html, the default color is blue.
+For all the pages you will need to import the css/app.css.
 
+## STYLES
 
-If you would like to change any color on the website, you can easily do so on the global variables files(scss/framework/components/_global.scss)
+If you would like to change any color on the website, you can easily do so on the global variables files(bower_components/foundation/scss/foundation/components/_global.scss)
 
-/*** SEO ***/
+/*** BUTTONS ***/
 
-I've used all the necessary html tags for SEO, now you need to make sure you target your keywords properly. If you still have access to bright marketing files. I would recommend taking a look and check our top keywords and ad groups, then create your SEO strategy from that. If you need more help with seo just let me know.
+You can include the button class inside an <a> and the <button> tags.
+- Blue: `class="button blue"`
+- Green: `class="button green"`
+- Purple: `class="button purple"`
 
-/*** QUESTIONS ***/
+You can include those inside any text tag to change the text color.
+- Blue: `class="color-blue"`
+- Green: `class="color-green"`
+- Purple: `class="color-purple"`
 
-Just skype me or email me at hello@rodrigoparra.com
+/*** TOP NAV ***/
 
+The nav bar default style is dark grey, if you want to change the color you will need to add an extra class to the div `contain-to-grid`. Remember to change the logo image as well.
+- Default/ Dark: `<div class="contain-to-grid">` / logo.png
+- Blue Nav: `<div class="contain-to-grid top-bar-blue">` / logo-blue.png
+- Green Nav: `<div class="contain-to-grid top-bar-green">"` / logo-green.png
+- Purple Nav: `<div class="contain-to-grid top-bar-purple">` / logo-purple.png
+
+## QUESTIONS
+
+Just email me at hello@rodrigoparra.com
 
 ## Upgrading
 

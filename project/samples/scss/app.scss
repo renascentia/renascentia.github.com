@@ -48,6 +48,10 @@ a {
 	color: $purple;
 }
 
+.color-white {
+	color: $white;
+}
+
 .ads-block {
 	background: url('../img/ads-pattern.jpg') repeat;
 
@@ -578,6 +582,7 @@ section.listing {
 
 .product-block {
 	margin-bottom: 20px;
+
 	.img-container {
 		height: 100%;
 		max-width: 100%;
@@ -591,20 +596,34 @@ section.listing {
 	}
 
 	&.with-ads {
+
 		.ads-block {
-			margin: 0 !important;
-			height: 282px;
+			position: relative; 
+			height: auto !important;
+
+			.img-ads-bg {
+				width: 100%;
+				visibility:hidden;
+			}
 
 			.ads-content {
-				width: 360px;
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-		}
+				position: absolute; 
+				top: 0; left: 0; 
+				right: 0; bottom: 0; 
+				width: auto;
 
-		.product-title {
-			height: 25px;
-			margin-bottom: 0;
+				.ads-align {
+					width: 300px; 
+					height: 250px; 
+					position: absolute; 
+					top: 50%; 
+					margin-top: -125px; 
+					left: 50%; 
+					margin-left: -150px;
+				}
+			}
+
+
 		}
 
 		.redeem-number {
@@ -679,6 +698,16 @@ section.product {
 			font-size: rem-calc(38);
 			line-height: 50px;
 			font-weight: bold;
+			display: block; /* Fallback for non-webkit */
+			display: -webkit-box;
+			//max-width: 370px;
+			height: 210px; /* Fallback for non-webkit */
+			margin: 0 auto;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
 		}
 
 		.details {
@@ -822,16 +851,6 @@ h1.product-title {
 
 #video {
 
-	.video-texture {
-		background: rgba(132,84,137,.8);
-		width: 100%;
-		height: 350px;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 10;
-	}
-
 	.video-unit {
 	  height: 350px;
 	  position: relative;
@@ -879,52 +898,52 @@ h1.product-title {
 	}
 }
 
-#about {
-	margin: 30px 0;
 
-	h2 {
-		font-size: 40px;
-		margin-bottom: 40px;
-	}
-
-
-	hr {
-		width: 20px;
-		border-width: 2px 0 0;
-		border-color: $blue;
-		margin: 10px 0;
-	}
-
-	h3 {
-		font-size: rem-calc(16);
-		font-weight: bold;
-		text-transform: uppercase;
-		font-family: $body-font-family;
-	}
-
-	p {
-		font-size: rem-calc(16);
-		color: $grey;
-	}
-
-}
-
-.parallax-container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.photo {
-	background-attachment: fixed;
-	background-position: 50% 0;
+.parallax-background {
+    //height: 400px;
 	background-repeat: no-repeat;
-	height: 300px;
-	position: relative;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	padding: 50px 0;
+	background: $white;
 
-	&.what-we-do {
-		background-image: url('../img/dummy-sample/sample-bg.jpg');
-		width: 100%;
+    &.what-we-do {
+		background-image: url('../img/about-2.jpeg');
+		// width: 100%;
+	}
+
+	&.how-it-works{
+		background: $blue;
+	}
+
+	&.why-we-do{
+		background-image: url('../img/about-1.jpeg');
+	}
+
+	.parallax-content {
+		text-align: center;
+		margin: 0 auto;
+		max-width: 600px;
+		padding: 30px;
+
+		&.img {
+			
+			background: rgba(0,0,0,.6);
+			
+
+			h2 {
+				color: $white;
+				@include text-shadow(rgba(0,0,0,.9) 0 1px 5px);
+			}
+
+			p {
+				color: $white;
+				@include text-shadow(rgba(0,0,0,.9) 0 1px 2px);
+			}
+		}
 	}
 }
 
@@ -1028,12 +1047,12 @@ h1.product-title {
 		}
 
 		.search-field {
-			width: 70%;
+			width: 80%;
 			float: left;
 			margin-top: 12px !important;
 
-			input {
-				padding-left: 8px;
+			form {
+				padding-left: 1.25rem;
 			}
 		}
 	}
@@ -1083,6 +1102,20 @@ h1.product-title {
 
 		.owl-icon {
 			top: 30% !important;
+			width: 30px !important;
+			height: 50px !important;
+
+			i {
+				margin-top: 13px !important;
+
+				&.icon-arrow-right {
+					margin-left: 10px !important;
+				}
+
+				&.icon-arrow-left {
+					margin-left: 6px !important;
+				}
+			}
 		}
 
 		.owl-prev {
@@ -1181,6 +1214,7 @@ h1.product-title {
 				line-height: 30px;
 				font-weight: bold;
 				margin-bottom: 0;
+				height: auto;
 			}
 
 			.details {
@@ -1237,12 +1271,26 @@ h1.product-title {
 		}
 	}
 
+	#video-container {
+		background: url('../img/about-3.jpeg');
+		video {
+			display: none;
+		}
+	}
+
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) { 
 
 	.button {
 		//width:100%;
+	}
+
+	#video-container {
+		background: url('../img/about-3.jpeg');
+		video {
+			display: none;
+		}
 	}
 
 	h1.site-title {
@@ -1276,7 +1324,7 @@ h1.product-title {
 		}
 
 		.owl-icon {
-			top: 30% !important;
+			top: 40% !important;
 		}
 
 		.owl-prev {
@@ -1287,10 +1335,25 @@ h1.product-title {
 	    }
 	}
 
+	.owl-carousel-category {
+		.owl-prev {
+	      display: none !important;
+	    }
+	    .owl-next {
+	      display: none !important;
+	    }
+
+	}
+
 	section.listing {
 		padding: 10px 0;
+
 		h2 {
 			font-size: rem-calc(28);
+		}
+
+		.large {
+			margin-bottom: 15px;
 		}
 
 		.product-block {
@@ -1302,7 +1365,7 @@ h1.product-title {
 
 			.product-title {
 				max-width: 100%;
-				height: auto;
+				//height: auto;
 				overflow: none;
 			}
 
@@ -1316,8 +1379,29 @@ h1.product-title {
 			}
 
 			&.with-ads {
+
+				.redeem-number {
+					padding-top: 20px;
+					display:block;
+					height: 118px;
+
+					&.tablet {
+						height: auto;
+					}
+				}
+
+				.img-tablet {
+					height: 300px;
+				}
+
 				.ads-block {
-					height: 370px;
+					display: table;
+					width: 100%;
+					
+					.ads-content {
+						display: table-cell;
+						vertical-align: middle;
+					}
 				}
 			}
 		}
@@ -1326,14 +1410,6 @@ h1.product-title {
 
 			&.offer-listing {
 				margin-bottom: 0px;
-
-				.with-ads {
-					.redeem-number {
-						padding-top: 20px;
-						height: 112px;
-						display:block;
-					}
-				}
 			}
 		}
 
@@ -1355,6 +1431,11 @@ h1.product-title {
 			padding: 0;
 			border: none;
 
+			h1 {
+				height: auto;
+				margin-bottom: 15px;
+			}
+
 			.details {
 				margin-top: 0;
 
@@ -1374,8 +1455,6 @@ h1.product-title {
 		}
 
 		.block-img {
-			//background: $white;
-			//height: 280px;
 
 			.img-container {
 				width: 100%;
@@ -1427,12 +1506,12 @@ h1.product-title {
 		}
 
 		.search-field {
-			width: 70%;
+			width: 90%;
 			float: left;
 			margin-top: 12px !important;
 
-			input {
-				padding-left: 8px;
+			form {
+				padding-left: 1.25rem;
 			}
 		}
 	}

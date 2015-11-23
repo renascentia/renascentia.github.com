@@ -2,7 +2,7 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-$('.top-bar .search-icon').click(function(event) {
+$('.top-bar .icon-expand').click(function(event) {
       if ($('.top-bar-section li.search-field').hasClass('open')){
         $('.top-bar-section li.search-field').animate({width: "0px", margin: "0px",display: 'none'}, 500).removeClass('open')
       } else {
