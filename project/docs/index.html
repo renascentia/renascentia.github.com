@@ -1,0 +1,2738 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://rodrigos-macbook-pro.local:4567/#introduction -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Jobzi API</title>
+
+    <link href="./Jobzi API_files/screen.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./Jobzi API_files/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="./Jobzi API_files/jquery.min.js"></script>
+      <script src="./Jobzi API_files/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          setupLanguages(["http"]);
+        });
+      </script>
+  <style type="text/css"></style></head>
+
+  <body class="index">
+    <a href="http://rodrigos-macbook-pro.local:4567/#" id="nav-button">
+      <span>
+        NAV
+        <img src="./Jobzi API_files/navbar.png">
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="./Jobzi API_files/logo.png">
+        <div class="lang-selector">
+              <a href="http://rodrigos-macbook-pro.local:4567/#" data-language-name="http" class="active">http</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="tocify">
+      <ul id="tocify-header0" class="tocify-header"><li class="tocify-item tocify-focus" data-unique="introduction"><a>Introduction</a></li></ul><ul id="tocify-header1" class="tocify-header"><li class="tocify-item" data-unique="users"><a>Users</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-users"><a>Get All Users</a></li><li class="tocify-item" data-unique="create-user"><a>Create User</a></li><li class="tocify-item" data-unique="retrieve-user"><a>Retrieve User</a></li><li class="tocify-item" data-unique="update-user"><a>Update User</a></li><li class="tocify-item" data-unique="delete-user"><a>Delete User</a></li></ul></ul><ul id="tocify-header2" class="tocify-header"><li class="tocify-item" data-unique="saved-searches"><a>Saved Searches</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-saved-searches"><a>Get All Saved Searches</a></li><li class="tocify-item" data-unique="create-saved-search"><a>Create Saved Search</a></li><li class="tocify-item" data-unique="delete-saved-search"><a>Delete Saved Search</a></li></ul></ul><ul id="tocify-header3" class="tocify-header"><li class="tocify-item" data-unique="resumes"><a>Resumes</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-resumes"><a>Get All Resumes</a></li><li class="tocify-item" data-unique="create-resume"><a>Create Resume</a></li><li class="tocify-item" data-unique="retrieve-resume"><a>Retrieve Resume</a></li><li class="tocify-item" data-unique="update-resume"><a>Update Resume</a></li><li class="tocify-item" data-unique="delete-resume"><a>Delete Resume</a></li><li class="tocify-item" data-unique="skill-39-s-suggestions"><a>Skill’s Suggestions</a></li></ul></ul><ul id="tocify-header4" class="tocify-header"><li class="tocify-item" data-unique="educations"><a>Educations</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-educations"><a>Get All Educations</a></li><li class="tocify-item" data-unique="create-education"><a>Create Education</a></li><li class="tocify-item" data-unique="retrieve-resume21"><a>Retrieve Resume</a></li><li class="tocify-item" data-unique="update-resume22"><a>Update Resume</a></li><li class="tocify-item" data-unique="delete-resume23"><a>Delete Resume</a></li></ul></ul><ul id="tocify-header5" class="tocify-header"><li class="tocify-item" data-unique="work-experiences"><a>Work Experiences</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-work-experiences"><a>Get All Work Experiences</a></li><li class="tocify-item" data-unique="create-work-experience"><a>Create Work Experience</a></li><li class="tocify-item" data-unique="retrieve-work-experience"><a>Retrieve Work Experience</a></li><li class="tocify-item" data-unique="update-work-experience"><a>Update Work Experience</a></li><li class="tocify-item" data-unique="delete-work-experience"><a>Delete Work Experience</a></li></ul></ul><ul id="tocify-header6" class="tocify-header"><li class="tocify-item" data-unique="skills"><a>Skills</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-skills"><a>Get All Skills</a></li><li class="tocify-item" data-unique="create-skill"><a>Create Skill</a></li><li class="tocify-item" data-unique="retrieve-skill"><a>Retrieve Skill</a></li><li class="tocify-item" data-unique="update-resume34"><a>Update Resume</a></li><li class="tocify-item" data-unique="delete-resume35"><a>Delete Resume</a></li></ul></ul><ul id="tocify-header7" class="tocify-header"><li class="tocify-item" data-unique="jobs"><a>Jobs</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-jobs"><a>Get All Jobs</a></li><li class="tocify-item" data-unique="retrieve-job"><a>Retrieve Job</a></li><li class="tocify-item" data-unique="similar-jobs"><a>Similar Jobs</a></li><li class="tocify-item" data-unique="job-39-s-skills-recommendations"><a>Job’s Skills Recommendations</a></li><li class="tocify-item" data-unique="job-39-s-titles-recommendations"><a>Job’s Titles Recommendations</a></li><li class="tocify-item" data-unique="get-all-user-39-s-jobs"><a>Get All User’s Jobs</a></li><li class="tocify-item" data-unique="create-user-39-s-job"><a>Create User’s Job</a></li><li class="tocify-item" data-unique="retrieve-user-39-s-job"><a>Retrieve User’s Job</a></li><li class="tocify-item" data-unique="update-user-39-s-job"><a>Update User’s Job</a></li><li class="tocify-item" data-unique="delete-user-39-s-job"><a>Delete User’s Job</a></li></ul></ul><ul id="tocify-header8" class="tocify-header"><li class="tocify-item" data-unique="suggestions"><a>Suggestions</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="term-39-s-suggestions"><a>Term’s Suggestions</a></li><li class="tocify-item" data-unique="location-39-s-suggestions"><a>Location’s Suggestions</a></li><li class="tocify-item" data-unique="search-suggestions"><a>Search Suggestions</a></li><li class="tocify-item" data-unique="skill-39-s-suggestions51"><a>Skill’s Suggestions</a></li><li class="tocify-item" data-unique="skill-39-s-suggestions-skill-to-skills"><a>Skill’s Suggestions (skill to skills)</a></li><li class="tocify-item" data-unique="educational-institution-39-s-suggestions"><a>Educational Institution’s Suggestions</a></li><li class="tocify-item" data-unique="course-39-s-suggestions"><a>Course’s Suggestions</a></li><li class="tocify-item" data-unique="vocabulary-39-s-suggestions"><a>Vocabulary’s Suggestions</a></li></ul></ul><ul id="tocify-header9" class="tocify-header"><li class="tocify-item" data-unique="companies"><a>Companies</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-company"><a>Get Company</a></li><li class="tocify-item" data-unique="get-company-39-s-jobs"><a>Get Company’s Jobs</a></li></ul></ul><ul id="tocify-header10" class="tocify-header"><li class="tocify-item" data-unique="errors"><a>Errors</a></li></ul></div>
+        <ul class="toc-footer">
+            <li><a target="_blank" href="http://apidev.jobzi.com/">Jobzi API - DEV</a></li>
+            <li><a target="_blank" href="http://apistage.jobzi.com/">Jobzi API - STAGE</a></li>
+            <li><a target="_blank" href="http://api.jobzi.com/">Jobzi API</a></li>
+            <li><a target="_blank" href="http://jobzi.com/">Jobzi</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <div name="introduction" data-unique="introduction"></div><h1 id="introduction">Introduction</h1>
+
+<p>Utilize a documentação aqui descrita para conhecer melhor os endpoints da Jobzi API. Com estes endpoints você pode manipular toda a informação básica para o funcionamento do <a href="http://jobzi.com/">jobzi.com</a> como: usuários, autenticação de usuários, curriculo, vagas, sugestões, recomendações, etc. </p>
+
+<p>Se você é desenvolvedor, sinta-se à vontade para corrigir ou atualizar esta documentação. Para isto basta clonar o <a href="https://bitbucket.org/atlz/jobzi-slate">Código do bitbucket</a> e modificar ou criar documentos “.md” no diretório “/source/includes”. Para mais exmplos de manipulação e edição, utilize a <a href="http://github.com/tripit/slate">documentação oficial do Slate</a>.</p>
+
+<aside class="notice">
+Ao criar novos arquivos “.md”, não esqueça de incluir uma referência no arquivo “index.md” na raiz do projeto.
+</aside>
+
+          <div name="users" data-unique="users"></div><h1 id="users">Users</h1>
+
+<div name="get-all-users" data-unique="get-all-users"></div><h2 id="get-all-users">Get All Users</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w"> </span><span class="nt">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JOAO CARVALHO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joao@atlz.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2a$10$sxcWZIKjtPFDdeWMkbrcpePo3IkSae/LcUlr3QL6UtgGsBlaOMl4q"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jobseeker"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linkedin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeProductEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeRecommendedJobs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeSavedSearch"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"hasPassword"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"jwt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiaWF0IjoxNDQ4MTYyNjA5LCJleHAiOjE0NDgyNDkwMDl9.Y-t0VMEegy2cdMNKQsAxtLd5u4SWA2KQDNKIyEkdaZc"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tokenPass"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tokenPassExpires"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-22T03:23:29.356Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-22T03:23:29.634Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todos os usuários cadastrados no sistema.</p>
+
+<aside class="notice">
+Possivelmente será removido. Não possui muita utilidade pois não temos um usuario administrador do sistema.
+</aside>
+
+<div name="create-user" data-unique="create-user"></div><h2 id="create-user">Create User</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">POST</span> <span class="nn">/v2/users</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"José Bonifacil"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mail@uol.com.br"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pass"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto mínimo para criação de um usuário.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="s">{</span>
+<span class="s">    "id": 2,</span>
+<span class="s">    "name": "JOAO CARVALHO",</span>
+<span class="s">    "email": "joao@atlz.com.br",</span>
+<span class="s">    "password": "$2a$10$sxcWZIKjtPFDdeWMkbrcpePo3IkSae/LcUlr3QL6UtgGsBlaOMl4q",</span>
+<span class="s">    "type": "jobseeker",</span>
+<span class="s">    "picture": null,</span>
+<span class="s">    "facebook": null,</span>
+<span class="s">    "twitter": null,</span>
+<span class="s">    "linkedin": null,</span>
+<span class="s">    "subscribeProductEmail": true,</span>
+<span class="s">    "subscribeRecommendedJobs": true,</span>
+<span class="s">    "subscribeSavedSearch": true,</span>
+<span class="s">    "hasPassword": true,</span>
+<span class="s">    "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiaWF0IjoxNDQ4MTYyNjA5LCJleHAiOjE0NDgyNDkwMDl9.Y-t0VMEegy2cdMNKQsAxtLd5u4SWA2KQDNKIyEkdaZc",</span>
+<span class="s">    "tokenPass": null,</span>
+<span class="s">    "tokenPassExpires": null,</span>
+<span class="s">    "createdAt": "2015-11-22T03:23:29.356Z",</span>
+<span class="s">    "updatedAt": "2015-11-22T03:23:29.634Z",</span>
+<span class="s">    "deletedAt": null,</span>
+<span class="s">    "cid": null</span>
+<span class="s">}</span>
+</code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo do novo usuário criado.</p>
+</blockquote>
+
+<p>Cria um novo usuário no banco de dados.</p>
+
+<aside class="notice">
+Ao ser criado, o campo type assume o valor “jobseeker” para criar um usuário que representa uma empresa passe o valor de type na criação do usuário como “jobposter”.
+</aside>
+
+<div name="retrieve-user" data-unique="retrieve-user"></div><h2 id="retrieve-user">Retrieve User</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JOAO CARVALHO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joao@atlz.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2a$10$sxcWZIKjtPFDdeWMkbrcpePo3IkSae/LcUlr3QL6UtgGsBlaOMl4q"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jobseeker"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linkedin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeProductEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeRecommendedJobs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeSavedSearch"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"hasPassword"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"jwt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiaWF0IjoxNDQ4MTYyNjA5LCJleHAiOjE0NDgyNDkwMDl9.Y-t0VMEegy2cdMNKQsAxtLd5u4SWA2KQDNKIyEkdaZc"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tokenPass"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tokenPassExpires"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-22T03:23:29.356Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-22T03:23:29.634Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna retorna o usuário que possui o ID informado.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário a ser retornado</td>
+</tr>
+</tbody></table>
+
+<div name="update-user" data-unique="update-user"></div><h2 id="update-user">Update User</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">PUT</span> <span class="nn">/v2/users/&lt;ID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"José Bonifacio"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://images.com.br/husuheu45434njdn3"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto com os campos que serão atualizados no banco de dados.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JOAO CARVALHO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joao@atlz.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2a$10$sxcWZIKjtPFDdeWMkbrcpePo3IkSae/LcUlr3QL6UtgGsBlaOMl4q"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jobseeker"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linkedin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeProductEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeRecommendedJobs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subscribeSavedSearch"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"hasPassword"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"jwt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiaWF0IjoxNDQ4MTYyNjA5LCJleHAiOjE0NDgyNDkwMDl9.Y-t0VMEegy2cdMNKQsAxtLd5u4SWA2KQDNKIyEkdaZc"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tokenPass"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"tokenPassExpires"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-22T03:23:29.356Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-22T03:23:29.634Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"deletedAt"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"cid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo do usuário atualizado.</p>
+</blockquote>
+
+<p>Modifica os dados de um usuário cadastrado.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário a ser atualizado</td>
+</tr>
+</tbody></table>
+
+<div name="delete-user" data-unique="delete-user"></div><h2 id="delete-user">Delete User</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">DELETE</span> <span class="nn">/v2/users/&lt;ID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User successfully disabled."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Exclui um usuário cadastrado.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário a ser excluído</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Os dados do usuário não são efetivamente excluídos. Apenas um flag no objeto usuário é modificado: “deleted” = true.
+</aside>
+
+          <div name="saved-searches" data-unique="saved-searches"></div><h1 id="saved-searches">Saved Searches</h1>
+
+<div name="get-all-saved-searches" data-unique="get-all-saved-searches"></div><h2 id="get-all-saved-searches">Get All Saved Searches</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/saved-searches</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w"> </span><span class="nt">"savedSearches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="nt">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561d0a47e20a89ff04f10c40"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"term"</span><span class="p">:</span><span class="w"> </span><span class="s2">"museologia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="nt">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561d50f9e20a89ff04f10c48"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todas as buscas salvas pelo usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+</tbody></table>
+
+<div name="create-saved-search" data-unique="create-saved-search"></div><h2 id="create-saved-search">Create Saved Search</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">POST</span> <span class="nn">/v2/users/&lt;ID&gt;/saved-searches</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"terms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"museologia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto típico para criação de uma busca salva.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"terms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"museologia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561d50f9e20a89ff04f10c48"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo da nova busca criada.</p>
+</blockquote>
+
+<p>Cria uma nova busca no banco de dados e associa ao usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+</tbody></table>
+
+<div name="delete-saved-search" data-unique="delete-saved-search"></div><h2 id="delete-saved-search">Delete Saved Search</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">DELETE</span> <span class="nn">/v2/users/&lt;ID&gt;/saved-searches/&lt;SSID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saved-search removed from database."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Exclui uma busca salva.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>SSID</td>
+<td>O ID da busca salva</td>
+</tr>
+</tbody></table>
+
+          <div name="resumes" data-unique="resumes"></div><h1 id="resumes">Resumes</h1>
+
+<div name="get-all-resumes" data-unique="get-all-resumes"></div><h2 id="get-all-resumes">Get All Resumes</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w"> </span><span class="nt">"resumes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"currentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"header"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jose Bonifacio"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todos os currículos de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+</tbody></table>
+
+<div name="create-resume" data-unique="create-resume"></div><h2 id="create-resume">Create Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">POST</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"currentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto mínimo para criação de um currículo.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"currentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"header"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jose Bonifacio"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo do novo curriculo.</p>
+</blockquote>
+
+<p>Cria um novo currículo no banco de dados e associa ao usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+</tbody></table>
+
+<div name="retrieve-resume" data-unique="retrieve-resume"></div><h2 id="retrieve-resume">Retrieve Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"currentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"header"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jose Bonifacio"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna o currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo a ser retornado</td>
+</tr>
+</tbody></table>
+
+<div name="update-resume" data-unique="update-resume"></div><h2 id="update-resume">Update Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">PUT</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"currentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Museologista"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto com os campos que serão atualizados no banco de dados.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"currentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Museologista"</span><span class="p">,</span><span class="w">
+ </span><span class="nt">"header"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jose Bonifacio"</span><span class="p">,</span><span class="w">
+ </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="p">,</span><span class="w">
+ </span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo do curículo atualizado.</p>
+</blockquote>
+
+<p>Modifica os dados de um currículo cadastrado.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo a ser atualizado</td>
+</tr>
+</tbody></table>
+
+<div name="delete-resume" data-unique="delete-resume"></div><h2 id="delete-resume">Delete Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">DELETE</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Resume removed from database."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Exclui um currículo do banco de dados.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo a ser excluído</td>
+</tr>
+</tbody></table>
+
+<div name="skill-39-s-suggestions" data-unique="skill-39-s-suggestions"></div><h2 id="skill-39-s-suggestions">Skill’s Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/suggestions/skills</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"processos administrativos"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"produtos financeiros"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"propaganda"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna skills sugeridas, ou seja, relacionadas ao conteúdo do currículo.</p>
+
+<aside class="notice">
+Utilizado no preechimento do currículo, secção de “habilidades”.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo a ser retornado</td>
+</tr>
+</tbody></table>
+
+          <div name="educations" data-unique="educations"></div><h1 id="educations">Educations</h1>
+
+<div name="get-all-educations" data-unique="get-all-educations"></div><h2 id="get-all-educations">Get All Educations</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/educations</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"educations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"degree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Biblioteconomia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"institution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Universidade Federal Do Estado Do Rio De Janeiro"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2010</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bacharelado"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0d3e20a89ff04f10c31"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todas as graduações do currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+</tbody></table>
+
+<div name="create-education" data-unique="create-education"></div><h2 id="create-education">Create Education</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">POST</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/educations</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"degree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Biblioteconomia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"institution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Universidade Federal Do Estado Do Rio De Janeiro"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2010</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bacharelado"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto típico para criação de uma graduação.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"degree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Biblioteconomia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"institution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Universidade Federal Do Estado Do Rio De Janeiro"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2010</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bacharelado"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0d3e20a89ff04f10c31"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo de uma nova graduação.</p>
+</blockquote>
+
+<p>Cria uma nova graduação no banco de dados e associa ao currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+</tbody></table>
+
+<div name="retrieve-resume21" data-unique="retrieve-resume21"></div><h2 id="retrieve-resume">Retrieve Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/educations/&lt;EID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"degree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Biblioteconomia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"institution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Universidade Federal Do Estado Do Rio De Janeiro"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2010</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bacharelado"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0d3e20a89ff04f10c31"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna a graduação do currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>EID</td>
+<td>O ID da graduação a ser retornada</td>
+</tr>
+</tbody></table>
+
+<div name="update-resume22" data-unique="update-resume22"></div><h2 id="update-resume">Update Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">PUT</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/educations/&lt;EID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"degree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bacharel em Biblioteconomia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"institution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Universidade Estadual do Rio de Janeiro"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto com os campos que serão atualizados no banco de dados.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"degree"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bacharel em Biblioteconomia"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"institution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Universidade Estadual do Rio de Janeiro"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2010</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bacharelado"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0d3e20a89ff04f10c31"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo da graduação atualizada.</p>
+</blockquote>
+
+<p>Modifica os dados de uma graduação cadastrada.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>EID</td>
+<td>O ID da graduação a ser atualizada</td>
+</tr>
+</tbody></table>
+
+<div name="delete-resume23" data-unique="delete-resume23"></div><h2 id="delete-resume">Delete Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">DELETE</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/educations/&lt;EID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Education removed from database."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Exclui uma graduação do banco de dados.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>EID</td>
+<td>O ID da graduação a ser excluída</td>
+</tr>
+</tbody></table>
+
+          <div name="work-experiences" data-unique="work-experiences"></div><h1 id="work-experiences">Work Experiences</h1>
+
+<div name="get-all-work-experiences" data-unique="get-all-work-experiences"></div><h2 id="get-all-work-experiences">Get All Work Experiences</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/workexperiences</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"workexperiences"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"isCurrentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas Partners"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Controle e organização do vocabulário Categorização"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0fae20a89ff04f10c32"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todas as experiências de trabalho do currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+</tbody></table>
+
+<div name="create-work-experience" data-unique="create-work-experience"></div><h2 id="create-work-experience">Create Work Experience</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">POST</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/workexperiences</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"isCurrentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas Partners"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Controle e organização do vocabulário Categorização"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto típico para criação de uma experiência de trabalho.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"isCurrentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas Partners"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Controle e organização do vocabulário Categorização"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0fae20a89ff04f10c32"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo de uma nova experiência de trabalho.</p>
+</blockquote>
+
+<p>Cria uma nova experiência de trabalho no banco de dados e associa ao currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+</tbody></table>
+
+<div name="retrieve-work-experience" data-unique="retrieve-work-experience"></div><h2 id="retrieve-work-experience">Retrieve Work Experience</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/workexperiences/&lt;WEID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"isCurrentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas Partners"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Controle e organização do vocabulário Categorização"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0fae20a89ff04f10c32"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna a experiência de trabalho do currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>WEID</td>
+<td>O ID da experiência de trabalho a ser retornada</td>
+</tr>
+</tbody></table>
+
+<div name="update-work-experience" data-unique="update-work-experience"></div><h2 id="update-work-experience">Update Work Experience</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">PUT</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/workexperiences/&lt;WEID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Controle e organização do vocabulário e categorização de conteúdo"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jobzi Partners LTDA"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto com os campos que serão atualizados no banco de dados.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bibliotecário"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"isCurrentOccupation"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jobzi Partners LTDA"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"initDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2015</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"year"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"month"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Controle e organização do vocabulário e categorização de conteúdo"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf0fae20a89ff04f10c32"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo da experiência de trabalho atualizada.</p>
+</blockquote>
+
+<p>Modifica os dados de uma experiência de trabalho cadastrada.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>WEID</td>
+<td>O ID da experiência de trabalho a ser atualizada</td>
+</tr>
+</tbody></table>
+
+<div name="delete-work-experience" data-unique="delete-work-experience"></div><h2 id="delete-work-experience">Delete Work Experience</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">DELETE</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/workexperiences/&lt;WEID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Work Experience removed from database."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Exclui uma experiência de trabalho do banco de dados.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>WEID</td>
+<td>O ID da experiência de trabalho a ser excluída</td>
+</tr>
+</tbody></table>
+
+          <div name="skills" data-unique="skills"></div><h1 id="skills">Skills</h1>
+
+<div name="get-all-skills" data-unique="get-all-skills"></div><h2 id="get-all-skills">Get All Skills</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/skills</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"office"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alemao"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf11ae20a89ff04f10c34"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todas as habilidades do currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+</tbody></table>
+
+<div name="create-skill" data-unique="create-skill"></div><h2 id="create-skill">Create Skill</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">POST</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/skills</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"office"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto típico para criação de uma habilidade.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"office"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo de uma nova habilidade.</p>
+</blockquote>
+
+<p>Cria uma nova habilidade no banco de dados e associa ao currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+</tbody></table>
+
+<div name="retrieve-skill" data-unique="retrieve-skill"></div><h2 id="retrieve-skill">Retrieve Skill</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/skills/&lt;SID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"office"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna a habilidade do currículo de um usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>SID</td>
+<td>O ID da habilidade a ser retornada</td>
+</tr>
+</tbody></table>
+
+<div name="update-resume34" data-unique="update-resume34"></div><h2 id="update-resume">Update Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">PUT</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/skills/&lt;SID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"microsoft office"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto com os campos que serão atualizados no banco de dados.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"microsoft office"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"rid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf01ae20a89ff04f10c30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo da habilidade atualizada.</p>
+</blockquote>
+
+<p>Modifica os dados de uma habilidade cadastrada.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>SID</td>
+<td>O ID da habilidade a ser atualizada</td>
+</tr>
+</tbody></table>
+
+<div name="delete-resume35" data-unique="delete-resume35"></div><h2 id="delete-resume">Delete Resume</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">DELETE</span> <span class="nn">/v2/users/&lt;ID&gt;/resumes/&lt;RID&gt;/skills/&lt;SID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Skill removed from database."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Exclui uma habilidade do banco de dados.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>RID</td>
+<td>O ID do currículo</td>
+</tr>
+<tr>
+<td>SID</td>
+<td>O ID da habilidade a ser excluída</td>
+</tr>
+</tbody></table>
+
+          <div name="jobs" data-unique="jobs"></div><h1 id="jobs">Jobs</h1>
+
+<div name="get-all-jobs" data-unique="get-all-jobs"></div><h2 id="get-all-jobs">Get All Jobs</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">164699</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"countJobs"</span><span class="p">:</span><span class="w"> </span><span class="mi">456486</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"consultor-de-vendas-oXbB4K"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONSULTOR DE VENDAS"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Requisitos Sem Experiência Sem estudos R$180.000 - R$800.000 por hora São Bernardo do Campo Descrição RESPONSAVEL POR PUBLICIDADES"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"datePosted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-27 17:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JORNAL CIDADES DO ABC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jornal-cidades-do-abc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Paulo"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"countJobs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">180000</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">800000</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://br.linkedin.com/jobs2/view/95164417"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"isExpired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todas as vagas do sistema.</p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Padrão</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>vazio</td>
+<td>String contendo os termos a serem buscados.</td>
+</tr>
+<tr>
+<td>l</td>
+<td>vazio</td>
+<td>String contendo o local a ser filtrado na busca.</td>
+</tr>
+<tr>
+<td>p</td>
+<td>30</td>
+<td>Admite 3 valores: 30, 7 e 1. O número significa o intervalo em dias para filtrar a busca por data de publicação.</td>
+</tr>
+<tr>
+<td>s</td>
+<td>vazio</td>
+<td>String com intervalos de salários, os valores separados por hífen (“-”) e os intervalos separados por “</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>0</td>
+<td>Pula quantidade de itens ao serem listados, utilizado para paginação .</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>10</td>
+<td>Número de resultados a ser retornado.</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>0</td>
+<td>Se for setado como 1 uma lista com o passo a passo da busca do science é mostrada</td>
+</tr>
+</tbody></table>
+
+<div name="retrieve-job" data-unique="retrieve-job"></div><h2 id="retrieve-job">Retrieve Job</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/jobs/&lt;ID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"consultor-de-vendas-oXbB4K"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONSULTOR DE VENDAS"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Requisitos Sem Experiência Sem estudos R$180.000 - R$800.000 por hora São Bernardo do Campo Descrição RESPONSAVEL POR PUBLICIDADES"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"datePosted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-27 17:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JORNAL CIDADES DO ABC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jornal-cidades-do-abc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Paulo"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"countJobs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">180000</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">800000</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://br.linkedin.com/jobs2/view/95164417"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"isExpired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma vaga do sistema.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID da vaga</td>
+</tr>
+</tbody></table>
+
+<div name="similar-jobs" data-unique="similar-jobs"></div><h2 id="similar-jobs">Similar Jobs</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/jobs/&lt;ID&gt;/more-like-this</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gerente-de-vendas-le8Xgo"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gerente de vendas"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Requisitos A combinar São Paulo Descrição Gerente de vendas Atuará na gestão da equipe, desenvolvendo planejamento estratégico de ações comerciais, negociação com clientes. Beneficios: Vale Transporte; Vale Refeição; Assistência Médica; Formação Acadêmica: Ensino médio completo. Experiência: Experiência na área têxtil. Salário: De R$ 3.501,00 a R$ 4.000,00 Cargo: Gerente de vendas Empresa: SINGULAR Comércio atacadista de tecidos. Ramo: Têxtil/ Vestuário"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"datePosted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-11-06 16:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SINGULAR"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"singular"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Paulo"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"countJobs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">3501</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">4000</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://br.linkedin.com/jobs2/view/97269244"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"planejamento estrategico"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"isExpired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todas as vagas do sistema semelhantes a vaga com ID passado.</p>
+
+<aside class="notice">
+Utilizado na visualização de uma vaga específica, secção "Vagas semelhantes”.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID da vaga</td>
+</tr>
+</tbody></table>
+
+<div name="job-39-s-skills-recommendations" data-unique="job-39-s-skills-recommendations"></div><h2 id="job-39-s-skills-recommendations">Job’s Skills Recommendations</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/jobs/&lt;ID&gt;/recommendations/skills</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vendas"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">109720</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"atendimento ao cliente"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">55028</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"recrutamento e selecao"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">53147</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna habilidades recomendadas para a vaga.</p>
+
+<aside class="notice">
+Utilizado na visualização de uma vaga específica, secção “Buscar por Habilidades Relacionadas”.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID da vaga</td>
+</tr>
+</tbody></table>
+
+<div name="job-39-s-titles-recommendations" data-unique="job-39-s-titles-recommendations"></div><h2 id="job-39-s-titles-recommendations">Job’s Titles Recommendations</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/jobs/&lt;ID&gt;/recommendations/skills</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"titles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"operador de caixa"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">109720</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"representante comercial"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">55028</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"professor"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">53147</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna títulos recomendadas para a vaga.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID da vaga</td>
+</tr>
+</tbody></table>
+
+<div name="get-all-user-39-s-jobs" data-unique="get-all-user-39-s-jobs"></div><h2 id="get-all-user-39-s-jobs">Get All User’s Jobs</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programador"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"confidencial"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programar em PHP e VBA."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="err">.</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna todas as vagas criadas por um usuário do tipo ‘jobposter’.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+</tbody></table>
+
+<div name="create-user-39-s-job" data-unique="create-user-39-s-job"></div><h2 id="create-user-39-s-job">Create User’s Job</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">POST</span> <span class="nn">/v2/users/&lt;ID&gt;/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programador"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"confidencial"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programar em PHP e VBA."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto típico para criação de uma vaga.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programador"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"confidencial"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programar em PHP e VBA."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo de uma nova vaga.</p>
+</blockquote>
+
+<p>Cria uma nova vaga no banco de dados e associa ao usuário.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+</tbody></table>
+
+<div name="retrieve-user-39-s-job" data-unique="retrieve-user-39-s-job"></div><h2 id="retrieve-user-39-s-job">Retrieve User’s Job</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/users/&lt;ID&gt;/jobs/&lt;JID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programador"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"confidencial"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programar em PHP e VBA."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna a vaga criada por um usuário do tipo 'jobposter’.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>JID</td>
+<td>O ID da vaga</td>
+</tr>
+</tbody></table>
+
+<div name="update-user-39-s-job" data-unique="update-user-39-s-job"></div><h2 id="update-user-39-s-job">Update User’s Job</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">PUT</span> <span class="nn">/v2/users/&lt;ID&gt;/jobs/&lt;JID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programador VBA"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programar VBA."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>A requisição acima contém o objeto com os campos que serão atualizados no banco de dados.</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programador VBA"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+</span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atlas"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"confidencial"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programar VBA."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561bf10be20a89ff04f10c33"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"561befdfd3760d310e0a3aa7"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>O retorno é um objeto completo da vaga atualizada.</p>
+</blockquote>
+
+<p>Modifica os dados de uma vaga cadastrada por um usuário do tipo 'jobposter’.</p>
+
+<aside class="notice">
+O campo de status assume 3 valores: “available”, “paused” ou “deleted”. Deve ser utilizado pelo FE para o controle do status de publicação da vaga.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>JID</td>
+<td>O ID da vaga a ser atualizada</td>
+</tr>
+</tbody></table>
+
+<div name="delete-user-39-s-job" data-unique="delete-user-39-s-job"></div><h2 id="delete-user-39-s-job">Delete User’s Job</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">DELETE</span> <span class="nn">/v2/users/&lt;ID&gt;/jobs/&lt;JID&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Job removed from database."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Exclui uma vaga do banco de dados.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>O ID do usuário</td>
+</tr>
+<tr>
+<td>JID</td>
+<td>O ID da vaga a ser excluída</td>
+</tr>
+</tbody></table>
+
+          <div name="suggestions" data-unique="suggestions"></div><h1 id="suggestions">Suggestions</h1>
+
+<div name="term-39-s-suggestions" data-unique="term-39-s-suggestions"></div><h2 id="term-39-s-suggestions">Term’s Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/terms/&lt;SEARCHSTRING&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"terms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"analista"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"analista de suporte"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"analista contabil"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"analista de sistemas"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de termos que completam a string enviada como parâmetro.</p>
+
+<aside class="notice">
+Utilizado para o autocomplete do campo “O QUE?” no formulário principal de busca do site.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SEARCHSTRING</td>
+<td>Uma string qualquer</td>
+</tr>
+</tbody></table>
+
+<div name="location-39-s-suggestions" data-unique="location-39-s-suggestions"></div><h2 id="location-39-s-suggestions">Location’s Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/locations/&lt;SEARCHSTRING&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+</span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="nt">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio De Contas, BA"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Pardo De Minas, MG"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio De Janeiro, RJ"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Verde De Mato Grosso, MS"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro, RJ"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Branco, AC"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Largo, AL"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Real, BA"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Bananal, ES"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Verde, GO"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de localizações que completam a string enviada como parâmetro.</p>
+
+<aside class="notice">
+Utilizado para o autocomplete do campo “ONDE?” no formulário principal de busca do site.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SEARCHSTRING</td>
+<td>Uma string qualquer</td>
+</tr>
+</tbody></table>
+
+<div name="search-suggestions" data-unique="search-suggestions"></div><h2 id="search-suggestions">Search Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/searches/&lt;SEARCHSTRING&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"terms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"administrador"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vendas"</span><span class="p">,</span><span class="w">   
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arquiteto"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de buscas que foram realizadas no site e possuem alguma relação com a string enviada como parâmetro.</p>
+
+<aside class="notice">
+Utilizado na visualização da listagem de vagas, secção “Buscas Relacionadas”.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SEARCHSTRING</td>
+<td>Uma string qualquer</td>
+</tr>
+</tbody></table>
+
+<div name="skill-39-s-suggestions51" data-unique="skill-39-s-suggestions51"></div><h2 id="skill-39-s-suggestions">Skill’s Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/skills</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"processos administrativos"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"produtos financeiros"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"propaganda"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de habilidades a partir de uma string qualquer digitada.</p>
+
+<aside class="notice">
+Utilizado no preechimento do currículo, autocomplete do campo “habilidade”.
+</aside>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Padrão</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>prefix</td>
+<td>vazio</td>
+<td>String contendo os caracteres utilizados na sugestão das habilidades.</td>
+</tr>
+</tbody></table>
+
+<div name="skill-39-s-suggestions-skill-to-skills" data-unique="skill-39-s-suggestions-skill-to-skills"></div><h2 id="skill-39-s-suggestions-skill-to-skills">Skill’s Suggestions (skill to skills)</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/skills/&lt;SNAME&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mysql"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"css"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"javascript"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"web"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"html"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de habilidades a partir de outra habilidade.</p>
+
+<aside class="notice">
+Utilizado na visualização de listagem de vagas, secção “Buscar por Habilidades Relacionadas”.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SNAME</td>
+<td>Uma skills que conste no vocabulário</td>
+</tr>
+</tbody></table>
+
+<div name="educational-institution-39-s-suggestions" data-unique="educational-institution-39-s-suggestions"></div><h2 id="educational-institution-39-s-suggestions">Educational Institution’s Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/educational-institutions/&lt;SEARCHSTRING&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"institutions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abeu - Centro Universitário"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNIABEU"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro Regional Universitário De Espírito Santo Do Pinhal"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNIPINHAL"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro Universitário Adventista De São Paulo"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNASP"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de instituições educacionais.</p>
+
+<aside class="notice">
+Utilizado no preechimento do currículo, autocomplete do campo “instituição”.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SEARCHSTRING</td>
+<td>Uma string qualquer</td>
+</tr>
+</tbody></table>
+
+<div name="course-39-s-suggestions" data-unique="course-39-s-suggestions"></div><h2 id="course-39-s-suggestions">Course’s Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/courses/&lt;SEARCHSTRING&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"courses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ciência Da Computação"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ciência Da Computação"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ciência e Tecnologia"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de cursos do MEC.</p>
+
+<aside class="notice">
+Utilizado no preechimento do currículo, autocomplete do campo “grau”.
+</aside>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SEARCHSTRING</td>
+<td>Uma string qualquer</td>
+</tr>
+</tbody></table>
+
+<div name="vocabulary-39-s-suggestions" data-unique="vocabulary-39-s-suggestions"></div><h2 id="vocabulary-39-s-suggestions">Vocabulary’s Suggestions</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/suggestions/vocabularies/&lt;SEARCHSTRING&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"terms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"php"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"php.ira"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"php5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"php5.6"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phpexcel"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phpmailer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phpmyadmin"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phpunit"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma lista com sugestões de termos de vocabulário relacionados com a string enviada como parâmetro.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SEARCHSTRING</td>
+<td>Uma string qualquer</td>
+</tr>
+</tbody></table>
+
+          <div name="companies" data-unique="companies"></div><h1 id="companies">Companies</h1>
+
+<div name="get-company" data-unique="get-company"></div><h2 id="get-company">Get Company</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/companies/&lt;CNAME&gt;</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"countJobItems"</span><span class="p">:</span><span class="w"> </span><span class="mi">66</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"countJobs"</span><span class="p">:</span><span class="w"> </span><span class="mi">76</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Osasco"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Paulo"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="err">.</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coca - Cola"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coca-cola"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna uma empresa do sistema.</p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CNAME</td>
+<td>O nome da empresa</td>
+</tr>
+</tbody></table>
+
+<div name="get-company-39-s-jobs" data-unique="get-company-39-s-jobs"></div><h2 id="get-company-39-s-jobs">Get Company’s Jobs</h2>
+<pre class="highlight http" style="display: block;"><code><span class="nf">GET</span> <span class="nn">/v2/companies/&lt;CNAME&gt;/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.jobzi.com, apidev.jobzi.com, apistage.jobzi.com</span>
+</code></pre>
+
+<blockquote>
+<p>A requisição acima retorna uma estrutura JSON como esta:</p>
+</blockquote>
+<pre class="highlight http" style="display: block;"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">59</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"countJobs"</span><span class="p">:</span><span class="w"> </span><span class="mi">76</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"jobs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"consultor-de-vendas-oXbB4K"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONSULTOR DE VENDAS"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Requisitos Sem Experiência Sem estudos R$180.000 - R$800.000 por hora São Bernardo do Campo Descrição RESPONSAVEL POR PUBLICIDADES"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"datePosted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-27 17:00:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JORNAL CIDADES DO ABC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jornal-cidades-do-abc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Paulo"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"countJobs"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"salary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">180000</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">800000</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://br.linkedin.com/jobs2/view/95164417"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"isExpired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="err">.</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Retorna vagas de uma determinada empresa.</p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Padrão</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>location</td>
+<td>vazio</td>
+<td>String contendo o local a ser filtrado na busca.</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>0</td>
+<td>Pula quantidade de itens ao serem listados, utilizado para paginação .</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>10</td>
+<td>Número de resultados a ser retornado.</td>
+</tr>
+</tbody></table>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CNAME</td>
+<td>O nome da empresa</td>
+</tr>
+</tbody></table>
+
+          <div name="errors" data-unique="errors"></div><h1 id="errors">Errors</h1>
+
+<aside class="notice">
+Todo erro retornado pela API tem o formado do seguinte objeto: <code>{message: "alguma mensagem relacionada"}</code>
+</aside>
+
+<p>Jobzi API usa os erros de código listados abaixo.</p>
+
+<table><thead>
+<tr>
+<th>Erro (cod.)</th>
+<th>Significado</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request – A requisição não foi entendida.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized – API Key errada ou JWT inválido no Authorization header.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found – Um resource específico não pode ser achado.</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict – A requisição foi parcialemente entendida.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error – Erro interno do servidor, causado em geral por erros provenientes de conecções com outras máquinas (ex.: Banco de dados).</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="http://rodrigos-macbook-pro.local:4567/#" data-language-name="http" class="active">http</a>
+          </div>
+      </div>
+    </div>
+  
+
+</body></html>
