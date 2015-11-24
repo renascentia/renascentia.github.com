@@ -271,6 +271,7 @@
 .owl-carousel, .owl-carousel-category {
   
   .item {
+    position: relative;
 
     .img-container {
       position: relative;
@@ -302,9 +303,16 @@
 
     .featured-content {
       position: absolute;
+      display: block;
       z-index: 9999;
       bottom: -50px;
-      left: 150px;
+      right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      /* give it dimensions */
+      min-height: 10em;
+      width: 80%;
       background: #FFF;
       padding: 15px 20px;
       border: 1px solid #959595;
@@ -313,7 +321,7 @@
         .product-title {
           display: block; /* Fallback for non-webkit */
           display: -webkit-box;
-          max-width: 420px;
+          //max-width: 420px;
           height: 24px*1.4*2; /* Fallback for non-webkit */
           margin: 0 auto;
           font-size: rem-calc(24);
