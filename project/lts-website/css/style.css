@@ -1023,10 +1023,10 @@ textarea.form-control {
 
 .navbar-brand span {
   display: block;
-  background-size: auto 50px;
-  height: 60px;
-  width: 140px;
-  margin-top: -10px;
+  background-size: auto 30px;
+  height: 30px;
+  width: 27px;
+  //margin-top: -10px;
 }
 
 .navbar-nav > li > a {
@@ -1158,7 +1158,7 @@ textarea.form-control {
 }
 
 .hero-p-v3 {
-  padding-top: 180px;
+  padding-top: 100px;
 }
 
 .hero-image {
@@ -1464,4 +1464,14 @@ textarea.form-control {
 
 .img-ceo {
   padding-bottom: 0px;
+}
+
+.img-logo {
+  width: 121px;
+  height: 191px;
+  margin-bottom: 30px;
+}
+
+.btn-default {
+  border: 1px solid #eeeeee !important;
 }
