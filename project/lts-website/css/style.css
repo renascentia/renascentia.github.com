@@ -1069,6 +1069,9 @@ textarea.form-control {
 .navbar.navbar-light {
   background-color: #fff;
   transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.2);
 }
 
 .navbar.navbar-dark {
@@ -1163,7 +1166,7 @@ textarea.form-control {
 }
 
 .hero-p-v3 {
-  padding-top: 100px;
+  padding-top: 140px;
   padding-bottom: 40px;
 }
 
@@ -1492,9 +1495,16 @@ textarea.form-control {
 }
 
 .img-logo {
-  width: 121px;
-  height: 191px;
+  width: 100%;
+  max-width: 670px;
+  max-height: 239px;
   margin-bottom: 30px;
+}
+
+.img-iconnect {
+  width: 100%;
+  max-width: 225px;
+  max-height: 225px;
 }
 
 .btn-default {
@@ -1530,13 +1540,33 @@ textarea.form-control {
   background-size: 14px 11px;
 }
 
+.icon-success-primary{
+  background-image: url('../images/icon-success-primary.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 11px;
+  width: 14px;
+  background-size: 14px 11px;
+}
+
+.icon-success-secondary{
+  background-image: url('../images/icon-success-secondary.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 11px;
+  width: 14px;
+  background-size: 14px 11px;
+}
+
 .ceo-list ul li span {
   margin-left: 10px;
   display: inline-block;
   vertical-align: middle;
 }
 
-#contact-promo {
+#services {
   padding-bottom: 0;
 }
 
@@ -1546,4 +1576,50 @@ textarea.form-control {
 
 #support h4, p {
   color: #999999;
+}
+
+#iconnect p {
+  font-size: 18px;
+}
+
+.alert-iconnect {
+  background-color: #00416B;
+}
+
+.alert-iconnect p {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alert-iconnect p i {
+  margin-right: 10px;
+}
+
+.alert-iconnect a {
+  color: #B4A274;
+}
+
+.alert-iconnect a:hover {
+  color: #CFBD8E;
+  text-decoration: underline;
+}
+
+.service-list ul li {
+  font-size: 16px;
+  color: #00416B;
+  padding: 10px 0;
+  display: block;
+}
+
+.service-list ul li span {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#services .service-title {
+  background-color: #00416B;
+  padding: 10px 15px;
+  color: #FFFFFF;
 }
