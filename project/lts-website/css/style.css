@@ -237,7 +237,7 @@ b {
 }
 
 .bg-color-light {
-  background-color: #FFFFFF;
+  background-color: #eaeaec;
 }
 
 .bg-color-dark {
@@ -269,7 +269,7 @@ b {
 }
 
 .bg-dark {
-  background-color: #444444;
+  background-color: #121212;
 }
 
 .bg-black {
@@ -995,6 +995,11 @@ textarea.form-control {
   opacity: 0.9;
 }
 
+.opacity-80 {
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
 /* _____________________________________
 
    09. Navigation Header
@@ -1159,6 +1164,7 @@ textarea.form-control {
 
 .hero-p-v3 {
   padding-top: 100px;
+  padding-bottom: 40px;
 }
 
 .hero-image {
@@ -1423,7 +1429,7 @@ textarea.form-control {
    _____________________________________ */
 
 .newsletter-image {
-  background: url("../images/newsletter-image-bg.jpg") center no-repeat #fcfcfc;
+  background: url("../images/support-bg.jpg") center no-repeat #fcfcfc;
   background-size: cover;
 }
 
@@ -1458,12 +1464,31 @@ textarea.form-control {
 
 /*CUSTOM CSS*/
 
-#ceo {
-  padding-bottom: 0px;
+.text-primary {
+  color: #B4A274;
 }
 
-.img-ceo {
-  padding-bottom: 0px;
+.text-secondary {
+  color: #00416B;
+}
+
+#ceo {
+  padding-bottom: 60px;
+}
+
+#ceo h2 {
+  color: #ffffff;
+}
+
+#ceo p {
+  color: #999999;
+  font-size: 18px;
+}
+
+.img-ceo img {
+  -webkit-box-shadow: 0px 10px 30px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 30px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 30px 3px rgba(0,0,0,0.75);
 }
 
 .img-logo {
@@ -1482,4 +1507,43 @@ textarea.form-control {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+}
+
+#hero-image p {
+  font-size: 16px;
+}
+
+.ceo-list ul li {
+  font-size: 16px;
+  color: #B4A274;
+  padding: 10px 0;
+  display: block;
+}
+
+.icon-success{
+  background-image: url('../images/icon-success.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 11px;
+  width: 14px;
+  background-size: 14px 11px;
+}
+
+.ceo-list ul li span {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#contact-promo {
+  padding-bottom: 0;
+}
+
+#support h2{
+  color: #ffffff;
+}
+
+#support h4, p {
+  color: #999999;
 }
