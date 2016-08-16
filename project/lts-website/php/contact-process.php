@@ -1,7 +1,7 @@
 <?php
 // Configure your Subject Prefix and Recipient here
-$subjectPrefix = '[Contact via website]';
-$emailTo       = '';
+$subjectPrefix = 'LTS - Website Contact';
+$emailTo       = 'rodrigokparra@gmail.com';
 
 $errors = array(); // array to hold validation errors
 $data   = array(); // array to pass back data
@@ -9,6 +9,7 @@ $data   = array(); // array to pass back data
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name    = stripslashes(trim($_POST['name']));
     $email   = stripslashes(trim($_POST['email']));
+    $phone   = stripslashes(trim($_POST['phone']));
     $message = stripslashes(trim($_POST['message']));
 
 
@@ -18,6 +19,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = 'Email is invalid.';
+    }
+
+    if (empty($phone)) {
+        $errors['phone'] = 'Phone number is required.';
     }
 
     if (empty($message)) {
@@ -33,6 +38,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $body    = '
             <strong>Name: </strong>'.$name.'<br />
             <strong>Email: </strong>'.$email.'<br />
+            <strong>Phone Number: </strong>'.$phone.'<br />
             <strong>Message: </strong>'.nl2br($message).'<br />
         ';
 
